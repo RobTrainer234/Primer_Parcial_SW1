@@ -1,4 +1,4 @@
-name: Backend CASE
+name: Proyecto CASE
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [main]
 
 jobs:
-  compilar:
+  backend:
     runs-on: ubuntu-latest
     steps:
       - name: Obtener codigo
@@ -22,3 +22,24 @@ jobs:
 
       - name: Compilar y probar backend CASE
         run: mvn -f backend-case/pom.xml test
+
+  frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Obtener codigo
+        uses: actions/checkout@v4
+
+      - name: Configurar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: frontend-case/package-lock.json
+
+      - name: Instalar dependencias frontend
+        working-directory: frontend-case
+        run: npm ci
+
+      - name: Compilar frontend CASE
+        working-directory: frontend-case
+        run: npm run compilar
