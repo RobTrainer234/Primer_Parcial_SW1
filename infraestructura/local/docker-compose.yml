@@ -16,5 +16,24 @@ services:
       timeout: 5s
       retries: 5
 
+  backend-case:
+    build:
+      context: ../../backend-case
+      dockerfile: Dockerfile
+    container_name: backend-case
+    depends_on:
+      base-datos-case:
+        condition: service_healthy
+    environment:
+      BASE_DATOS_URL: jdbc:postgresql://base-datos-case:5432/proyecto_case
+      BASE_DATOS_USUARIO: case_user
+      BASE_DATOS_CLAVE: case_password
+      DIRECTORIO_ARTEFACTOS: /app/generados
+    ports:
+      - "8080:8080"
+    volumes:
+      - artefactos_case:/app/generados
+
 volumes:
   datos_case:
+  artefactos_case:

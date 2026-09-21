@@ -1,11 +1,11 @@
 # Ejecución local
 
-## Base de datos
+## Ejecutar backend y base de datos con Docker
 
 Desde la raíz del repositorio:
 
 ```bash
-docker compose -f infraestructura/local/docker-compose.yml up -d
+docker compose -f infraestructura/local/docker-compose.yml up --build -d
 ```
 
 La base queda disponible en:
@@ -16,7 +16,15 @@ usuario: case_user
 clave: case_password
 ```
 
-## Backend CASE
+El backend queda disponible en:
+
+```text
+http://localhost:8080
+```
+
+## Ejecutar backend con Maven local
+
+Si Maven está instalado:
 
 ```bash
 cd backend-case

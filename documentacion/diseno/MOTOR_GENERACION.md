@@ -40,11 +40,19 @@ Modelo conceptual persistido
 - Swagger/OpenAPI.
 - README del backend generado.
 
-## Primera versión recomendada
+## Primera versión implementada
 
-1. Generar entidades sin relaciones.
-2. Generar CRUD básico.
-3. Confirmar que compila.
-4. Agregar relaciones uno a muchos.
-5. Agregar relaciones uno a uno.
-6. Agregar relaciones muchos a muchos.
+1. Convertir modelo conceptual a modelo intermedio.
+2. Validar antes de generar.
+3. Registrar trabajo de generación.
+4. Generar proyecto Spring Boot CRUD básico.
+5. Crear ZIP descargable.
+6. Registrar artefacto generado.
+
+## Pendiente de mejora
+
+1. Confirmar compilación real con Maven instalado.
+2. Agregar relaciones uno a muchos en el backend generado.
+3. Agregar relaciones uno a uno.
+4. Agregar relaciones muchos a muchos.
+5. Generar DTO relacionales más completos.

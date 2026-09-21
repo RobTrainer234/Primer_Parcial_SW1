@@ -8,13 +8,16 @@ Backend principal de la herramienta CASE.
 - Persistencia del modelo conceptual.
 - Gestión de entidades, atributos y relaciones.
 - Validación básica del modelo antes de generación.
+- Construcción de modelo intermedio.
+- Motor determinista inicial de generación.
+- Empaquetado ZIP.
+- Gestión local de artefactos generados.
 
 ## Responsabilidades pendientes
 
-- Construcción de modelo intermedio.
-- Motor determinista de generación.
-- Empaquetado ZIP.
-- Gestión real de artefactos generados.
+- Generación avanzada de relaciones JPA completas.
+- Frontend real para invocar generación.
+- Pruebas automatizadas cuando Maven esté disponible.
 
 ## Arquitectura interna
 
@@ -76,15 +79,25 @@ POST /modelos/{modeloId}/validacion
 GET  /modelos/{modeloId}/validacion
 ```
 
-## Ejecución local
+### Generación
 
-Levantar PostgreSQL:
-
-```bash
-docker compose -f ../infraestructura/local/docker-compose.yml up -d
+```http
+POST /modelos/{modeloId}/generaciones
+GET  /generaciones/{generacionId}
+GET  /generaciones/{generacionId}/artefacto
 ```
 
-Ejecutar backend:
+La primera versión genera un backend Spring Boot CRUD básico. Las relaciones quedan registradas en el modelo intermedio, pero el mapeo JPA avanzado se completará en una fase posterior.
+
+## Ejecución local
+
+### Con Docker desde la raíz del repositorio
+
+```bash
+docker compose -f infraestructura/local/docker-compose.yml up --build -d
+```
+
+### Con Maven local desde `backend-case/`
 
 ```bash
 mvn spring-boot:run
@@ -95,3 +108,13 @@ Swagger:
 ```text
 http://localhost:8080/swagger-ui.html
 ```
+
+## Prueba rápida del flujo principal
+
+Con el backend ejecutándose:
+
+```bash
+herramientas/scripts/probar-flujo-backend-case.sh
+```
+
+El script crea un proyecto, modelo, entidad, atributos, valida, genera y descarga un ZIP en `generados/`.
