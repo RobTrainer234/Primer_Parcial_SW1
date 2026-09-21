@@ -304,7 +304,23 @@ public class GeneradorProyectoSpring {
                         return ResponseEntity.noContent().build();
                     }
                 }
-                """.formatted(modelo.paqueteBase(), modelo.paqueteBase(), entidad.nombreClase(), modelo.paqueteBase(), entidad.nombreClase(), modelo.paqueteBase(), entidad.nombreClase(), entidad.rutaRecurso(), entidad.nombreClase(), entidad.nombreClase(), entidad.nombreClase(), entidad.nombreClase(), entidad.nombreClase(), entidad.nombreClase(), entidad.nombreClase(), clave.tipoJava(), entidad.nombreClase(), entidad.nombreClase(), entidad.nombreClase(), entidad.rutaRecurso(), entidad.nombreClase(), clave.tipoJava(), entidad.nombreClase(), clave.tipoJava());
+                """.formatted(
+                modelo.paqueteBase(),
+                modelo.paqueteBase(), entidad.nombreClase(),
+                modelo.paqueteBase(), entidad.nombreClase(),
+                modelo.paqueteBase(), entidad.nombreClase(),
+                entidad.rutaRecurso(),
+                entidad.nombreClase(),
+                entidad.nombreClase(),
+                entidad.nombreClase(), entidad.nombreClase(),
+                entidad.nombreClase(),
+                entidad.nombreClase(), clave.tipoJava(),
+                entidad.nombreClase(), entidad.nombreClase(),
+                entidad.nombreClase(),
+                entidad.rutaRecurso(),
+                entidad.nombreClase(), clave.tipoJava(), entidad.nombreClase(),
+                clave.tipoJava()
+        );
     }
 
     private String excepcion(ModeloIntermedio modelo) {

@@ -31,10 +31,19 @@ Hacer que el backend CASE y el motor de generación sean más verificables aunqu
 
 ## Verificación ejecutada
 
-- Chequeo liviano de archivos Java: correcto.
-- `bash -n herramientas/scripts/probar-flujo-backend-case.sh`: correcto.
-- `mvn -f backend-case/pom.xml test` no pudo ejecutarse porque Maven no está instalado (`mvn: command not found`).
+- GitHub Actions `Backend CASE`: correcto.
+- Docker build de `backend-case`: correcto.
+- `docker compose -f infraestructura/local/docker-compose.yml up --build -d`: correcto.
+- `curl http://localhost:8080/actuator/health`: `UP`.
+- `herramientas/scripts/probar-flujo-backend-case.sh`: correcto.
+- Descarga de ZIP generado: correcta.
+- Compilación del backend generado con Docker/Maven: correcta.
+- `mvn -f backend-case/pom.xml test` local no pudo ejecutarse porque Maven no está instalado (`mvn: command not found`), pero Docker y GitHub Actions cubrieron esa verificación.
+
+## Corrección aplicada
+
+La primera prueba real encontró que el controlador generado recibía tipos desplazados por un argumento extra en `.formatted(...)`. Se corrigió el orden de placeholders del controlador generado y se verificó compilando el backend generado.
 
 ## Estado
 
-Completado con verificación limitada por entorno.
+Completado y verificado con Docker + GitHub Actions.
