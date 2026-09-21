@@ -1,24 +1,63 @@
 # Frontend CASE
 
-Frontend web para crear modelos conceptuales y ejecutar la generación del backend.
+Frontend web Angular para crear modelos conceptuales y ejecutar la generación del backend.
 
-## Responsabilidades
+## Responsabilidades implementadas
 
-- Administrar proyectos.
-- Dibujar entidades y relaciones.
-- Editar atributos y cardinalidades.
-- Mostrar errores de validación.
-- Ejecutar generación y descargar artefactos.
+- Crear proyecto.
+- Crear modelo conceptual.
+- Crear entidad.
+- Crear atributos.
+- Validar modelo.
+- Generar backend.
+- Descargar ZIP generado.
+
+## Pendiente
+
+- Editor visual con canvas.
+- Relaciones desde interfaz.
+- Edición y eliminación desde UI.
+- Mejoras visuales finales.
 
 ## Organización
 
 ```text
-nucleo/           Servicios globales, configuración e interceptores.
-compartido/       Componentes, modelos y utilidades reutilizables.
-funcionalidades/  Proyectos, editor, validación y generación.
-layout/           Estructura visual general.
+src/app/componente-raiz.*       Pantalla funcional principal.
+src/app/nucleo/modelos-case.ts  Tipos del backend CASE.
+src/app/nucleo/servicio-api-case.ts Cliente HTTP.
 ```
 
-## Próximo paso
+## Ejecutar
 
-Inicializar Angular y crear las primeras pantallas de proyectos.
+Primero levantar el backend CASE:
+
+```bash
+docker compose -f ../infraestructura/local/docker-compose.yml up --build -d
+```
+
+Luego instalar dependencias y ejecutar Angular:
+
+```bash
+npm install
+npm run iniciar
+```
+
+Abrir:
+
+```text
+http://localhost:4200
+```
+
+## Compilar
+
+```bash
+npm run compilar
+```
+
+## Backend esperado
+
+La interfaz apunta por ahora a:
+
+```text
+http://localhost:8080
+```

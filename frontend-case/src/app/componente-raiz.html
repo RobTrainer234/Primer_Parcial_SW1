@@ -1,0 +1,159 @@
+<main class="pagina">
+  <header class="encabezado">
+    <div>
+      <p class="etiqueta">Herramienta CASE</p>
+      <h1>Generador de backend Spring Boot</h1>
+      <p>Flujo mínimo: proyecto → modelo → entidad → atributos → validación → generación → descarga.</p>
+    </div>
+    <div class="estado-api">
+      API: <strong>http://localhost:8080</strong>
+    </div>
+  </header>
+
+  <section *ngIf="mensaje" class="mensaje">{{ mensaje }}</section>
+  <section *ngIf="error" class="error">{{ error }}</section>
+
+  <section class="grilla">
+    <article class="tarjeta">
+      <div class="titulo-paso">
+        <span>1</span>
+        <h2>Proyecto</h2>
+      </div>
+
+      <label>Nombre</label>
+      <input [(ngModel)]="formularioProyecto.nombre" placeholder="Clinica">
+
+      <label>Descripción</label>
+      <textarea [(ngModel)]="formularioProyecto.descripcion" rows="3"></textarea>
+
+      <button (click)="crearProyecto()" [disabled]="cargando">Crear proyecto</button>
+      <button class="secundario" (click)="cargarProyectos()" [disabled]="cargando">Recargar proyectos</button>
+
+      <div class="lista" *ngIf="proyectos.length">
+        <h3>Proyectos existentes</h3>
+        <button class="item" *ngFor="let proyecto of proyectos" (click)="seleccionarProyecto(proyecto)">
+          {{ proyecto.nombre }}
+        </button>
+      </div>
+    </article>
+
+    <article class="tarjeta">
+      <div class="titulo-paso">
+        <span>2</span>
+        <h2>Modelo conceptual</h2>
+      </div>
+
+      <p class="contexto" *ngIf="proyectoActual">Proyecto actual: <strong>{{ proyectoActual.nombre }}</strong></p>
+      <p class="contexto advertencia" *ngIf="!proyectoActual">Primero crea o selecciona un proyecto.</p>
+
+      <label>Nombre del modelo</label>
+      <input [(ngModel)]="formularioModelo.nombre" placeholder="Clinica">
+
+      <button (click)="crearModelo()" [disabled]="cargando || !proyectoActual">Crear modelo</button>
+
+      <div *ngIf="modeloActual" class="resumen">
+        <strong>Modelo:</strong> {{ modeloActual.nombre }} v{{ modeloActual.version }}
+      </div>
+    </article>
+
+    <article class="tarjeta">
+      <div class="titulo-paso">
+        <span>3</span>
+        <h2>Entidad</h2>
+      </div>
+
+      <label>Nombre de entidad</label>
+      <input [(ngModel)]="formularioEntidad.nombre" placeholder="Paciente">
+
+      <div class="dos-columnas">
+        <div>
+          <label>X</label>
+          <input type="number" [(ngModel)]="formularioEntidad.posicionX">
+        </div>
+        <div>
+          <label>Y</label>
+          <input type="number" [(ngModel)]="formularioEntidad.posicionY">
+        </div>
+      </div>
+
+      <button (click)="crearEntidad()" [disabled]="cargando || !modeloActual">Crear entidad</button>
+
+      <div class="lista" *ngIf="modeloActual?.entidades?.length">
+        <h3>Entidades</h3>
+        <button class="item" *ngFor="let entidad of modeloActual?.entidades" (click)="seleccionarEntidad(entidad)">
+          {{ entidad.nombre }} · {{ entidad.atributos.length }} atributos
+        </button>
+      </div>
+    </article>
+
+    <article class="tarjeta">
+      <div class="titulo-paso">
+        <span>4</span>
+        <h2>Atributo</h2>
+      </div>
+
+      <p class="contexto" *ngIf="entidadActual">Entidad actual: <strong>{{ entidadActual.nombre }}</strong></p>
+      <p class="contexto advertencia" *ngIf="!entidadActual">Primero crea o selecciona una entidad.</p>
+
+      <label>Nombre de atributo</label>
+      <input [(ngModel)]="formularioAtributo.nombre" placeholder="id">
+
+      <label>Tipo de dato</label>
+      <select [(ngModel)]="formularioAtributo.tipoDato">
+        <option *ngFor="let tipo of tiposDato" [value]="tipo">{{ tipo }}</option>
+      </select>
+
+      <label class="check"><input type="checkbox" [(ngModel)]="formularioAtributo.clavePrimaria"> Clave primaria</label>
+      <label class="check"><input type="checkbox" [(ngModel)]="formularioAtributo.obligatorio"> Obligatorio</label>
+      <label class="check"><input type="checkbox" [(ngModel)]="formularioAtributo.valorUnico"> Valor único</label>
+
+      <button (click)="crearAtributo()" [disabled]="cargando || !entidadActual">Crear atributo</button>
+
+      <div class="lista" *ngIf="entidadActual?.atributos?.length">
+        <h3>Atributos de {{ entidadActual?.nombre }}</h3>
+        <div class="atributo" *ngFor="let atributo of entidadActual?.atributos">
+          <strong>{{ atributo.nombre }}</strong> · {{ atributo.tipoDato }}
+          <span *ngIf="atributo.clavePrimaria"> · PK</span>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section class="acciones">
+    <article class="tarjeta grande">
+      <div class="titulo-paso">
+        <span>5</span>
+        <h2>Validar y generar</h2>
+      </div>
+
+      <div class="botonera">
+        <button (click)="validarModelo()" [disabled]="cargando || !modeloActual">Validar modelo</button>
+        <button (click)="generarBackend()" [disabled]="cargando || !modeloActual">Generar backend</button>
+        <button class="exito" (click)="descargarArtefacto()" [disabled]="!generacion || generacion.estado !== 'COMPLETADO'">Descargar ZIP</button>
+      </div>
+
+      <div *ngIf="resultadoValidacion" class="panel-resultado">
+        <h3>Resultado de validación</h3>
+        <p [class.ok]="resultadoValidacion.valido" [class.mal]="!resultadoValidacion.valido">
+          {{ resultadoValidacion.valido ? 'Modelo válido' : 'Modelo con errores' }}
+        </p>
+        <ul *ngIf="resultadoValidacion.errores.length">
+          <li *ngFor="let error of resultadoValidacion.errores">
+            <strong>{{ error.codigo }}:</strong> {{ error.mensaje }}
+          </li>
+        </ul>
+      </div>
+
+      <div *ngIf="generacion" class="panel-resultado">
+        <h3>Generación</h3>
+        <p>Trabajo #{{ generacion.id }} · Estado: <strong>{{ generacion.estado }}</strong></p>
+        <p *ngIf="generacion.mensajeError" class="mal">{{ generacion.mensajeError }}</p>
+      </div>
+    </article>
+
+    <article class="tarjeta grande" *ngIf="modeloActual">
+      <h2>Resumen del modelo</h2>
+      <pre>{{ modeloActual | json }}</pre>
+    </article>
+  </section>
+</main>
