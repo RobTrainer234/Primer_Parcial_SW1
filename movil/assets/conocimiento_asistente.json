@@ -1,0 +1,20 @@
+{
+  "respuestas": [
+    {
+      "intencion": "crear",
+      "respuesta": "Para crear un registro, ingresa a la seccion correspondiente, presiona Nuevo, completa los datos obligatorios y guarda."
+    },
+    {
+      "intencion": "listar",
+      "respuesta": "Para consultar registros, abre la seccion de la entidad y revisa la lista cargada desde el backend."
+    },
+    {
+      "intencion": "editar",
+      "respuesta": "Para editar un registro, selecciona un elemento existente, modifica sus datos y guarda los cambios."
+    },
+    {
+      "intencion": "eliminar",
+      "respuesta": "Para eliminar un registro, selecciona el elemento y usa la opcion Eliminar. Confirma la accion solo si estas seguro."
+    }
+  ]
+}

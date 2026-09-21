@@ -1,0 +1,30 @@
+server:
+  port: ${PUERTO_BACKEND:8080}
+
+spring:
+  application:
+    name: backend-case
+  datasource:
+    url: ${BASE_DATOS_URL:jdbc:postgresql://localhost:5432/proyecto_case}
+    username: ${BASE_DATOS_USUARIO:case_user}
+    password: ${BASE_DATOS_CLAVE:case_password}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: true
+    properties:
+      hibernate:
+        format_sql: true
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info

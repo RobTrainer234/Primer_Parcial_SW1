@@ -1,0 +1,1692 @@
+﻿Total pages: 166
+--- PAGE 1 ---
+UNIVERSIDAD AUT�NOMA GABRIEL RENE MORENO
+FACULTAD DE INGENIER�A CIENCIAS DE LA
+COMPUTACI�N Y TELECOMUNICACIONES
+SEGUNDO P ARCIAL
+�SOFTWARE DE GESTION DE POLITICAS DE NEGOCIOS(WORKFLOW)�
+NOMBRE: LOZADA ARIAS VICTOR ADOLFO
+REGISTRO: 221044914
+MATERIA: INGENIER�A DE SOFTWARE I
+SIGLA: INF 422-SB
+DOCENTE: ING. MART�NEZ CANEDO ROLANDO ANTONIO
+SEMESTRE: 2026-1
+--- PAGE 2 ---
+1 Tabla de contenido
+1 FUNDAMENTACION TEORICA ............................................................................................................... 1
+1.1 Ingenier�a de Software Asistida por Computadora (CASE) ....................................................... 1
+1.1.1 Caracter�sticas principales ........................................................................................................ 1
+1.1.2 Clasificaci�n de las herramientas CASE..................................................................................... 1
+1.1.3 Ventajas y desventajas .............................................................................................................. 2
+1.1.4 Aplicaci�n en el desarrollo de software .................................................................................... 3
+1.2 Desarrollo de Software Basado en Componentes .................................................................... 3
+1.2.1 Caracter�sticas del desarrollo basado en componentes ........................................................... 3
+1.2.2 Principios fundamentales.......................................................................................................... 3
+1.2.3 Ventajas y desventajas .............................................................................................................. 4
+1.2.4 Relaci�n con arquitecturas modernas ...................................................................................... 4
+1.2.5 Aplicaci�n en el desarrollo de software .................................................................................... 4
+1.3 Arquitectura de Software ......................................................................................................... 5
+1.3.1 Estilos arquitect�nicos aplicables ............................................................................................. 5
+1.3.2 Stack tecnol�gico y su integraci�n ............................................................................................ 5
+1.4 Proceso Unificado de Desarrollo de Software (PUDS) .............................................................. 5
+1.4.1 Caracter�sticas principales ........................................................................................................ 6
+1.4.2 Fases del PUDS .......................................................................................................................... 6
+1.4.3 Disciplinas del PUDS .................................................................................................................. 6
+1.4.4 Ventajas y desventajas .............................................................................................................. 7
+1.4.5 Aplicaci�n en el desarrollo de software .................................................................................... 7
+1.5 Lenguaje Unificado de Modelado (UML) .................................................................................. 7
+1.5.1 Caracter�sticas de UML ............................................................................................................. 8
+1.5.2 Tipos de diagramas UML ........................................................................................................... 8
+1.5.3 Diagrama de actividades ........................................................................................................... 8
+1.5.4 Ventajas y desventajas .............................................................................................................. 9
+1.5.5 Aplicaci�n en el desarrollo de software .................................................................................... 9
+1.6 Inteligencia Artificial aplicada al desarrollo de software .......................................................... 9
+1.6.1 Aplicaciones de la IA en el desarrollo de software ................................................................. 10
+�C�mo deber�a usar la IA un programador? .......................................................................................... 11
+--- PAGE 3 ---
+1.6.2 Ventajas y desventajas ............................................................................................................ 11
+1.6.3 Buenas pr�cticas en el uso de IA ............................................................................................. 11
+1.6.4 Aplicaci�n en el desarrollo de software .................................................................................. 12
+1.7 Sistemas Workflow ................................................................................................................. 12
+1.7.1 Caracter�sticas de los sistemas workflow ............................................................................... 12
+1.7.2 Tipos de workflow ................................................................................................................... 12
+1.7.3 Componentes de un sistema workflow .................................................................................. 13
+1.7.4 Ventajas y desventajas ............................................................................................................ 13
+1.7.5 Aplicaci�n en el desarrollo de software .................................................................................. 13
+1.8 Sistema de Gesti�n Documental (SGD) ................................................................................... 14
+1.8.1 Edici�n colaborativa y control de concurrencia ...................................................................... 14
+1.8.2 Seguridad documental ............................................................................................................ 14
+1.9 . Infraestructura en la Nube Basada en AWS .......................................................................... 15
+1.9.1 Modelos de servicio y despliegue ........................................................................................... 15
+1.9.2 Amazon S3: modelo de objetos y URLs prefirmadas .............................................................. 15
+1.9.3 Escalabilidad y disponibilidad ................................................................................................. 16
+1.9.4 Ventajas del almacenamiento de objetos para sistemas documentales ................................ 16
+1.10 Deep Learning ......................................................................................................................... 17
+1.10.1 Modelos de lenguaje y representaciones sem�nticas (NLP) .................................................. 17
+1.10.2 Reconocimiento autom�tico de voz (ASR) .............................................................................. 17
+1.10.3 Clasificaci�n supervisada sobre datos tabulares y predicci�n de flujo ................................... 18
+1.10.4 Framework de Deep Learning: PyTorch .................................................................................. 18
+1.10.5 Modelos generativos de gran escala (LLMs en producci�n) ................................................... 19
+2 PUDS (PROCESO UNIFICADO DE DESARROLLO DE SOFTWARE) ......................................................... 19
+2.1 FT: CAPTURA DE REQUISITOS ................................................................................................. 19
+2.1.1 Identificar Actores y Casos de Uso .......................................................................................... 19
+2.1.1.1 Identificar Actores ................................................................................................................... 19
+2.1.1.2 Identificar Casos de Uso .......................................................................................................... 20
+2.1.2 Priorizar Casos de Uso ............................................................................................................. 22
+2.1.3 Especificar Casos de Uso ......................................................................................................... 26
+2.1.4 Estructurar Modelo de Casos de Uso ...................................................................................... 60
+2.1.5 Prototipar Interfaz de Usuario ................................................................................................ 63
+--- PAGE 4 ---
+2.2 FT: ANALISIS ............................................................................................................................ 66
+2.2.1 ANALISIS DE ARQUITECTURA .................................................................................................. 66
+2.2.1.1 IDENTIFICAR PAQUETES .......................................................................................................... 66
+2.2.1.2 Relacionar Paquetes y Casos de Uso ....................................................................................... 69
+2.2.2 An�lisis de Casos de Uso ......................................................................................................... 74
+2.2.2.1 Diagramas de Colaboraci�n/Comunicaci�n ............................................................................ 74
+2.2.3 An�lisis de Paquetes ............................................................................................................... 81
+2.3 Dise�o ..................................................................................................................................... 83
+2.3.1 Modelado de Arquitectura C4 ................................................................................................ 83
+2.3.2 Dise�o de Arquitectura ........................................................................................................... 86
+2.3.2.1 Dise�o F�sico ........................................................................................................................... 86
+2.3.3 Dise�o L�gico (Diagrama Organizado en Capas) .................................................................... 87
+2.3.4 Dise�o de Datos ...................................................................................................................... 88
+2.3.4.1 Dise�o de Datos L�gicos ......................................................................................................... 88
+2.3.4.1.1 Diagrama de Clases ......................................................................................................... 88
+2.3.5 Diagrama de Secuencia ........................................................................................................... 90
+2.4 FT: Implementaci�n .............................................................................................................. 106
+2.4.1 Implementaci�n de la arquitectura del sistema ................................................................... 106
+2.4.2 Implementaci�n de la arquitectura de subsistema .............................................................. 106
+2.5 Pruebas ................................................................................................................................. 116
+2.5.1 Casos de Prueba � Ciclo 1 .................................................................................................... 118
+2.5.2 Casos de Prueba � Ciclo 2 .................................................................................................... 126
+3 Manual de Usuario ........................................................................................................................... 134
+3.1 INTRODUCCI�N ..................................................................................................................... 134
+3.1.1 PARTE 1: MANUAL DEL ADMINISTRADOR ............................................................................ 134
+3.1.2 PARTE 2: MANUAL DEL FUNCIONARIO ................................................................................. 143
+3.1.3 PARTE 3: MANUAL DEL CLIENTE ........................................................................................... 147
+3.4 AP�NDICE: REFERENCIA DE ESTADOS ............................................................................................. 152
+4 BIBLIOGRAFIA ................................................................................................................................... 152
+5 ANEXO .............................................................................................................................................. 153
+5.1 EST�NDARES DE CODIFICACI�N ........................................................................................... 153
+5.1.1 Est�ndar de codificaci�n del backend (Spring Boot � Java) ................................................ 153
+--- PAGE 5 ---
+5.1.2 Est�ndar de codificaci�n del frontend web (Angular � TypeScript) .................................... 154
+5.1.3 Est�ndar de codificaci�n del microservicio IA (FastAPI � Python) ...................................... 155
+5.1.4 Est�ndar de codificaci�n de la aplicaci�n m�vil (Flutter � Dart) ......................................... 156
+5.1.5 EST�NDARES (FACTORES) DE CALIDAD SEG�N ISO/IEC 25010 ............................................ 156
+5.1.6 Conclusi�n ............................................................................................................................. 160
+--- PAGE 6 ---
+1 FUNDAMENTACION TEORICA
+1.1 Ingenier�a de Software Asistida por Computadora
+(CASE)
+La Ingenier�a de Software Asistida por Computadora (CASE, Computer-Aided Software
+Engineering) se refiere al conjunto de herramientas, t�cnicas y metodolog�as orientadas
+a apoyar y automatizar las diferentes fases del ciclo de vida del desarrollo de software.
+Su objetivo principal es mejorar la calidad del producto, incrementar la productividad del
+equipo de desarrollo y garantizar la consistencia entre los artefactos generados.
+El uso de herramientas CASE surge como respuesta a la creciente complejidad de los
+sistemas inform�ticos, donde la gesti�n manual de actividades como el an�lisis, dise�o
+e implementaci�n resulta ineficiente. En este contexto, estas herramientas permiten
+estructurar el desarrollo, facilitando la modelaci�n, validaci�n y documentaci�n del
+software.
+Desde la perspectiva de la Ingenier�a de Software, CASE contribuye a la aplicaci�n de
+buenas pr�cticas como la trazabilidad de requisitos, la estandarizaci�n de procesos y la
+reutilizaci�n de modelos.
+1.1.1 Caracter�sticas principales
+Las herramientas CASE presentan caracter�sticas que facilitan el desarrollo de
+software:
+� Modelado visual mediante notaciones estandarizadas como UML y
+BPMN.
+� Generaci�n autom�tica de c�digo a partir de modelos.
+� Validaci�n de diagramas para detectar inconsistencias.
+� Generaci�n autom�tica de documentaci�n t�cnica.
+� Soporte para trabajo colaborativo.
+1.1.2 Clasificaci�n de las herramientas CASE
+Las herramientas CASE se clasifican seg�n la fase del ciclo de vida del software que
+soportan:
+Upper CASE:
+Se utilizan en las fases de an�lisis y dise�o, permitiendo modelar el sistema antes de
+su implementaci�n.
+Ejemplos:
+1
+--- PAGE 7 ---
+� Enterprise Architect: herramienta orientada al modelado UML y dise�o de
+arquitectura de software.
+� Visual Paradigm: permite la creaci�n de diagramas UML, BPMN y la
+documentaci�n del sistema.
+Lower CASE:Se enfocan en la implementaci�n, pruebas y mantenimiento del software.
+Ejemplos:
+� JUnit: framework utilizado para la ejecuci�n de pruebas unitarias en aplicaciones
+Java.
+� SonarQube: plataforma que analiza la calidad del c�digo y detecta errores o
+vulnerabilidades.
+I-CASE (Integrated CASE):Integran todo el ciclo de vida del software en una sola
+herramienta.
+Ejemplos:
+� IBM Rational Software Architect: herramienta que permite modelar, dise�ar y
+desarrollar software dentro de un entorno integrado.
+� GenMyModel: plataforma en l�nea que permite modelado colaborativo y
+generaci�n de c�digo.
+1.1.3 Ventajas y desventajas
+Ventajas:
+� Mejora de la calidad del software
+� Incremento de la productividad
+� Trazabilidad entre requisitos, dise�o e implementaci�n
+� Estandarizaci�n del desarrollo
+� Facilita el mantenimiento Desventajas:
+� Curva de aprendizaje
+� Costos de implementaci�n
+� Dependencia de herramientas espec�ficas
+� Posible exceso de documentaci�n
+2
+--- PAGE 8 ---
+1.1.4 Aplicaci�n en el desarrollo de software
+Las herramientas CASE permiten representar de forma clara la estructura y
+comportamiento de un sistema antes de su implementaci�n, facilitando la comprensi�n y
+comunicaci�n entre los distintos actores del proyecto.
+Su uso contribuye a mantener la coherencia entre el dise�o conceptual y la
+implementaci�n t�cnica, permitiendo un desarrollo m�s estructurado y controlado
+1.2 Desarrollo de Software Basado en Componentes
+El desarrollo de software basado en componentes es un enfoque que propone la
+construcci�n de sistemas mediante la integraci�n de unidades modulares independientes
+denominadas componentes. Cada componente encapsula una funcionalidad espec�fica
+y se comunica con otros a trav�s de interfaces bien definidas, lo que permite su
+reutilizaci�n en distintos contextos.
+Este paradigma surge como una evoluci�n de la Ingenier�a de Software tradicional,
+buscando mejorar la eficiencia en el desarrollo y reducir la complejidad de los sistemas
+mediante la descomposici�n en partes m�s manejables.
+1.2.1 Caracter�sticas del desarrollo basado en componentes
+Los componentes de software presentan una serie de caracter�sticas que los
+diferencian de otras unidades de desarrollo:
+� Encapsulaci�n: cada componente oculta su implementaci�n
+interna
+� Reutilizaci�n: pueden ser utilizados en m�ltiples sistemas
+� Interoperabilidad: interact�an mediante interfaces definidas
+� Bajo acoplamiento: m�nima dependencia entre componentes
+� Alta cohesi�n: cada componente cumple una funci�n espec�fica
+Estas caracter�sticas permiten construir sistemas m�s flexibles y mantenibles.
+1.2.2 Principios fundamentales
+El desarrollo basado en componentes se apoya en varios principios clave:
+� Modularidad: divisi�n del sistema en partes independientes
+� Separaci�n de responsabilidades: cada componente tiene una funci�n clara
+� Sustituibilidad: un componente puede ser reemplazado sin afectar el sistema
+� Abstracci�n: interacci�n a trav�s de interfaces, no implementaciones
+Estos principios facilitan la evoluci�n del sistema a lo largo del tiempo.
+3
+--- PAGE 9 ---
+1.2.3 Ventajas y desventajas
+Ventajas:
+� Reducci�n del tiempo de desarrollo mediante reutilizaci�n
+� Mejora en la mantenibilidad del sistema
+� Posibilidad de desarrollo paralelo
+� Mayor confiabilidad al reutilizar componentes probados
+� Escalabilidad del sistema
+Desventajas:
+� Problemas de compatibilidad entre componentes
+� Dependencia de terceros
+� Complejidad en la integraci�n
+� Necesidad de una buena definici�n de interfaces
+1.2.4 Relaci�n con arquitecturas modernas
+El desarrollo basado en componentes se encuentra estrechamente relacionado con
+arquitecturas modernas como:
+� Arquitectura orientada a servicios (SOA)
+� Arquitectura de microservicios
+� Sistemas modulares
+En estos enfoques, cada componente o servicio representa una unidad independiente
+que puede ser desarrollada, desplegada y mantenida de forma aut�noma.
+1.2.5 Aplicaci�n en el desarrollo de software
+Este enfoque es ampliamente utilizado en el desarrollo de sistemas complejos, ya que
+permite organizar el software en m�dulos independientes, facilitando su comprensi�n,
+mantenimiento y evoluci�n.
+Adem�s, favorece la reutilizaci�n de soluciones existentes y la integraci�n con otros
+sistemas, lo que resulta clave en entornos donde se requiere adaptabilidad y
+escalabilidad.
+4
+--- PAGE 10 ---
+1.3 Arquitectura de Software
+1.3.1 Estilos arquitect�nicos aplicables
+La arquitectura de software define la estructura organizativa del sistema, los
+componentes, sus relaciones y los principios que gu�an su dise�o y evoluci�n. Entre los
+estilos m�s relevantes para el proyecto se encuentran:
+� Arquitectura en capas (layered): separa responsabilidades en presentaci�n
+(Angular/Flutter), l�gica de negocio (Spring Boot), servicios externos (FastAPI
+para IA) y persistencia (MongoDB). Esto facilita el mantenimiento y la evoluci�n
+independiente.
+� Arquitectura de microservicios: el sistema se descompone en servicios
+aut�nomos (backend principal y microservicio de IA) que se comunican mediante
+APIs REST. Permite escalar de forma independiente la generaci�n de diagramas
+con Gemini, que puede tener picos de demanda distintos a los del flujo de trabajo
+principal.
+� Arquitectura orientada a eventos: las notificaciones de tareas se propagan
+mediante WebSocket (STOMP), permitiendo una experiencia de usuario reactiva.
+Internamente, eventos como �tarea asignada� o �formulario completado� pueden
+desencadenar actualizaciones en tiempo real.
+1.3.2 Stack tecnol�gico y su integraci�n
+La arquitectura del sistema se despliega en AWS, aprovechando servicios como EC2 o
+ECS para contener Spring Boot y el microservicio FastAPI, y MongoDB Atlas (o Amazon
+DocumentDB) para una base de datos 100% documental. El frontend web se sirve como
+una SPA (Single Page Application) en Angular, mientras que la aplicaci�n m�vil,
+construida con Flutter, consume las mismas APIs REST y se comunica v�a STOMP para
+la llegada instant�nea de tareas.
+La elecci�n de MongoDB como base de datos NoSQL se justifica por la naturaleza
+semiestructurada de los formularios din�micos: cada actividad puede requerir una
+plantilla de formulario distinta, y el modelo de documentos JSON permite almacenar tanto
+la definici�n del formulario como los datos capturados sin necesidad de esquemas
+r�gidos.
+1.4 Proceso Unificado de Desarrollo de Software
+(PUDS)
+El Proceso Unificado de Desarrollo de Software (PUDS), conocido en ingl�s como
+Rational Unified Process (RUP), es una metodolog�a de desarrollo de software de tipo
+iterativo e incremental, que organiza el proceso en fases bien definidas con el objetivo
+de gestionar la complejidad del sistema y reducir riesgos durante su construcci�n.
+5
+--- PAGE 11 ---
+Este proceso fue desarrollado por IBM (a trav�s de Rational) y se basa en principios de
+la Ingenier�a de Software, promoviendo un desarrollo estructurado, la validaci�n continua
+y la trazabilidad entre los requisitos y la soluci�n implementada.
+1.4.1 Caracter�sticas principales
+El PUDS presenta caracter�sticas que lo diferencian de otros modelos de desarrollo:
+� Iterativo: el sistema se desarrolla en m�ltiples iteraciones
+� Incremental: cada iteraci�n a�ade nuevas funcionalidades
+� Dirigido por casos de uso: los requisitos se organizan en funcionalidades del
+sistema
+� Centrado en la arquitectura: se establece una base s�lida desde etapas
+tempranas
+� Orientado a la gesti�n de riesgos: identifica y reduce riesgos desde el inicio
+1.4.2 Fases del PUDS
+El PUDS se divide en cuatro fases principales:
+Inicio:
+Se define el alcance del proyecto, los objetivos del sistema y su viabilidad, identificando
+requisitos y riesgos iniciales.
+Elaboraci�n:
+Se detallan los requisitos cr�ticos y se define la arquitectura del sistema, reduciendo
+riesgos t�cnicos.
+Construcci�n:
+Se implementa el sistema mediante iteraciones, desarrollando las funcionalidades
+planificadas.
+Transici�n:
+Se realiza el despliegue del sistema, pruebas finales y entrega al usuario, incluyendo
+capacitaci�n y ajustes.
+1.4.3 Disciplinas del PUDS
+El proceso se organiza en disciplinas que se ejecutan a lo largo de todo el desarrollo:
+� Requisitos
+� An�lisis y dise�o
+� Implementaci�n
+6
+--- PAGE 12 ---
+�
+�
+Pruebas
+Gesti�n de configuraci�n
+� Gesti�n del proyecto
+Estas disciplinas se aplican en cada iteraci�n, permitiendo un desarrollo continuo y
+controlado.
+1.4.4 Ventajas y desventajas
+Ventajas:
+� Permite gestionar proyectos complejos de forma
+estructurada
+� Reduce riesgos mediante iteraciones tempranas
+� Mantiene trazabilidad entre requisitos y desarrollo
+� Facilita la validaci�n continua del sistema Desventajas:
+� Puede resultar complejo de implementar
+� Requiere mayor documentaci�n
+� No es ideal para proyectos peque�os sin adaptaci�n
+� Puede percibirse como un modelo pesado
+1.4.5 Aplicaci�n en el desarrollo de software
+El PUDS es utilizado en proyectos donde se requiere un alto nivel de organizaci�n, control
+y calidad en el proceso de desarrollo. Su enfoque iterativo permite validar
+progresivamente el sistema, reduciendo errores y mejorando la calidad del producto final.
+1.5 Lenguaje Unificado de Modelado (UML)
+El Lenguaje Unificado de Modelado (UML, Unified Modeling Language) es un est�ndar
+ampliamente utilizado para la representaci�n visual de sistemas de software. Su objetivo
+es facilitar la visualizaci�n, especificaci�n, construcci�n y documentaci�n de sistemas
+mediante una notaci�n gr�fica com�n.
+UML fue desarrollado por Grady Booch, James Rumbaugh y Ivar Jacobson, y es
+mantenido por el Object Management Group (OMG). Se ha convertido en un est�ndar en
+la Ingenier�a de Software debido a su capacidad para representar tanto la estructura
+como el comportamiento de los sistemas.
+7
+--- PAGE 13 ---
+�
+�
+1.5.1 Caracter�sticas de UML
+UML presenta caracter�sticas que lo convierten en una herramienta fundamental en el
+desarrollo de software:
+Lenguaje visual basado en diagramas
+Independiente del lenguaje de programaci�n
+� Permite modelar sistemas complejos
+� Facilita la comunicaci�n entre los actores del proyecto
+� Estandariza la representaci�n de sistemas
+1.5.2 Tipos de diagramas UML
+UML incluye diversos tipos de diagramas que se clasifican en dos grandes grupos:
+Diagramas estructurales: Representan la organizaci�n del sistema y sus
+componentes.
+� Diagrama de clases
+� Diagrama de componentes
+� Diagrama de despliegue
+Diagramas de comportamiento: Representan la din�mica del sistema y la interacci�n
+entre sus elementos.
+� Diagrama de secuencia
+� Diagrama de estados
+� Diagrama de actividades
+1.5.3 Diagrama de actividades
+El diagrama de actividades es uno de los m�s utilizados dentro de UML, ya que permite
+representar el flujo de trabajo de un sistema mediante la secuencia de actividades y
+decisiones.
+Este tipo de diagrama permite modelar:
+� Secuencia de tareas
+� Condiciones y decisiones
+� Procesos paralelos
+� Inicio y fin de procesos
+8
+--- PAGE 14 ---
+�
+�
+Su estructura facilita la comprensi�n de procesos tanto t�cnicos como
+organizacionales, siendo especialmente �til en sistemas donde se requiere representar
+flujos de trabajo.
+1.5.4 Ventajas y desventajas
+Ventajas:
+� Facilita la comprensi�n de sistemas complejos
+� Mejora la comunicaci�n entre los involucrados
+� Permite detectar errores en etapas tempranas
+Estandariza la documentaci�n del sistema Sirve
+como base para la implementaci�n
+Desventajas:
+� Requiere conocimiento previo del lenguaje
+� Puede volverse complejo en sistemas grandes
+� No define el proceso de desarrollo, solo el modelado
+� Puede generar diagramas innecesarios si no se usa correctamente
+1.5.5 Aplicaci�n en el desarrollo de software
+UML es ampliamente utilizado en el desarrollo de software para representar tanto la
+estructura como el comportamiento de los sistemas antes de su implementaci�n. Su uso
+permite planificar y dise�ar soluciones de manera clara, reduciendo errores y facilitando
+el mantenimiento del sistema.
+Adem�s, UML sirve como puente entre el an�lisis y la implementaci�n, permitiendo que
+los modelos conceptuales se traduzcan en soluciones t�cnicas de manera m�s
+organizada.
+1.6 Inteligencia Artificial aplicada al desarrollo de
+software
+La inteligencia artificial (IA) aplicada al desarrollo de software se refiere al uso de
+sistemas y herramientas capaces de asistir al programador en tareas como generaci�n
+de c�digo, an�lisis, pruebas y documentaci�n. Estas herramientas utilizan modelos
+avanzados para interpretar instrucciones, sugerir soluciones y automatizar actividades
+dentro del proceso de desarrollo.
+9
+--- PAGE 15 ---
+�
+�
+En el contexto de la Ingenier�a de Software, la IA se ha convertido en un apoyo relevante
+que permite mejorar la productividad y acelerar el desarrollo, aunque su uso requiere un
+enfoque responsable y cr�tico por parte del programador.
+1.6.1 Aplicaciones de la IA en el desarrollo de software
+La IA puede ser utilizada en diversas actividades dentro del desarrollo:
+� Generaci�n de c�digo a partir de descripciones en lenguaje natural
+� Detecci�n de errores y sugerencias de correcci�n
+� Automatizaci�n de pruebas
+� Generaci�n de documentaci�n t�cnica
+� Asistencia en el aprendizaje de nuevas tecnolog�as
+Herramientas como GitHub Copilot o ChatGPT ejemplifican este tipo de aplicaciones.
+10
+--- PAGE 16 ---
+�C�mo deber�a usar la IA un programador?
+El uso de la inteligencia artificial por parte de un programador debe ser estrat�gico y
+consciente, consider�ndola como una herramienta de apoyo y no como un sustituto del
+conocimiento t�cnico.
+Para un uso adecuado, se recomienda:
+� Utilizar la IA como asistente para generar ideas o estructuras iniciales de c�digo
+� Validar y comprender el c�digo generado antes de utilizarlo
+� Emplearla para automatizar tareas repetitivas y mejorar la eficiencia
+� Apoyarse en la IA para aprender conceptos o resolver dudas espec�ficas
+� Mantener el control sobre las decisiones de dise�o y arquitectura
+El programador debe conservar siempre el rol principal en el desarrollo, utilizando la IA
+como complemento y no como dependencia.
+1.6.2 Ventajas y desventajas
+Ventajas:
+� Incremento de la productividad
+� Reducci�n del tiempo de desarrollo
+� Apoyo en la resoluci�n de problemas
+� Automatizaci�n de tareas repetitivas
+� Facilita el aprendizaje de nuevas tecnolog�as
+Desventajas:
+� Posible generaci�n de c�digo incorrecto o ineficiente
+� Dependencia excesiva del programador hacia la herramienta
+� Riesgos de seguridad si no se valida el c�digo
+� P�rdida de comprensi�n profunda si se usa de forma inadecuada
+1.6.3 Buenas pr�cticas en el uso de IA
+Para un uso responsable de la IA en el desarrollo de software, se recomienda:
+� Revisar y probar todo el c�digo generado
+� No confiar ciegamente en las respuestas
+� Evitar compartir informaci�n sensible
+� Utilizar la IA como apoyo, no como reemplazo
+� Complementar su uso con conocimientos propios
+11
+--- PAGE 17 ---
+1.6.4 Aplicaci�n en el desarrollo de software
+La inteligencia artificial se ha integrado progresivamente en el desarrollo moderno,
+permitiendo optimizar procesos y mejorar la eficiencia del equipo. Su uso adecuado
+puede representar una ventaja competitiva, siempre que se mantenga un enfoque cr�tico
+y responsable.
+1.7 Sistemas Workflow
+Los sistemas workflow son herramientas dise�adas para la automatizaci�n, ejecuci�n y
+control de procesos mediante la definici�n de flujos de trabajo. Su objetivo principal es
+coordinar actividades, usuarios, decisiones y recursos dentro de un proceso
+estructurado, permitiendo mejorar la eficiencia y organizaci�n de las tareas.
+Estos sistemas forman parte de la evoluci�n de la Ingenier�a de Software y han sido
+ampliamente utilizados en entornos organizacionales donde los procesos deben ser
+definidos, controlados y optimizados.
+1.7.1 Caracter�sticas de los sistemas workflow
+Los sistemas workflow presentan una serie de caracter�sticas que los hacen
+fundamentales en la gesti�n de procesos:
+� Automatizaci�n de tareas dentro de un proceso
+� Definici�n estructurada de flujos de trabajo
+� Asignaci�n de tareas a usuarios o roles
+� Control del estado de los procesos
+� Seguimiento y monitoreo de actividades
+Estas caracter�sticas permiten mejorar la eficiencia operativa y reducir errores en la
+ejecuci�n de procesos.
+1.7.2 Tipos de workflow
+Los sistemas workflow pueden clasificarse seg�n la forma en que se ejecutan los
+procesos:
+� Workflow secuencial: las tareas se ejecutan en un orden definido
+� Workflow paralelo: varias actividades se ejecutan simult�neamente
+� Workflow basado en reglas: el flujo depende de condiciones o decisiones
+Esta clasificaci�n permite adaptar los sistemas workflow a diferentes tipos de procesos
+organizacionales.
+12
+--- PAGE 18 ---
+1.7.3 Componentes de un sistema workflow
+Un sistema workflow est� compuesto por varios elementos fundamentales:
+� Modelo del proceso: representaci�n del flujo de trabajo
+� Motor de workflow: encargado de ejecutar el proceso
+� Reglas de negocio: definen condiciones y decisiones
+� Gesti�n de usuarios: asigna tareas a los participantes
+� Persistencia del estado: almacena el estado de cada proceso
+El motor de workflow es el componente central, ya que interpreta el modelo del proceso
+y controla su ejecuci�n.
+1.7.4 Ventajas y desventajas
+Ventajas:
+� Automatizaci�n de procesos repetitivos
+� Mejora en la eficiencia organizacional
+� Reducci�n de errores humanos
+� Mayor control y seguimiento de actividades
+� Facilita la estandarizaci�n de procesos
+Desventajas:
+� Complejidad en el dise�o inicial
+� Dependencia del sistema workflow
+� Necesidad de capacitaci�n para los usuarios
+� Posible rigidez en procesos muy cambiantes
+1.7.5 Aplicaci�n en el desarrollo de software
+Los sistemas workflow son ampliamente utilizados en el desarrollo de soluciones que
+requieren la automatizaci�n de procesos, permitiendo gestionar de manera estructurada
+la ejecuci�n de tareas y decisiones.
+Adem�s, estos sistemas se integran con otras tecnolog�as y arquitecturas, facilitando la
+construcci�n de soluciones escalables y adaptables a distintos
+entornos organizacionales.
+13
+--- PAGE 19 ---
+1.8 Sistema de Gesti�n Documental (SGD)
+Un Sistema de Gesti�n Documental (SGD) es el conjunto de procesos, tecnolog�as y
+pol�ticas que permiten capturar, almacenar, organizar, controlar y recuperar documentos
+digitales a lo largo de su ciclo de vida (Sprague, 1995). En el contexto de los sistemas
+de informaci�n empresarial, un SGD trasciende el simple almacenamiento de archivos:
+incorpora mecanismos de control de versiones, auditor�a de acceso, flujos de aprobaci�n
+y reglas de retenci�n que garantizan la integridad y trazabilidad de la informaci�n.
+Ciclo de vida del documento
+El ciclo de vida de un documento digital comprende cinco fases: creaci�n/captura,
+almacenamiento, distribuci�n y colaboraci�n, retenci�n y disposici�n (ISO 15489-
+1:2016). En cada fase se aplican controles distintos:
+Captura: validaci�n del tipo MIME y del tama�o m�ximo permitido antes de aceptar el
+archivo.
+Almacenamiento: persistencia en un repositorio con clave �nica reproducible, separado
+de la base de datos transaccional.
+Distribuci�n: entrega mediante URLs temporales con expiraci�n y firma criptogr�fica,
+evitando exponer credenciales del repositorio.
+Versionado: conservaci�n del historial de revisiones, de modo que el estado anterior
+siempre pueda ser auditado o restaurado.
+Auditor�a: registro inmutable de cada operaci�n (qui�n, qu� acci�n, cu�ndo) asociada al
+documento.
+1.8.1 Edici�n colaborativa y control de concurrencia
+Los servidores de edici�n colaborativa, como los basados en el algoritmo Operational
+Transformation (OT) �implementado por herramientas como OnlyOffice o Google
+Docs�, act�an como intermediarios. El algoritmo OT (Ellis & Gibbs, 1989) transforma
+cada operaci�n de edici�n antes de aplicarla para mantener la consistencia entre los
+cursores de m�ltiples usuarios. El servidor mantiene el estado autoritativo del documento
+en memoria, propaga cambios a todos los clientes mediante WebSocket y, al finalizar la
+sesi�n de edici�n, ejecuta una llamada de retorno (callback) hacia el sistema de origen
+para persistir la versi�n final.
+1.8.2 Seguridad documental
+La seguridad documental abarca tres dimensiones: confidencialidad (solo usuarios
+autorizados acceden al documento), integridad (el documento no puede ser alterado sin
+dejar traza) e irrefutabilidad (el sistema puede demostrar qui�n realiz� cada operaci�n).
+Las URLs prefirmadas implementan confidencialidad mediante firma HMAC-SHA256 con
+tiempo de expiraci�n; los registros de auditor�a implementan la irrefutabilidad al asociar
+14
+--- PAGE 20 ---
+cada operaci�n al identificador del usuario autenticado. La integridad ante modificaciones
+accidentales se protege mediante el versionado: la versi�n anterior nunca se
+sobreescribe, solo se archiva su referencia en el historial.
+1.9 . Infraestructura en la Nube Basada en AWS
+La computaci�n en la nube, definida por NIST (Mell & Grance, 2011), es un modelo que
+permite el acceso bajo demanda a un conjunto compartido de recursos inform�ticos
+configurables (redes, servidores, almacenamiento, aplicaciones y servicios) que pueden
+ser aprovisionados y liberados con m�nimo esfuerzo de gesti�n. Amazon Web Services
+(AWS) es el proveedor l�der de servicios en la nube p�blica, con una oferta que cubre los
+tres modelos de servicio: IaaS, PaaS y SaaS.
+1.9.1 Modelos de servicio y despliegue
+El modelo IaaS (Infrastructure as a Service) provee recursos de c�mputo virtualizados
+gestionados por el proveedor a nivel de infraestructura f�sica y de red. EC2 (Elastic
+Compute Cloud) es el servicio IaaS de AWS: permite lanzar instancias de m�quinas
+virtuales con sistema operativo configurable, almacenamiento en bloques EBS y
+conectividad mediante grupos de seguridad que act�an como firewall stateful.
+El modelo PaaS (Platform as a Service) abstrae el sistema operativo y el middleware. S3
+(Simple Storage Service) es un servicio de almacenamiento de objetos que garantiza 11
+nueves de durabilidad (99,999999999%), replicaci�n autom�tica entre zonas de
+disponibilidad y un modelo de acceso REST sin necesidad de gestionar sistemas de
+archivos.
+1.9.2 Amazon S3: modelo de objetos y URLs prefirmadas
+S3 organiza los datos en buckets (contenedores) y objetos identificados por una clave
+(key) arbitraria. A diferencia de un sistema de archivos, S3 es un almac�n de clave-valor
+plano: no existen carpetas reales, aunque las claves pueden contener el car�cter / para
+simular jerarqu�as. Cada objeto tiene un tama�o de hasta 5 TB, metadatos (Content-
+Type, Content-Length) y una lista de control de acceso.
+Las URLs prefirmadas (presigned URLs) son el mecanismo central de seguridad para
+acceso temporal sin credenciales: el servidor firma la URL con la clave secreta de AWS
+usando HMAC-SHA256, incrustando el m�todo HTTP permitido, el bucket, la clave y la
+fecha de expiraci�n. El cliente puede usar esa URL durante el per�odo de validez sin
+necesidad de autenticarse contra AWS; transcurrido ese tiempo, la URL es rechazada.
+Esto permite que el frontend suba archivos directamente a S3 con PUT (reduciendo la
+carga del servidor de aplicaciones) y que los descargue con GET, manteniendo el bucket
+completamente privado.
+15
+--- PAGE 21 ---
+1.9.3 Escalabilidad y disponibilidad
+La nube de AWS facilita dos patrones de escalabilidad: vertical (aumentar los recursos
+de una instancia EC2) y horizontal (agregar instancias detr�s de un balanceador de carga
+como ELB). Para aplicaciones sin estado (stateless) que utilizan autenticaci�n basada
+en tokens (sin sesi�n en servidor), la escalabilidad horizontal es directa: cada instancia
+puede atender cualquier petici�n sin necesidad de coordinaci�n. S3 es intr�nsecamente
+escalable de forma transparente: su rendimiento se adapta autom�ticamente a la
+demanda sin intervenci�n del operador.
+Un patr�n arquitect�nico com�n para facilitar la escalabilidad horizontal es separar el
+almacenamiento de documentos (objetos) en un servicio de objetos externo, en lugar de
+usar vol�menes de almacenamiento locales o compartidos (como NFS) ligados a los
+servidores de aplicaciones. Esta separaci�n evita el estado compartido en el sistema de
+archivos y permite agregar o quitar instancias de aplicaci�n sin necesidad de sincronizar
+archivos entre ellas.
+1.9.4 Ventajas del almacenamiento de objetos para sistemas documentales
+El uso de un servicio de almacenamiento de objetos como Amazon S3, en lugar de
+sistemas de archivos tradicionales (NFS, SMB) o vol�menes en bloques (EBS), aporta
+ventajas espec�ficas para los Sistemas de Gesti�n Documental (Amazon Web Services,
+Inc., documentaci�n oficial):
+� Durabilidad y disponibilidad: S3 replica autom�ticamente los objetos entre
+m�ltiples zonas de disponibilidad, garantizando 11 nueves de durabilidad
+(99,999999999%) sin acciones administrativas adicionales. Esto reduce
+dr�sticamente el riesgo de p�rdida de documentos por fallos de hardware.
+� Escalabilidad sin particionamiento: a diferencia de un sistema de archivos que
+enfrenta l�mites de inodos o tama�o de directorio, S3 escala linealmente hasta
+exabytes sin reconfiguraci�n manual. Un SGD puede crecer sin necesidad de
+migrar o reparticionar datos.
+� Acceso concurrente sin bloqueos: m�ltiples clientes pueden leer o escribir
+objetos simult�neamente sin mecanismos de bloqueo distribuido, lo que evita
+cuellos de botella t�picos de NFS en entornos con alta concurrencia (por ejemplo,
+muchas sesiones de edici�n colaborativa o descarga simult�nea de informes).
+� Modelo de pago por uso: no hay costo por capacidad aprovisionada, sino por
+almacenamiento real utilizado y operaciones realizadas (GET, PUT, DELETE).
+Esto alinea los costos con la demanda real del sistema documental, evitando
+inversiones iniciales en infraestructura subutilizada.
+� Independencia del ciclo de vida del servidor: los objetos persisten m�s all� de
+la vida �til de cualquier instancia de c�mputo. En un SGD, esto significa que los
+documentos no se pierden si una instancia EC2 se detiene o reemplaza,
+simplificando la gesti�n de estados en arquitecturas el�sticas.
+16
+--- PAGE 22 ---
+1.10 Deep Learning
+El Deep Learning (DL) es una subdisciplina del Machine Learning que utiliza redes
+neuronales artificiales con m�ltiples capas de transformaci�n para aprender
+representaciones jer�rquicas de los datos (LeCun, Bengio & Hinton, 2015). A diferencia
+del Machine Learning cl�sico, que requiere ingenier�a manual de caracter�sticas (feature
+engineering), las redes profundas aprenden autom�ticamente representaciones
+abstractas a partir de datos crudos: texto, audio, vectores tabulares o secuencias
+simb�licas. Su aplicaci�n cubre un espectro amplio de dominios que incluye el
+procesamiento de lenguaje natural, el reconocimiento de voz, la clasificaci�n sobre datos
+estructurados y la generaci�n de contenido.
+1.10.1 Modelos de lenguaje y representaciones sem�nticas (NLP)
+La aplicaci�n del Deep Learning al Procesamiento de Lenguaje Natural (NLP)
+experiment� una revoluci�n con la introducci�n de la arquitectura Transformer (Vaswani
+et al., 2017), que reemplaz� las redes recurrentes mediante el mecanismo de atenci�n
+multi-cabeza (multi-head attention), permitiendo capturar dependencias de largo alcance
+en el texto con mayor eficiencia de paralelizaci�n.
+Los modelos de sentence embeddings (como Sentence-BERT o MiniLM) extienden esta
+idea: ajustan un Transformer para que frases sem�nticamente similares produzcan
+vectores de alta dimensi�n con una similitud coseno alta. Esta m�trica, que mide el
+coseno del �ngulo entre dos vectores, es independiente de su magnitud y alcanza su
+valor m�ximo cuando los vectores apuntan en la misma direcci�n (identidad sem�ntica).
+Este enfoque permite construir sistemas de clasificaci�n y recomendaci�n basados en la
+proximidad sem�ntica del texto del usuario respecto a un cat�logo de opciones
+candidatas, sin necesidad de etiquetas de entrenamiento expl�citas para cada par texto-
+opci�n.
+1.10.2 Reconocimiento autom�tico de voz (ASR)
+El Reconocimiento Autom�tico del Habla (ASR, Automatic Speech Recognition)
+convierte se�ales de audio en texto transcrito. Los sistemas modernos de ASR basados
+en Deep Learning operan sobre una representaci�n tiempo-frecuencia del audio
+denominada espectrograma Mel: una matriz que captura la energ�a de la se�al en
+distintas bandas de frecuencia a lo largo del tiempo, aproximando la percepci�n auditiva
+humana.
+El modelo Whisper (Radford et al., 2022) es un Transformer encoder-decoder entrenado
+sobre 680.000 horas de audio multiling�e en un r�gimen de aprendizaje supervisado
+d�bil (weakly supervised). El encoder procesa los espectrogramas Mel y produce
+representaciones contextuales del audio; el decoder genera tokens de texto mediante
+decodificaci�n autoregresiva con atenci�n cruzada (cross-attention) sobre las
+17
+--- PAGE 23 ---
+representaciones del encoder. Este dise�o permite transcripci�n multiling�e, detecci�n
+autom�tica de idioma y generaci�n de marcas de tiempo por segmento, siendo robusto
+ante variaciones de calidad de audio, acento y ruido de fondo.
+1.10.3 Clasificaci�n supervisada sobre datos tabulares y predicci�n de flujo
+M�s all� del lenguaje y el audio, el Deep Learning se aplica con frecuencia a datos
+tabulares estructurados: vectores de caracter�sticas num�ricas y categ�ricas que
+describen el estado de un objeto o evento en un instante dado. Una red neuronal
+feedforward (MLP � Multi-Layer Perceptron) aprende una funci�n de clasificaci�n que
+asigna cada vector de entrada a una categor�a discreta entre m�ltiples clases posibles.
+Cada capa oculta aplica una transformaci�n seguida de una funci�n de activaci�n no
+lineal (como ReLU o GELU), lo que dota al modelo de la capacidad de aprender l�mites
+de decisi�n arbitrariamente complejos.
+En el dominio de la gesti�n de procesos de negocio, esta t�cnica se emplea para la
+predicci�n de rutas de proceso (workflow routing): dado el estado de contexto de una
+instancia en un nodo de decisi�n, el modelo predice cu�l de las ramas disponibles es
+m�s adecuada seg�n los patrones aprendidos de instancias hist�ricas. Las
+caracter�sticas de entrada pueden incluir variables como la complejidad del caso, la
+completitud documental, el segmento del solicitante, la zona geogr�fica o el historial de
+incidencias previas. El entrenamiento utiliza la funci�n de p�rdida de entrop�a cruzada
+categ�rica, y la actualizaci�n de pesos se realiza mediante retropropagaci�n con un
+optimizador adaptativo como Adam. En inferencia, la rama recomendada corresponde a
+la clase con mayor probabilidad en la distribuci�n de salida, acompa�ada de un
+porcentaje de confianza que determina si la recomendaci�n es suficientemente fiable
+para presentarla al operador como sugerencia.
+1.10.4 Framework de Deep Learning: PyTorch
+PyTorch (Paszke et al., 2019), desarrollado por Meta AI Research, se distingue por su
+grafo de computaci�n din�mico (define-by-run): el grafo se construye en tiempo de
+ejecuci�n, lo que facilita la depuraci�n con herramientas est�ndar de Python y el
+desarrollo de arquitecturas con flujo de control variable. PyTorch se ha consolidado como
+el framework dominante en investigaci�n acad�mica y es la base de la mayor�a de los
+modelos del ecosistema HuggingFace Transformers, incluidos los modelos de sentence
+embeddings (MiniLM, Sentence-BERT) y los sistemas ASR de c�digo abierto como
+Whisper.
+Sus conceptos fundamentales incluyen: tensores como estructura de datos central con
+soporte GPU, diferenciaci�n autom�tica (autograd) para calcular gradientes en la
+retropropagaci�n, y capas como abstracciones de transformaciones param�tricas. La
+diferenciaci�n autom�tica implementa la regla de la cadena de forma computacional,
+construyendo un grafo de operaciones y propagando gradientes en sentido inverso para
+actualizar los pesos mediante descenso de gradiente estoc�stico (SGD) o variantes
+adaptativas como Adam.
+18
+--- PAGE 24 ---
+1.10.5 Modelos generativos de gran escala (LLMs en producci�n)
+Los LLMs de �ltima generaci�n son modelos Transformer multimodales de decenas de
+miles de millones de par�metros, accesibles mediante APIs de inferencia. Son capaces
+de razonamiento complejo, generaci�n de c�digo estructurado, comprensi�n de
+contextos largos y producci�n de salidas en formatos estructurados (JSON, XML)
+mediante t�cnicas de prompting como chain-of-thought y few-shot learning, sin
+necesidad de fine-tuning espec�fico para cada tarea.
+Una capacidad particularmente relevante en sistemas de informaci�n empresarial es la
+generaci�n de artefactos estructurados a partir de descripciones en lenguaje natural:
+dado un prompt que describe un proceso de negocio, el modelo puede producir
+directamente una representaci�n formal del proceso (un diagrama, un esquema de
+formulario, un informe anal�tico) que cumple con restricciones sint�cticas y sem�nticas
+predefinidas. Esta capacidad reduce sustancialmente la brecha entre la especificaci�n
+informal de un proceso en lenguaje natural y su representaci�n ejecutable en un sistema
+de gesti�n.
+2 PUDS (PROCESO UNIFICADO DE DESARROLLO DE
+SOFTWARE)
+2.1 FT: CAPTURA DE REQUISITOS
+2.1.1 Identificar Actores y Casos de Uso
+2.1.1.1 Identificar Actores
+ID ACTOR DESCRIPCI�N
+A1
+Gestiona usuarios, departamentos y pol�ticas de
+negocio; adem�s publica pol�ticas, consulta
+anal�tica y usa funciones avanzadas como
+Administrador colaboraci�n e IA.
+19
+--- PAGE 25 ---
+Ejecuta el trabajo operativo del sistema
+mediante el inicio de tr�mites, reclamo de
+A2 Funcionario tareas y completado de formularios.
+Consulta y da seguimiento a sus tr�mites,
+adem�s de registrarse e iniciar sesi�n en la
+A3 Cliente plataforma.
+2.1.1.2 Identificar Casos de Uso
+ID NOMBRE
+CU-
+Iniciar sesion
+01
+CU-
+Registarse
+02
+CU-
+Cerrar sesi�n
+03
+CU-
+Gestionar usuarios
+04
+CU-
+Gestionar departamentos
+05
+CU-
+Crear pol�tica de negocio
+06
+CU-
+Editar pol�tica de negocio
+07
+CU-
+Publicar pol�tica de negocio
+08
+CU-
+Iniciar tr�mite
+09
+CU-
+Reclamar tarea (Atender Actividad)
+10
+20
+--- PAGE 26 ---
+CU-
+Completar tarea (Formulario)
+11
+CU-
+Listar tr�mites
+12
+CU-
+Ver estado de tr�mite
+13
+CU-
+Generar diagrama mediante IA
+14
+CU-
+Colaborar en tiempo real
+15
+CU- Ver Anal�tica y Cuellos de Botella
+16
+CU-
+Subir documento a tr�mite
+17
+CU-
+Descargar documento
+18
+CU-
+Ver auditor�a de documento
+19
+CU-
+Gestionar Privilegios
+20
+CU-
+Editar documento en l�nea de forma colaborativa
+21
+CU-
+Iniciar tr�mite mediante agente IA
+22
+CU-
+Ver an�lisis de riesgo de tr�mites
+23
+CU-
+Generar reporte din�mico
+24
+CU-
+Usar aplicaci�n sin conexi�n
+25
+21
+--- PAGE 27 ---
+2.1.2 Priorizar Casos de Uso
+ID NOMBRE ACTOR PRIORIDAD
+Iniciar sesi�n Administrador,
+CU-01 Funcionario, Cliente ALTA
+ALTA
+CU2 Registrarse Cliente
+Administrador,
+ALTA
+CU3 Cerrar sesi�n Funcionario, Cliente
+Gestionar usuarios
+CU4 Administrador ALTA
+CU5 Gestionar departamentos Administrador ALTA
+CU6 Crear pol�tica de negocio Administrador ALTA
+CU7 Editar pol�tica de negocio Administrador MEDIA
+Publicar pol�tica de
+CU8 Administrador ALTA
+negocio
+Iniciar tr�mite
+CU9 Funcionario ALTA
+Reclamar tarea (Atender
+ALTA
+CU10 Funcionario
+Actividad)
+Completar tarea
+CU11 Funcionario ALTA
+(Formulario)
+Listar tr�mites
+CU12 Cliente ALTA
+Ver estado de tr�mite
+CU13 Cliente ALTA
+Generar diagrama
+CU14 Administrador BAJA
+mediante IA
+22
+--- PAGE 28 ---
+Colaborar en tiempo real
+CU15 Administrador BAJA
+Ver Anal�tica y Cuellos
+CU16 Administrador BAJA
+de Botella
+CU- Subir documento a
+Cliente,Funcionario ALTA
+17 tr�mite
+CU- Cliente,Funcionario,
+Descargar documento MEDIA
+18 Administrador
+CU- Ver auditor�a de
+Administrador BAJA
+19 documento
+CU-
+Gestionar Privilegios Administrador MEDIA
+20
+CU- Editar documento en
+Funcionario,
+21 l�nea de forma ALTA
+Administrador
+colaborativa
+CU- Iniciar tr�mite mediante
+Cliente ALTA
+22 agente IA
+CU- Ver an�lisis de riesgo de
+Administrador MEDIA
+23 tr�mites
+CU- Generar reporte
+Administrador MEDIA
+24 din�mico
+CU- Cliente,
+Usar aplicaci�n sin
+25 Administrador, ALTA
+conexi�n
+Funcionario
+Ciclo #1
+ID NOMBRE ACTOR PRIORIDAD
+Iniciar sesi�n Administrador,
+CU-01 Funcionario, ALTA
+Cliente
+ALTA
+CU2 Registrarse Cliente
+23
+--- PAGE 29 ---
+Administrador,
+ALTA
+CU3 Cerrar sesi�n Funcionario,
+Cliente
+Gestionar usuarios
+CU4 Administrador ALTA
+CU5 Gestionar departamentos Administrador ALTA
+CU6 Crear pol�tica de negocio Administrador ALTA
+CU7 Editar pol�tica de negocio Administrador MEDIA
+Publicar pol�tica de
+CU8 Administrador ALTA
+negocio
+Iniciar tr�mite
+CU9 Funcionario ALTA
+Reclamar tarea (Atender
+ALTA
+CU10 Funcionario
+Actividad)
+Completar tarea
+CU11 Funcionario ALTA
+(Formulario)
+Listar tr�mites
+CU12 Cliente ALTA
+Ver estado de tr�mite
+CU13 Cliente ALTA
+Generar diagrama
+CU14 Administrador BAJA
+mediante IA
+Colaborar en tiempo real
+CU15 Administrador BAJA
+Ver Anal�tica y Cuellos de
+CU16 Administrador BAJA
+Botella
+Ciclo #2
+CU- Subir documento a
+Cliente,Funcionario ALTA
+17 tr�mite
+24
+--- PAGE 30 ---
+CU- Cliente,Funcionario,
+Descargar documento MEDIA
+18 Administrador
+CU- Ver auditor�a de
+Administrador BAJA
+19 documento
+CU-
+Gestionar Privilegios Admin MEDIA
+20
+CU- Editar documento en
+Funcionario,
+21 l�nea de forma ALTA
+Administrador
+colaborativa
+CU- Iniciar tr�mite mediante
+Cliente ALTA
+22 agente IA
+CU- Ver an�lisis de riesgo de
+Administrador MEDIA
+23 tr�mites
+CU- Generar reporte
+Administrador MEDIA
+24 din�mico
+CU- Cliente,
+Usar aplicaci�n sin
+25 Administrador, ALTA
+conexi�n
+Funcionario
+25
+--- PAGE 31 ---
+2.1.3 Especificar Casos de Uso
+CU-01 � Iniciar sesi�n
+Prop�sito Permitir que los usuarios (Administrador, Funcionario o Cliente) accedan al
+sistema mediante la validaci�n de sus credenciales.
+Resumen El usuario ingresa su email y contrase�a. El sistema valida los datos contra
+la base de datos y, si son correctos, genera un token JWT para manejar la
+sesi�n y los permisos seg�n el rol.
+Actores Administrador,Funcionario,Cliente
+Administrador,Funcionario,Cliente
+Actor
+Iniciador
+Precondici�n El usuario debe estar registrado en el sistema.
+Postcondici�n El usuario accede al sistema con una sesi�n activa
+26
+--- PAGE 32 ---
+Flujo Principal
+1. El usuario accede a la interfaz de inicio de sesi�n.
+2. El usuario ingresa su correo electr�nico y contrase�a.
+3. El sistema valida las credenciales en la base de datos.
+4. El sistema genera un token de acceso (JWT) con el rol del usuario.
+5. El sistema redirige al usuario al dashboard correspondiente a su nivel de
+acceso.
+Excepci�n
+Credenciales inv�lidas: El sistema deniega el acceso y muestra un
+mensaje de error indicando que el usuario o la contrase�a son incorrectos.
+CU-02 �Registrarse
+Prop�sito Permitir a los nuevos clientes crear una cuenta en el sistema
+para poder iniciar tr�mites de pol�ticas de negocio.
+Resumen El usuario proporciona sus datos personales b�sicos (nombre,
+email, contrase�a). El sistema encripta la contrase�a y almacena
+el nuevo perfil con el rol de "Cliente" por defecto.
+Actores Cliente
+Actor Iniciador Cliente
+27
+--- PAGE 33 ---
+Precondici�n Ninguna (el usuario no requiere estar autenticado para
+registrarse como cliente).
+Postcondici�n El usuario queda registrado, autenticado autom�ticamente y
+accede al panel correspondiente seg�n su rol.
+Flujo Principal 1. El usuario selecciona la opci�n "Registrarse" en la pantalla de
+inicio.
+2. El usuario completa el formulario con su nombre completo,
+correo electr�nico y una contrase�a segura.
+3. El sistema verifica que el correo electr�nico no est�
+registrado previamente.
+4. El sistema encripta la contrase�a utilizando el est�ndar
+BCrypt.
+5. El sistema crea el nuevo registro de usuario en la colecci�n
+de
+MongoDB
+Excepci�n
+Email duplicado: El sistema informa que el correo ya est� en
+uso y solicita uno diferente.
+CU-03 �Cerrar Sesi�n
+Prop�sito Finalizar la sesi�n actual del usuario de forma segura, invalidando
+su acceso actual al sistema
+28
+--- PAGE 34 ---
+Actores Administrador,Funcionario,Cliente
+Actor Iniciador Administrador,Funcionario,Cliente
+Precondicion El usuario debe tener una sesi�n activa con un token v�lido..
+Postcondici�n El usuario queda registrado, autenticado autom�ticamente y accede
+al panel correspondiente seg�n su rol.
+Flujo Principal
+1. El usuario selecciona la opci�n "Cerrar sesi�n" en el men�
+de navegaci�n.
+2. El sistema procede a eliminar el token JWT del
+almacenamiento local
+3. El sistema redirige autom�ticamente al usuario a la p�gina
+de inicio de sesi�n.
+Excepci�n
+Fallo de conexi�n: Si no se puede completar la redirecci�n, el
+sistema fuerza la limpieza del almacenamiento local y solicita
+refrescar la p�gina..
+CU-04 �Gestionar Usuario
+Prop�sito
+Permitir al Administrador gestionar el ciclo de vida de todos los
+usuarios del sistema, controlando sus niveles de acceso y
+responsabilidades.
+29
+--- PAGE 35 ---
+Resumen El administrador accede al panel de usuarios, donde puede
+visualizar el listado completo, registrar nuevos funcionarios,
+asignarles roles (Admin/Funcionario) y vincularlos a un
+departamento espec�fico, adem�s de poder editar o desactivar
+cuentas.
+Actores Administrador
+Actor Iniciador Administrador
+Precondici�n El administrador debe tener una sesi�n activa.
+Flujo Principal
+1. El administrador accede a la secci�n "Gesti�n de Usuarios.
+2. El sistema recupera de MongoDB y muestra la lista de
+usuarios.
+3. El administrador selecciona la acci�n "Nuevo Usuario" (o
+Editar uno existente).
+4. El sistema despliega el formulario de registro
+5. El administrador ingresa los datos, asigna el rol y, si es
+funcionario, selecciona su departamento
+6. El sistema valida, persiste los cambios y actualiza la lista
+visual
+Excepci�n
+Datos inv�lidos o duplicados: Si el email ya existe o faltan
+campos obligatorios, el sistema cancela la operaci�n y resalta los
+errores en el formulario.
+30
+--- PAGE 36 ---
+CU-05 �Gestionar departamentos
+Prop�sito
+Permitir al Administrador crear y administrar las unidades
+organizativas de la empresa, las cuales actuar�n como
+carriles (lanes) en el dise�o de las pol�ticas de negocio.
+Resumen ResumenEl administrador define los departamentos (ej.
+Recursos Humanos, Soporte T�cnico, Finanzas) que
+conformar�n la estructura de la empresa. Estos
+departamentos agrupar�n a los funcionarios y servir�n para
+enrutar las actividades del workflow.
+Actores Administrador
+Actor Iniciador Administrador
+Precondici�n El administrador debe tener una sesi�n activa.
+Flujo Principal 1. El administrador accede a la secci�n "Gesti�n de
+Departamentos
+2. El sistema muestra la lista de departamentos activos.
+3. El administrador selecciona la opci�n "Nuevo
+Departamento"
+4. Ingresa el nombre y una breve descripci�n de la
+unidad organizativa
+5. El administrador hace clic en "Guardar"
+6. El sistema valida la informaci�n, guarda el documento
+en la base de datos y actualiza la lista
+31
+--- PAGE 37 ---
+Excepci�n
+Eliminaci�n bloqueada: Si el administrador intenta eliminar
+un departamento que ya tiene funcionarios asignados o que
+est� siendo utilizado en un diagrama de pol�tica de negocio
+activo, el sistema bloquea la acci�n y muestra un mensaje de
+restricci�n por integridad de datos.
+CU-06 �Crear pol�tica de negocio
+Prop�sito
+Permitir al Administrador definir una nueva pol�tica de negocio
+mediante un diagrama interactivo basado en UML 2.5,
+utilizando actividades, lanes y formularios din�micos..
+Resumen El administrador ingresa los datos base y accede al lienzo de
+dise�o. El sistema inicializa el entorno mostrando un Pool con
+un carril inicial sin departamento asignado. El administrador
+selecciona el carril para asignarle un departamento en el
+panel derecho, a�ade m�s carriles si es necesario, dibuja las
+actividades, las conecta y configura sus formularios.
+Actores Administrador
+Actor Iniciador Administrador
+Precondici�n El administrador debe estar autenticado. Deben existir
+departamentos creados previamente en el sistema.
+32
+--- PAGE 38 ---
+Flujo Principal
+1. El administrador selecciona "Nueva pol�tica de
+negocio"
+2. Ingresa el nombre del proceso.
+3. El sistema despliega el entorno de dise�o visual,
+inicializando autom�ticamente un Pool con un carril (lane)
+inicial sin departamento asignado.
+4. El administrador hace clic sobre el carril inicial y utiliza
+el panel de propiedades a la derecha para vincularle un
+departamento del sistema.
+5. El administrador a�ade carriles adicionales mediante
+el bot�n de la barra de herramientas seg�n lo requiera el
+proceso.
+6. Dibuja las actividades dentro de los carriles, las enlaza
+definiendo el flujo l�gico y configura los formularios
+din�micos para cada una.
+7. El administrador guarda la pol�tica en estado
+"Borrador".
+Excepci�n
+Datos inv�lidos en dise�o: El sistema impide el guardado si
+detecta configuraciones incompletas en los formularios
+din�micos o errores de integridad en el nombre de la pol�tica.
+CU-07 �Editar pol�tica de negocio
+Prop�sito Permitir al Administrador modificar la estructura gr�fica o los formularios de
+una pol�tica de negocio que ya fue creada.
+Resumen El administrador selecciona una pol�tica existente. El sistema carga el lienzo
+con el diagrama guardado, permitiendo al usuario agregar o quitar nodos,
+reconectar flujos o alterar los requerimientos de los formularios antes de
+volver a guardar los cambios.
+33
+--- PAGE 39 ---
+Actores Administrador
+Administrador
+Actor
+Iniciador
+Precondici�n El administrador debe estar autenticado y la pol�tica seleccionada debe
+existir.
+Flujo 1. El administrador accede a la lista de pol�ticas de negocio.
+Principal 2. Selecciona la opci�n "Editar" sobre una pol�tica espec�fica.
+3. El sistema recupera la informaci�n de la base de datos y renderiza el
+diagrama en el lienzo.
+4. El administrador modifica elementos (mueve nodos, cambia
+conexiones o edita formularios).
+5. Hace clic en "Guardar�.
+6. El sistema actualiza el registro en la base de datos y confirma el �xito
+de la operaci�n.
+Excepci�n
+Edici�n restringida: Si la pol�tica ya est� en estado "Publicada" o tiene
+tr�mites en ejecuci�n, el sistema bloquea la edici�n estructural del diagrama
+para evitar inconsistencias y solo permite visualizaci�n.
+CU-08 �Publicar pol�tica de negocio
+Prop�sito
+Permitir al Administrador habilitar operativamente una pol�tica de
+negocio para que los clientes puedan iniciar tr�mites basados en
+ella.
+34
+--- PAGE 40 ---
+Resumen El administrador selecciona una pol�tica existente. El sistema
+carga el lienzo con el diagrama guardado, permitiendo al usuario
+agregar o quitar nodos, reconectar flujos o alterar los
+requerimientos de los formularios antes de volver a guardar los
+cambios.
+Actores Administrador
+Actor Iniciador Administrador
+Precondici�n El administrador debe estar autenticado y la pol�tica seleccionada
+debe existir.
+Flujo Principal 1. El administrador accede a la lista de pol�ticas de negocio.
+2. Selecciona la opci�n "Editar" sobre una pol�tica espec�fica.
+3. El sistema recupera la informaci�n de la base de datos y
+renderiza el diagrama en el lienzo.
+4. El administrador modifica elementos (mueve nodos, cambia
+conexiones o edita formularios).
+5. Hace clic en "Guardar�.
+6. El sistema actualiza el registro en la base de datos y
+confirma el �xito de la operaci�n.
+Excepci�n
+Edici�n restringida: Si la pol�tica ya est� en estado "Publicada" o
+tiene tr�mites en ejecuci�n, el sistema bloquea la edici�n
+estructural del diagrama para evitar inconsistencias y solo permite
+visualizaci�n.
+35
+--- PAGE 41 ---
+CU-09 �Iniciar tr�mite
+Prop�sito Permitir al Funcionario crear una instancia de un proceso
+(workflow) y vincularla formalmente a un Cliente registrado.
+Resumen El funcionario selecciona al cliente solicitante y el tipo de pol�tica
+de negocio (tr�mite) que se desea realizar. Al confirmar, el
+sistema crea la instancia en la base de datos y genera
+autom�ticamente la primera actividad del flujo en estado
+pendiente
+Actores Funcionario
+Actor Iniciador Funcionario
+Precondici�n El funcionario debe estar autenticado. La pol�tica debe estar
+"Publicada". El cliente debe existir en el sistema.
+Flujo Principal 1. El funcionario selecciona la opci�n de "Iniciar Tr�mite�.
+2. El sistema solicita seleccionar al cliente solicitante.
+3. El funcionario busca y selecciona al Cliente de la lista de
+usuarios registrados�.
+4. El funcionario selecciona la Pol�tica de Negocio a ejecutar
+de entre las disponibles.
+5. El sistema crea la instancia del Tr�mite en MongoDB, la
+asocia al ID del Cliente y genera la primera Actividad del
+proceso.
+36
+--- PAGE 42 ---
+6. El sistema muestra un mensaje de confirmaci�n con el
+n�mero de tr�mite generado
+Excepci�n
+Cliente no seleccionado: El sistema impide la creaci�n si no se
+ha vinculado un usuario con rol de cliente.
+CU-10 �Reclamar Tarea
+Prop�sito
+Permitir que cualquier funcionario disponible asuma la
+responsabilidad de una actividad que ha sido enrutada a la
+bandeja compartida de su departamento.
+Resumen Tras iniciar un tr�mite o completar un paso anterior, el sistema
+env�a la nueva tarea al departamento correspondiente seg�n el
+lane del diagrama. Cualquier funcionario de ese departamento
+puede ver la tarea, seleccionarla y "reclamarla" (atenderla),
+bloque�ndola para el resto de sus compa�eros..
+Actores Funcionario
+Actor Iniciador Funcionario
+Precondici�n El funcionario debe estar autenticado y tener asignado el
+departamento al que lleg� la actividad. La tarea debe estar en
+estado "Pendiente".
+37
+--- PAGE 43 ---
+Flujo Principal 1. El funcionario accede al Monitor de Actividades de su
+departamento.
+2. El sistema muestra la lista de actividades en estado
+"Pendiente" que a�n no tienen un responsable asignado.
+3. El funcionario selecciona una actividad de la bandeja
+grupal.
+4. Hace clic en el bot�n "Atender" o "Reclamar".
+5. El sistema asocia el ID del funcionario a la tarea,
+cambiando su estado a "En Progreso"
+6. El sistema remueve visualmente la tarea de la bandeja
+"Pendiente" del resto de los funcionarios del departamento
+Excepci�n
+Colisi�n de atenci�n: Si dos funcionarios intentan reclamar la
+misma tarea al mismo tiempo, el sistema se la asigna al primero
+que la solicit� y al segundo le muestra un aviso de "Actividad ya
+reclamada por otro usuario", actualizando su lista.
+CU-11 Completar Formulario�
+Prop�sito
+Permitir al Funcionario registrar la informaci�n t�cnica requerida de
+una tarea que est� atendiendo y hacer que el tr�mite avance al
+siguiente paso del proceso.
+38
+--- PAGE 44 ---
+Resumen El funcionario abre una tarea que previamente reclam� (estado "En
+Progreso"). El sistema renderiza el formulario din�mico configurado
+en el diagrama UML. Tras completar y validar los datos, el sistema
+guarda la informaci�n, cierra la tarea actual y enruta autom�ticamente
+la siguiente actividad a la bandeja del departamento correspondiente.
+Actores Funcionario
+Actor Iniciador Funcionario
+Precondici�n La actividad debe haber sido atendida/reclamada previamente y
+encontrarse en estado "En Progreso" bajo la responsabilidad del
+funcionario.
+Flujo Principal 1. El funcionario accede a su bandeja personal y selecciona una
+actividad en estado "En Progreso".
+2. El sistema recupera la estructura del formulario din�mico
+desde la definici�n de la pol�tica de negocio en MongoDB.
+3. El sistema renderiza el formulario en pantalla.
+4. El funcionario completa los campos t�cnicos y datos
+requeridos.
+5. Hace clic en "Completar Formulario".
+6. El sistema eval�a el flujo del diagrama UML, identifica el
+siguiente paso y genera la nueva actividad en estado "Pendiente"
+en la bandeja grupal del departamento que indica el carril (lane).
+Excepci�n
+Datos incompletos o inv�lidos: Si el funcionario omite informaci�n
+obligatoria o ingresa datos con formato incorrecto, el sistema bloquea
+el env�o, resalta los campos con error y solicita su correcci�n.
+39
+--- PAGE 45 ---
+CU-12 �Listar Tramites
+Prop�sito
+Permitir al Cliente visualizar una relaci�n organizada e hist�rica
+de todos los tr�mites que han sido vinculados a su cuenta por los
+funcionarios.
+Resumen El cliente accede a su panel personal de seguimiento. El sistema
+consulta en la base de datos todos los procesos asociados a su
+ID de usuario y muestra una lista resumida con el nombre del
+tr�mite, fechas clave y el estado global (En proceso, Completado
+o Rechazado).
+Actores Cliente
+Actor Iniciador Cliente
+Precondici�n El cliente debe estar autenticado en el sistema.
+40
+--- PAGE 46 ---
+Flujo Principal
+1. El cliente selecciona la opci�n "Mis Tr�mites" en su men�
+de navegaci�n.
+2. El sistema realiza una consulta a la colecci�n de
+MongoDB filtrando los tr�mites por el ID del cliente
+autenticado.
+3. El sistema procesa la informaci�n y despliega una lista o
+tabla de resultados.
+4. El cliente visualiza el nombre de la pol�tica de negocio
+aplicada, la fecha en que el funcionario inici� el tr�mite y el
+estado actual mediante indicadores visuales (badges de
+colores).
+Excepci�n
+Bandeja vac�a: Si el cliente a�n no tiene ning�n tr�mite asociado
+a su cuenta, el sistema muestra un mensaje amigable indicando
+que no hay actividad registrada por el momento.
+CU-13 �Ver estado de tramite
+Prop�sito Permitir al Cliente visualizar el progreso y la ubicaci�n exacta de
+su tr�mite dentro del flujo de trabajo definido por la empresa.
+Resumen El cliente accede al detalle de un tr�mite. El sistema recupera la
+estructura gr�fica de la pol�tica de negocio y la renderiza en modo
+de solo lectura, resaltando visualmente la actividad actual y
+mostrando el historial de los departamentos por los que ya pas�.
+Actores Cliente
+Actor Iniciador Cliente
+41
+--- PAGE 47 ---
+Precondici�n El cliente debe estar autenticado y el tr�mite debe existir y estar
+vinculado a su cuenta.
+Flujo Principal
+1. El cliente selecciona un tr�mite espec�fico desde su lista de
+"Mis Tr�mites".
+2. El sistema recupera de MongoDB la instancia del tr�mite y
+el JSON del diagrama de la pol�tica de negocio.
+3. El sistema renderiza el diagrama UML en el lienzo en
+modo read-only (solo lectura).
+4. El sistema identifica la actividad que se encuentra en
+estado "En Progreso" o "Pendiente" y la resalta con un color
+distintivo (ej. animaci�n o borde).
+5. El cliente visualiza el historial de tareas completadas,
+incluyendo la fecha de finalizaci�n de cada paso.
+Excepci�n
+Error de renderizado: Si el JSON del diagrama fue corrompido o
+no se puede cargar, el sistema muestra el estado del tr�mite en
+formato de lista de texto y reporta un error de visualizaci�n
+gr�fica.
+CU-14 �Generar diagrama mediante IA
+Prop�sito
+Permitir al Administrador agilizar la creaci�n de pol�ticas de
+negocio utilizando inteligencia artificial generativa a partir de
+lenguaje natural.
+Resumen El administrador escribe una descripci�n del proceso que desea
+modelar. El sistema env�a este prompt junto con el contexto de los
+departamentos al microservicio de IA (FastAPI + Google Gemini).
+La IA retorna una estructura estructurada que el sistema dibuja
+autom�ticamente en el lienzo como un diagrama inicial editable.
+42
+--- PAGE 48 ---
+Actores Administrador
+Actor Iniciador Administrador
+Precondici�n El administrador debe estar autenticado en el dise�ador. El
+microservicio de Inteligencia Artificial debe estar en l�nea.
+Flujo Principal
+1. El administrador, dentro del editor de pol�ticas, abre el
+panel de "Asistente IA".
+2. Ingresa la descripci�n del proceso (ej. "Proceso de
+instalaci�n de medidor con validaci�n de cr�dito y asignaci�n
+t�cnica").
+3. El sistema env�a la consulta al microservicio externo
+(FastAPI).
+4. l microservicio interact�a con Google Gemini 2.5 Flash y
+procesa la respuesta para convertirla en el formato compatible
+con el lienzo
+5. El sistema recibe los datos y dibuja autom�ticamente los
+carriles (lanes), actividades y flechas de conexi�n en el canvas.
+6. El administrador revisa el diagrama generado y puede
+editarlo manualmente seg�n necesite.
+Excepci�n
+Falla de servicio IA: Si la API de Gemini no responde o hay un
+timeout en FastAPI, el sistema muestra un mensaje de "Servicio
+de IA no disponible temporalmente" y mantiene intacto el
+diagrama actual.
+43
+--- PAGE 49 ---
+CU-15 � Colaborar en tiempo real
+Prop�sito
+Permitir que m�ltiples Administradores editen el mismo diagrama
+de pol�tica de negocio de manera simult�nea sin generar
+conflictos de guardado.
+Resumen El administrador habilita el modo colaborativo. El sistema
+establece una conexi�n mediante WebSockets (STOMP).
+Cualquier modificaci�n en el lienzo (mover un nodo, cambiar un
+nombre, agregar un flujo) emite un evento que se propaga
+instant�neamente a todos los administradores conectados a esa
+sesi�n.
+Actores Administrador
+Actor Iniciador Administrador
+Precondici�n Los administradores deben estar autenticados. La pol�tica de
+negocio debe estar previamente guardada en el sistema.
+44
+--- PAGE 50 ---
+Flujo Principal
+1. El administrador accede a una pol�tica en modo edici�n y
+activa la "Colaboraci�n".
+2. El sistema establece una conexi�n WebSocket hacia el
+backend (Spring Boot) suscribi�ndose al t�pico espec�fico del
+diagrama
+3. Otro administrador se conecta al mismo diagrama.
+4. El primer administrador realiza un cambio (ej. arrastra una
+nueva actividad al lienzo)
+5. El sistema emite el evento del cambio (coordenadas, tipo
+de nodo) al servidor.
+6. El servidor hace un broadcast del evento a todos los
+clientes suscritos.
+7. El lienzo del segundo administrador se actualiza en tiempo
+real reflejando el cambio exacto.
+CU-17 � Subir documento a tr�mite
+Prop�sito Permitir a clientes y empleados adjuntar los archivos
+requeridos por la pol�tica de negocio a un tr�mite activo.
+Resumen El usuario selecciona el requisito documental del tr�mite,
+elige un archivo desde su dispositivo y el sistema lo carga
+en Amazon S3, registrando el documento en MongoDB
+vinculado al tr�mite, la pol�tica y el cliente.
+45
+--- PAGE 51 ---
+Actores Cliente, Funcionario
+Actor Iniciador Cliente / Funcionario
+Precondici�n El usuario est� autenticado. Existe un tr�mite activo con
+al menos un requisito documental pendiente.
+Postcondici�n El documento queda almacenado en S3 y registrado en el
+sistema con estado UPLOADED, asociado al tr�mite y al
+cliente.
+Flujo Principal 1. El usuario accede al tr�mite activo y visualiza los
+requisitos documentales pendientes.
+2. El usuario selecciona el requisito y elige el archivo
+desde su dispositivo.
+3. El sistema solicita una URL pre-firmada al backend
+(POST /documents/upload/init).
+4. El sistema sube el archivo directamente a S3 usando la
+URL pre-firmada.
+5. El sistema confirma la carga al backend (POST
+/documents/upload/confirm).
+6. El backend registra el documento en MongoDB con
+estado UPLOADED.
+46
+--- PAGE 52 ---
+CU-18 � Descargar documento
+Prop�sito Permitir a usuarios autorizados obtener una copia local de un
+archivo almacenado en el sistema.
+Resumen El usuario solicita la descarga de un documento. El sistema
+verifica los privilegios de acceso y genera una URL temporal
+pre-firmada de S3 para iniciar la descarga. El evento queda
+registrado en la bit�cora de auditor�a.
+Actores Cliente, Funcionario, Admin
+Actor Iniciador Cliente / Funcionario / Admin
+Precondici�n El usuario est� autenticado y tiene privilegios de lectura sobre
+el documento solicitado.
+Postcondici�n El archivo se descarga al dispositivo del usuario. El evento
+queda registrado en la bit�cora de auditor�a.
+Flujo Principal 1. El usuario localiza el documento en la gesti�n documental o
+en el detalle del tr�mite.
+2. El usuario hace clic en "Descargar".
+3. El sistema verifica que el usuario tiene permiso de lectura
+sobre el documento.
+47
+--- PAGE 53 ---
+4. El backend genera una URL pre-firmada de S3 con tiempo
+de expiraci�n.
+5. El sistema inicia la descarga del archivo en el dispositivo del
+usuario.
+6. El sistema registra el evento de descarga en la bit�cora de
+auditor�a.
+Excepci�n Sin privilegios de acceso: El sistema informa que el usuario
+no tiene permiso para descargar el documento.
+CU-19 � Ver auditor�a de documento
+Prop�sito Permitir a empleados y administradores revisar el historial
+completo de eventos registrados sobre un documento
+(cargas, descargas, ediciones y cambios de acceso).
+Resumen El usuario accede a la bit�cora de auditor�a de un
+documento. El sistema consulta MongoDB y muestra
+cronol�gicamente cada evento con el usuario responsable,
+el tipo de acci�n y la fecha/hora.
+Actores Funcionario, Admin
+Actor Iniciador Admin
+48
+--- PAGE 54 ---
+Precondici�n El usuario est� autenticado con rol Empleado o
+Admin/Designer. El documento existe en el sistema.
+Postcondici�n El usuario visualiza el historial completo de auditor�a sin que
+se modifique ning�n dato.
+Flujo Principal 1. El usuario accede a la secci�n de gesti�n documental.
+2. El usuario selecciona un documento y hace clic en
+"Auditor�a".
+3. El sistema consulta la colecci�n de eventos de auditor�a
+en MongoDB para ese documento.
+4. El sistema muestra la bit�cora ordenada
+cronol�gicamente: usuario, tipo de acci�n, fecha y hora.
+Excepci�n Sin eventos registrados: El sistema muestra un mensaje
+indicando que no hay historial disponible para el documento.
+CU-20 � Gestionar privilegios de documento
+Prop�sito Permitir al administrador controlar qu� usuarios tienen
+acceso a un documento y con qu� nivel de permiso (lectura
+o escritura).
+49
+--- PAGE 55 ---
+Resumen El administrador abre el panel de privilegios de un
+documento, visualiza los usuarios con acceso actual y
+puede agregar o revocar permisos individuales por usuario.
+Actores Admin
+Actor Iniciador Admin
+Precondici�n El usuario est� autenticado con rol Admin/Designer. El
+documento existe en el sistema.
+Postcondici�n Los privilegios del documento quedan actualizados en
+MongoDB. Los usuarios afectados podr�n o no acceder
+seg�n la nueva configuraci�n.
+Flujo Principal 1. El administrador accede a la gesti�n documental y
+selecciona un documento.
+2. El administrador hace clic en "Privilegios".
+3. El sistema muestra la lista de usuarios con acceso actual
+y su nivel de permiso.
+4. El administrador agrega nuevos usuarios o elimina
+accesos existentes, definiendo el tipo (lectura/escritura).
+5. El administrador confirma los cambios.
+6. El sistema actualiza los permisos del documento en
+MongoDB.
+Excepci�n Usuario no encontrado: El sistema informa que el usuario
+ingresado no existe en el sistema.
+50
+--- PAGE 56 ---
+CU-21 � Editar documento en l�nea de forma colaborativa
+Prop�sito Permitir que m�ltiples usuarios editen simult�neamente un
+documento en el navegador sin necesidad de descargarlo,
+con sincronizaci�n en tiempo real mediante OnlyOffice
+Document Server.
+Resumen El usuario abre un documento editable. El backend genera
+una configuraci�n firmada con JWT para OnlyOffice
+Document Server y carga el editor en el navegador. Varios
+usuarios pueden colaborar en simult�neo. Al guardar, el
+Document Server env�a el archivo actualizado al backend,
+que lo versiona en S3.
+Actores Funcionario, Admin
+Actor Iniciador Funcionario
+Precondici�n El usuario est� autenticado. El documento tiene formato
+editable compatible (docx, xlsx, pptx). El servicio OnlyOffice
+Document Server est� disponible en el servidor.
+51
+--- PAGE 57 ---
+Postcondici�n Los cambios se guardan como una nueva versi�n del
+documento en S3. Todos los colaboradores ven los
+cambios aplicados en tiempo real.
+Flujo Principal 1. El usuario selecciona un documento editable y hace clic
+en "Editar".
+2. El backend genera una configuraci�n de sesi�n firmada
+con JWT para OnlyOffice.
+3. El frontend carga el editor embebido de OnlyOffice en el
+navegador usando la configuraci�n recibida.
+4. Uno o m�s usuarios editan el documento
+simult�neamente y visualizan los cambios del otro en
+tiempo real.
+5. Al guardar, OnlyOffice Document Server env�a el archivo
+actualizado al endpoint de callback del backend.
+6. El backend descarga el archivo y sube la nueva versi�n a
+S3.
+Excepci�n Formato no soportado: El sistema indica que el archivo
+no puede abrirse en el editor en l�nea.
+52
+--- PAGE 58 ---
+CU-22 � Iniciar tr�mite mediante agente IA
+Prop�sito Permitir al cliente iniciar un tr�mite describiendo su
+necesidad en lenguaje natural (texto o voz), sin necesidad
+de conocer el nombre de la pol�tica de negocio.
+Resumen El cliente interact�a con el agente IA mediante texto escrito
+o audio. El agente usa NLP con Deep Learning (modelo
+MiniLM) para identificar la pol�tica m�s adecuada, solicita los
+documentos requeridos y crea el proceso autom�ticamente.
+Actores Cliente
+Actor Iniciador Cliente
+Precondici�n El usuario est� autenticado con rol Cliente. Existen pol�ticas
+activas en el sistema con descripci�n y tags definidos.
+Postcondici�n Se crea una instancia de proceso asociada a la pol�tica
+identificada. Los documentos iniciales quedan registrados.
+El proceso queda en estado ACTIVE.
+53
+--- PAGE 59 ---
+Flujo Principal 1. El cliente abre el m�dulo Asistente IA en la aplicaci�n
+m�vil o web.
+2. El cliente describe su necesidad en texto o mediante
+audio (el audio se convierte a texto v�a Whisper).
+3. El sistema env�a el texto al microservicio ibpms_ml
+(POST /agent/classify) junto con las pol�ticas activas.
+4. El modelo MiniLM calcula la similitud coseno entre el texto
+y cada pol�tica (nombre + descripci�n + tags).
+5. El sistema retorna la pol�tica recomendada con su
+porcentaje de confianza.
+6. El cliente confirma la pol�tica sugerida.
+7. El agente solicita los documentos obligatorios definidos
+en la pol�tica (uploadStage = PROCESS_START).
+8. El cliente sube los documentos requeridos desde su
+dispositivo.
+9. El sistema crea el proceso (POST /processes) con los
+documentos confirmados.
+Excepci�n Confianza insuficiente (< 30%): El agente solicita al cliente
+describir su necesidad con m�s detalle.
+Sin pol�ticas activas: El sistema informa que no hay
+tr�mites disponibles en el momento.
+54
+--- PAGE 60 ---
+CU-23 � Ver an�lisis de riesgo de tr�mites
+Prop�sito Permitir al administrador identificar tr�mites con comportamiento
+an�malo o en riesgo de demora mediante un motor de detecci�n
+basado en Deep Learning (autoencoder PyTorch).
+Resumen El administrador accede al m�dulo de riesgos. El backend calcula
+un vector de 7 caracter�sticas por instancia y lo env�a al
+microservicio ibpms_ml. El autoencoder determina el score de
+riesgo mediante error de reconstrucci�n y clasifica cada instancia
+como LOW, MEDIUM o HIGH.
+Actores Admin
+Actor Iniciador Admin/Designer
+Precondici�n El usuario est� autenticado con rol Admin/Designer. Existen
+instancias de proceso en el sistema.
+Postcondici�n El usuario visualiza el an�lisis de riesgo por instancia sin modificar
+datos. Las instancias an�malas quedan identificadas con sus
+causas y una recomendaci�n de acci�n.
+Flujo Principal 1. El administrador accede al m�dulo de an�lisis de riesgos y
+selecciona una pol�tica.
+2. El sistema consulta las instancias de proceso de esa pol�tica en
+MongoDB.
+python : Traceback (most recent call last):
+En línea: 1 Carácter: 1
++ python -c "
++ ~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "<string>", line 7, in <module>
+    print(page.extract_text())
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 906: character maps to <undefined>
+55
+--- PAGE 61 ---
+3. El backend calcula los 7 features por instancia: elapsedRatio,
+progressRatio, avgTaskRatio, maxQueueRatio,
+reassignmentRatio, bottleneckPressure, reworkRatio.
+4. El backend env�a los vectores al microservicio ibpms_ml (POST
+/risk/score).
+5. El autoencoder PyTorch calcula el error de reconstrucci�n por
+instancia y determina si es an�mala.
+6. El sistema clasifica cada instancia como LOW / MEDIUM /
+HIGH y marca las anomal�as.
+7. El sistema muestra el score, nivel de prioridad, features
+causantes y recomendaci�n por instancia.
+Excepci�n Sin instancias suficientes: El sistema muestra un mensaje
+indicando que no hay datos disponibles para el an�lisis de esa
+pol�tica.
+56
+--- PAGE 62 ---

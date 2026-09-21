@@ -1,0 +1,62 @@
+# Local Pi runtime state
+.atl/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Logs
+*.log
+logs/
+
+# Variables locales
+.env
+.env.*
+!.env.example
+
+# Java / Maven / Spring Boot
+backend-case/target/
+*.class
+*.jar
+*.war
+*.ear
+.mvn/wrapper/maven-wrapper.jar
+
+# Angular / Node
+frontend-case/node_modules/
+frontend-case/dist/
+frontend-case/.angular/
+frontend-case/coverage/
+frontend-case/.env
+
+# Flutter / Dart
+movil/.dart_tool/
+movil/.flutter-plugins
+movil/.flutter-plugins-dependencies
+movil/build/
+movil/coverage/
+movil/android/.gradle/
+movil/ios/Pods/
+movil/pubspec.lock
+
+# IDEs
+.idea/
+.vscode/
+*.iml
+
+# Backends generados y artefactos pesados temporales
+generados/*
+!generados/.gitkeep
+*.zip
+
+# Evidencias binarias locales opcionales
+# Si una evidencia debe entregarse, subirla conscientemente.
+evidencias/**/*.mp4
+evidencias/**/*.mov
+evidencias/**/*.avi
+
+# Documentos temporales de Office
+~$*.docx
+~$*.xlsx
+~$*.pptx

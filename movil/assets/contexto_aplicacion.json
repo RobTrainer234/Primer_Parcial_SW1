@@ -1,0 +1,6 @@
+{
+  "aplicacion": "Aplicacion generada",
+  "descripcion": "Contexto local usado por el asistente offline.",
+  "entidades": [],
+  "operaciones": ["crear", "listar", "editar", "eliminar"]
+}

@@ -1,0 +1,20 @@
+services:
+  base-datos-case:
+    image: postgres:16
+    container_name: base-datos-case
+    environment:
+      POSTGRES_DB: proyecto_case
+      POSTGRES_USER: case_user
+      POSTGRES_PASSWORD: case_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - datos_case:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U case_user -d proyecto_case"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  datos_case:
