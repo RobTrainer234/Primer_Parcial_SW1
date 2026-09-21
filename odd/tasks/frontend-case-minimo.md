@@ -13,7 +13,7 @@ Implementar una primera interfaz Angular funcional para demostrar el flujo princ
 - [x] Crear modelos TypeScript del flujo mínimo.
 - [x] Crear pantalla principal con formularios simples.
 - [x] Verificar compilación o estructura disponible.
-- [ ] Subir cambios al repositorio.
+- [x] Subir cambios al repositorio.
 
 ## Alcance incluido
 
@@ -44,9 +44,17 @@ Implementar una primera interfaz Angular funcional para demostrar el flujo princ
 ## Verificación ejecutada
 
 - `npm install`: correcto, con advertencias de auditoría npm sobre dependencias transitivas.
+- `npm ci`: correcto después de sincronizar `package-lock.json`.
 - `npm run compilar`: correcto.
 - `docker compose -f infraestructura/local/docker-compose.yml build backend-case`: correcto tras agregar CORS.
+- GitHub Actions `Proyecto CASE`: backend y frontend correctos.
+
+## Commits relacionados
+
+- `fdee369 Implementar frontend CASE minimo`
+- `49840bf Verificar frontend en CI`
+- `ee2ffa9 Sincronizar lockfile frontend`
 
 ## Estado
 
-Implementado localmente. Pendiente commit/push.
+Completado y subido a GitHub.
