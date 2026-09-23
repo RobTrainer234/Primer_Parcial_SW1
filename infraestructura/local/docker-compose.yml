@@ -1,3 +1,5 @@
+name: parcial_sw1
+
 services:
   base-datos-case:
     image: postgres:16
@@ -29,11 +31,38 @@ services:
       BASE_DATOS_USUARIO: case_user
       BASE_DATOS_CLAVE: case_password
       DIRECTORIO_ARTEFACTOS: /app/generados
+      AI_TEXT_PROPOSALS_ENABLED: ${AI_TEXT_PROPOSALS_ENABLED:-false}
+      AI_TEXT_PROPOSALS_PROVIDER: ${AI_TEXT_PROPOSALS_PROVIDER:-qwen}
+      AI_QWEN_ENDPOINT: ${AI_QWEN_ENDPOINT:-http://host.docker.internal:12434/engines/v1/chat/completions}
+      CU12_PHOTO_QWEN_ENABLED: ${CU12_PHOTO_QWEN_ENABLED:-false}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     ports:
       - "8080:8080"
     volumes:
       - artefactos_case:/app/generados
 
+  frontend-case:
+    build:
+      context: ../../frontend-case
+      dockerfile: Dockerfile
+    container_name: frontend-case
+    depends_on:
+      backend-case:
+        condition: service_started
+    ports:
+      - "4200:80"
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://127.0.0.1/ >/dev/null || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
 volumes:
   datos_case:
+    external: true
+    name: local_datos_case
   artefactos_case:
+    external: true
+    name: local_artefactos_case

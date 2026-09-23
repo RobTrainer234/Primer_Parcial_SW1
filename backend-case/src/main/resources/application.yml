@@ -32,3 +32,19 @@ management:
 caseapp:
   artefactos:
     directorio: ${DIRECTORIO_ARTEFACTOS:generados}
+  ai:
+    text-proposals:
+      enabled: ${AI_TEXT_PROPOSALS_ENABLED:false}
+      provider: ${AI_TEXT_PROPOSALS_PROVIDER:deterministic}
+      qwen:
+        endpoint: ${AI_QWEN_ENDPOINT:http://127.0.0.1:12434/engines/v1/chat/completions}
+        model: ${AI_QWEN_MODEL:hf.co/ggml-org/Qwen3.5-0.8B-GGUF:Q4_0}
+        connect-timeout-ms: ${AI_QWEN_CONNECT_TIMEOUT_MS:2000}
+        read-timeout-ms: ${AI_QWEN_READ_TIMEOUT_MS:120000}
+        max-request-bytes: ${AI_QWEN_MAX_REQUEST_BYTES:16000000}
+        max-response-bytes: ${AI_QWEN_MAX_RESPONSE_BYTES:32768}
+        max-context-bytes: ${AI_QWEN_MAX_CONTEXT_BYTES:8192}
+        max-completion-tokens: ${AI_QWEN_MAX_COMPLETION_TOKENS:768}
+  qwen:
+    photo:
+      enabled: ${CU12_PHOTO_QWEN_ENABLED:false}

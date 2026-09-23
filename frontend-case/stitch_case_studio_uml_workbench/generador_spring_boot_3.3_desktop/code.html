@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=JetBrains+Mono:wght@100..900&family=Space+Grotesk:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-secondary-fixed":"#001f26","background":"#0b1326","on-tertiary-fixed-variant":"#434176","inverse-on-surface":"#283044","primary":"#c0c1ff","on-primary":"#1000a9","inverse-surface":"#dbe2fd","inverse-primary":"#494bd6","on-primary-container":"#0d0096","surface-container-high":"#222a3e","on-primary-fixed-variant":"#2f2ebe","surface-container":"#171f33","surface-variant":"#2d3449","on-secondary-container":"#00424e","secondary-fixed-dim":"#4cd7f6","tertiary-fixed-dim":"#c3c0ff","on-surface-variant":"#c7c4d7","on-tertiary":"#2c2a5e","on-secondary":"#003640","outline-variant":"#464554","on-surface":"#dbe2fd","outline":"#908fa0","primary-fixed-dim":"#c0c1ff","secondary-fixed":"#acedff","on-tertiary-fixed":"#161349","on-error":"#690005","surface-container-highest":"#2d3449","surface-bright":"#31394e","secondary-container":"#03b5d4","on-secondary-fixed-variant":"#004e5c","surface-tint":"#c0c1ff","error":"#ffb4ab","on-tertiary-container":"#020026","surface-dim":"#0b1326","surface":"#0b1326","surface-container-low":"#131b2e","primary-container":"#8083ff","surface-container-lowest":"#060d20","error-container":"#93000a","on-background":"#dbe2fd","tertiary":"#c3c0ff","tertiary-container":"#7371aa","tertiary-fixed":"#e3dfff","secondary":"#4cd7f6","on-primary-fixed":"#07006c","primary-fixed":"#e1e0ff","on-error-container":"#ffdad6"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"gutter-mobile":"0.5rem","space-md":"0.75rem","margin-mobile":"0.5rem","space-lg":"1.25rem","space-sm":"0.375rem","space-xs":"0.25rem","space-xl":"1.75rem","gutter":"0.75rem","margin":"1rem"},"fontFamily":{"body-sm":["Geist"],"headline-sm":["Space Grotesk"],"headline-lg":["Space Grotesk"],"code-sm":["JetBrains Mono"],"headline-lg-mobile":["Space Grotesk"],"body-md":["Geist"],"code-md":["JetBrains Mono"],"label-sm":["JetBrains Mono"],"headline-md":["Space Grotesk"],"label-md":["JetBrains Mono"],"body-lg":["Geist"]},"fontSize":{"body-sm":["11px",{"lineHeight":"16px","fontWeight":"400"}],"headline-sm":["16px",{"lineHeight":"22px","fontWeight":"500"}],"headline-lg":["30px",{"lineHeight":"38px","fontWeight":"600"}],"code-sm":["11px",{"lineHeight":"14px","fontWeight":"400"}],"headline-lg-mobile":["22px",{"lineHeight":"28px","fontWeight":"600"}],"body-md":["13px",{"lineHeight":"18px","fontWeight":"400"}],"code-md":["12px",{"lineHeight":"16px","fontWeight":"500"}],"label-sm":["10px",{"lineHeight":"12px","fontWeight":"600"}],"headline-md":["20px",{"lineHeight":"26px","fontWeight":"600"}],"label-md":["11px",{"lineHeight":"14px","fontWeight":"500"}],"body-lg":["14px",{"lineHeight":"20px","fontWeight":"400"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased select-none"><header class="fixed top-0 left-0 right-0 z-50 h-14 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.4)] px-gutter flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-secondary text-headline-md">architecture</span><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-on-surface">CASE STUDIO</span></div><span class="px-space-xs py-0.5 rounded bg-surface-container-high text-tertiary font-label-sm text-label-sm border border-outline-variant/30">UML 2.5 • Spring 3.3</span><div class="h-4 w-px bg-outline-variant/40 mx-space-xs"></div><button class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-secondary text-[16px]">folder_open</span><span class="font-code-md text-code-md text-on-surface">Clínica Médica / Dominio v1.2</span><span class="material-symbols-outlined text-on-surface-variant text-[14px]">expand_more</span></button></div><nav class="flex items-center gap-space-xs bg-surface-container-lowest px-space-xs py-1 rounded-lg" data-active-classes="bg-surface-container-highest text-secondary shadow-[inset_0_0_0_1px_#4cd7f6]"><a class="px-space-sm py-1 font-label-md text-label-md rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors flex items-center gap-1" data-path="workbench-cad-canvas" href="#"><span class="material-symbols-outlined text-[15px]">near_me</span> Select (V)</a><a class="px-space-sm py-1 font-label-md text-label-md rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors flex items-center gap-1" data-path="domain-model-explorer" href="#"><span class="material-symbols-outlined text-[15px]">pan_tool</span> Pan (H)</a><a class="px-space-sm py-1 font-label-md text-label-md rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors flex items-center gap-1" data-path="spring-metamodel-inspector" href="#"><span class="material-symbols-outlined text-[15px]">conversion_path</span> Smart Connector (C)</a><a class="px-space-sm py-1 font-label-md text-label-md rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors flex items-center gap-1" data-path="ocl-validation-suite" href="#"><span class="material-symbols-outlined text-[15px]">account_tree</span> Auto-Layout</a></nav><div class="flex items-center gap-space-md"><div class="flex items-center -space-x-2"><div class="w-6 h-6 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-label-sm text-label-sm ring-2 ring-surface font-bold" title="Carlos M. (Active)">CM</div><div class="w-6 h-6 rounded-full bg-tertiary-container text-on-tertiary flex items-center justify-center font-label-sm text-label-sm ring-2 ring-surface font-bold" title="Ana R. (Active)">AR</div></div><div class="flex items-center gap-space-xs px-space-xs py-0.5 rounded bg-surface-container text-secondary font-label-sm text-label-sm"><span class="material-symbols-outlined text-[14px]">verified</span><span>OCL Validated</span></div><button class="flex items-center gap-1 px-space-sm py-1 rounded bg-surface-container-high hover:bg-surface-bright text-tertiary font-code-sm text-code-sm transition-colors"><span class="material-symbols-outlined text-[14px]">auto_awesome</span>Copilot</button><button class="px-space-md py-1.5 rounded bg-secondary text-on-secondary font-headline-sm text-label-md font-semibold hover:bg-secondary-fixed transition-colors flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">bolt</span> Generar Spring Boot 3.3</button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><aside class="fixed left-0 top-14 bottom-7 w-64 bg-surface-container-low z-40 flex flex-col justify-between"><div class="flex flex-col flex-1 overflow-hidden"><div class="h-9 px-space-md bg-surface-container flex items-center justify-between"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Model Hierarchy</span><span class="material-symbols-outlined text-on-surface-variant text-[16px]">filter_list</span></div><nav class="p-space-xs flex flex-col gap-0.5" data-active-classes="bg-surface-container-high text-on-surface font-semibold"><a class="flex items-center gap-2 px-space-sm py-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="workbench-cad-canvas" href="#"><span class="material-symbols-outlined text-[16px]">grid_view</span><span class="font-body-md text-body-md">CAD Canvas View</span></a><a class="flex items-center gap-2 px-space-sm py-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="domain-model-explorer" href="#"><span class="material-symbols-outlined text-[16px]">folder_special</span><span class="font-body-md text-body-md">Domain Explorer</span></a><a class="flex items-center gap-2 px-space-sm py-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="spring-metamodel-inspector" href="#"><span class="material-symbols-outlined text-[16px]">tune</span><span class="font-body-md text-body-md">JPA & Metamodel</span></a><a class="flex items-center gap-2 px-space-sm py-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="ocl-validation-suite" href="#"><span class="material-symbols-outlined text-[16px]">rule</span><span class="font-body-md text-body-md">OCL Rules Engine</span></a><a aria-current="page" class="flex items-center gap-2 px-space-sm py-1.5 rounded transition-colors bg-surface-container-high text-on-surface font-semibold" data-path="code-generator-preview" href="#"><span class="material-symbols-outlined text-[16px]">code</span><span class="font-body-md text-body-md">Spring Codegen</span></a></nav></div><div class="p-space-sm bg-surface-container-lowest"><div class="flex items-center justify-between text-on-surface-variant font-code-sm text-code-sm px-space-xs py-1"><span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-secondary"></span> Live Sync</span><span class="text-tertiary">12ms</span></div></div></aside><div class="pl-64"><main class="w-full pt-14 pb-7 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Pipeline Header & Runtime Spec Deck -->
+<div class="bg-surface-container-low px-gutter py-space-md shadow-md flex flex-col gap-space-sm">
+<div class="flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-8 h-8 rounded bg-surface-container-highest flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">terminal</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">MDA Pipeline Compiler: PIM to PSM Derivation</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-secondary font-code-sm text-code-sm">v3.3.4-RELEASE</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Transforming Platform-Independent UML 2.5 Metamodel to Spring Boot JPA 3.3 Target Spec</span>
+</div>
+</div>
+<!-- Pipeline Telemetry Chips -->
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-space-xs px-space-md py-1 rounded bg-surface-container-highest text-secondary font-code-sm text-code-sm shadow-sm">
+<span class="material-symbols-outlined text-[15px] text-secondary">verified_user</span>
+<span>OMG UML 2.5 Metamodel 100% Validated</span>
+</div>
+<div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-highest text-on-surface-variant font-code-sm text-code-sm">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>0 Errors</span>
+</div>
+<div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-highest text-on-surface-variant font-code-sm text-code-sm">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+<span>0 Warnings</span>
+</div>
+<button class="px-space-md py-1 rounded bg-secondary text-on-secondary font-label-md text-label-md hover:bg-secondary-fixed transition-colors flex items-center gap-1 shadow-sm active:scale-95" id="btn-recompile">
+<span class="material-symbols-outlined text-[15px]">refresh</span>
+<span>Re-Derive PSM</span>
+</button>
+</div>
+</div>
+<!-- Target Runtime Matrix Ribbon -->
+<div class="grid grid-cols-2 md:grid-cols-6 gap-space-xs pt-space-xs">
+<div class="bg-surface-container px-space-sm py-1 rounded flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase">Language</span>
+<span class="font-code-sm text-code-sm text-primary font-medium">Java 21 LTS</span>
+</div>
+<div class="bg-surface-container px-space-sm py-1 rounded flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase">Framework</span>
+<span class="font-code-sm text-code-sm text-secondary font-medium">Spring Boot 3.3.4</span>
+</div>
+<div class="bg-surface-container px-space-sm py-1 rounded flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase">Persistence</span>
+<span class="font-code-sm text-code-sm text-on-surface font-medium">Hibernate 6.5</span>
+</div>
+<div class="bg-surface-container px-space-sm py-1 rounded flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase">RDBMS Target</span>
+<span class="font-code-sm text-code-sm text-tertiary font-medium">PostgreSQL 16</span>
+</div>
+<div class="bg-surface-container px-space-sm py-1 rounded flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase">Migration</span>
+<span class="font-code-sm text-code-sm text-secondary font-medium">Flyway 10.1</span>
+</div>
+<div class="bg-surface-container px-space-sm py-1 rounded flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase">Container</span>
+<span class="font-code-sm text-code-sm text-primary font-medium">Docker Compose</span>
+</div>
+</div>
+</div>
+<!-- Dual Column Workbench Workspace -->
+<div class="grid grid-cols-12 gap-space-sm p-gutter flex-1 items-start">
+<!-- LEFT COLUMN: Explorer & Packager Checklist (Col 1-4) -->
+<div class="col-span-12 lg:col-span-4 flex flex-col gap-space-sm">
+<!-- Project Tree Artifact Explorer -->
+<div class="bg-surface-container-low rounded-xl shadow-md p-space-sm flex flex-col">
+<div class="flex items-center justify-between px-space-xs py-1 bg-surface-container rounded-lg mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[16px]">inventory_2</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold tracking-wide">ARTIFACT EXPLORER</span>
+</div>
+<span class="font-code-sm text-code-sm text-tertiary bg-surface-container-high px-1.5 py-0.5 rounded">backend-spring-boot.zip</span>
+</div>
+<!-- Tree Nodes View -->
+<div class="flex flex-col font-code-sm text-code-sm text-on-surface-variant gap-0.5 max-h-[380px] overflow-y-auto pr-space-xs select-none">
+<!-- Root Archive -->
+<div class="flex items-center gap-1.5 px-space-xs py-1 rounded hover:bg-surface-container cursor-pointer text-on-surface">
+<span class="material-symbols-outlined text-[15px] text-tertiary">folder_zip</span>
+<span class="font-medium text-on-surface">backend-spring-boot/</span>
+</div>
+<!-- Java Package Path Indented -->
+<div class="flex items-center gap-1.5 pl-4 py-1 text-outline">
+<span class="material-symbols-outlined text-[14px]">folder</span>
+<span>src/main/java/com/clinica/dominio/</span>
+</div>
+<!-- File Items with JPA/Stereotype annotations -->
+<div class="file-item active flex items-center justify-between pl-8 pr-space-xs py-1 rounded bg-surface-container-high text-on-surface cursor-pointer shadow-sm" data-file="Paciente.java">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-secondary text-[14px]">data_object</span>
+<span class="truncate font-medium text-secondary">Paciente.java</span>
+</div>
+<span class="px-1 rounded bg-secondary/15 text-secondary font-label-sm text-label-sm">@Entity</span>
+</div>
+<div class="file-item flex items-center justify-between pl-8 pr-space-xs py-1 rounded hover:bg-surface-container text-on-surface-variant cursor-pointer transition-colors" data-file="HistorialClinico.java">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-outline text-[14px]">data_object</span>
+<span class="truncate">HistorialClinico.java</span>
+</div>
+<span class="px-1 rounded bg-secondary/15 text-secondary font-label-sm text-label-sm">@Entity</span>
+</div>
+<div class="file-item flex items-center justify-between pl-8 pr-space-xs py-1 rounded hover:bg-surface-container text-on-surface-variant cursor-pointer transition-colors" data-file="Medico.java">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-outline text-[14px]">data_object</span>
+<span class="truncate">Medico.java</span>
+</div>
+<span class="px-1 rounded bg-secondary/15 text-secondary font-label-sm text-label-sm">@Entity</span>
+</div>
+<div class="file-item flex items-center justify-between pl-8 pr-space-xs py-1 rounded hover:bg-surface-container text-on-surface-variant cursor-pointer transition-colors" data-file="PacienteRepository.java">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-primary text-[14px]">storage</span>
+<span class="truncate">PacienteRepository.java</span>
+</div>
+<span class="px-1 rounded bg-primary/15 text-primary font-label-sm text-label-sm">@Repository</span>
+</div>
+<div class="file-item flex items-center justify-between pl-8 pr-space-xs py-1 rounded hover:bg-surface-container text-on-surface-variant cursor-pointer transition-colors" data-file="PacienteController.java">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-tertiary text-[14px]">api</span>
+<span class="truncate">PacienteController.java</span>
+</div>
+<span class="px-1 rounded bg-tertiary/15 text-tertiary font-label-sm text-label-sm">@RestController</span>
+</div>
+<div class="file-item flex items-center justify-between pl-8 pr-space-xs py-1 rounded hover:bg-surface-container text-on-surface-variant cursor-pointer transition-colors" data-file="ClinicaApplication.java">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-on-surface-variant text-[14px]">power_settings_new</span>
+<span class="truncate">ClinicaApplication.java</span>
+</div>
+<span class="px-1 rounded bg-surface-container-highest text-on-surface font-label-sm text-label-sm">@SpringBootApp</span>
+</div>
+<!-- Resources Section -->
+<div class="flex items-center gap-1.5 pl-4 py-1 text-outline mt-1">
+<span class="material-symbols-outlined text-[14px]">folder_open</span>
+<span>src/main/resources/</span>
+</div>
+<div class="file-item flex items-center justify-between pl-8 pr-space-xs py-1 rounded hover:bg-surface-container text-on-surface-variant cursor-pointer transition-colors" data-file="application.yml">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-secondary text-[14px]">settings</span>
+<span class="truncate">application.yml</span>
+</div>
+<span class="px-1 rounded bg-surface-container-highest text-outline font-label-sm text-label-sm">YAML</span>
+</div>
+<div class="file-item flex items-center justify-between pl-8 pr-space-xs py-1 rounded hover:bg-surface-container text-on-surface-variant cursor-pointer transition-colors" data-file="V1__init_clinica_schema.sql">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-tertiary text-[14px]">schema</span>
+<span class="truncate">V1__init_clinica_schema.sql</span>
+</div>
+<span class="px-1 rounded bg-surface-container-highest text-outline font-label-sm text-label-sm">DDL</span>
+</div>
+<!-- Build & Deploy Configurations -->
+<div class="flex items-center gap-1.5 pl-4 py-1 text-outline mt-1">
+<span class="material-symbols-outlined text-[14px]">integration_instructions</span>
+<span>Deployment & Dependencies</span>
+</div>
+<div class="file-item flex items-center justify-between pl-8 pr-space-xs py-1 rounded hover:bg-surface-container text-on-surface-variant cursor-pointer transition-colors" data-file="docker-compose.yml">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-secondary text-[14px]">view_in_ar</span>
+<span class="truncate">docker-compose.yml</span>
+</div>
+<span class="px-1 rounded bg-surface-container-highest text-outline font-label-sm text-label-sm">Compose</span>
+</div>
+<div class="file-item flex items-center justify-between pl-8 pr-space-xs py-1 rounded hover:bg-surface-container text-on-surface-variant cursor-pointer transition-colors" data-file="pom.xml">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-primary text-[14px]">construction</span>
+<span class="truncate">pom.xml</span>
+</div>
+<span class="px-1 rounded bg-surface-container-highest text-outline font-label-sm text-label-sm">Maven 3.9</span>
+</div>
+</div>
+</div>
+<!-- Packaging Configuration Checklist -->
+<div class="bg-surface-container-low rounded-xl shadow-md p-space-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between px-space-xs py-1 bg-surface-container rounded-lg">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[16px]">rule</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold tracking-wide">PACKAGING SPECIFICATIONS</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container-high px-1.5 py-0.5 rounded">4/4 Active</span>
+</div>
+<div class="flex flex-col gap-1 p-space-xs font-body-sm text-body-sm">
+<label class="flex items-start gap-space-sm p-1.5 rounded hover:bg-surface-container cursor-pointer transition-colors">
+<input checked="" class="mt-0.5 accent-primary rounded cursor-pointer" type="checkbox"/>
+<div class="flex flex-col">
+<span class="text-on-surface font-medium">Unit & Architecture Tests</span>
+<span class="text-on-surface-variant font-code-sm text-code-sm">JUnit 5 • Mockito • ArchUnit 1.2 ruleset</span>
+</div>
+</label>
+<label class="flex items-start gap-space-sm p-1.5 rounded hover:bg-surface-container cursor-pointer transition-colors">
+<input checked="" class="mt-0.5 accent-primary rounded cursor-pointer" type="checkbox"/>
+<div class="flex flex-col">
+<span class="text-on-surface font-medium">DTOs & Mappers</span>
+<span class="text-on-surface-variant font-code-sm text-code-sm">MapStruct 1.5 automatic generation & validation</span>
+</div>
+</label>
+<label class="flex items-start gap-space-sm p-1.5 rounded hover:bg-surface-container cursor-pointer transition-colors">
+<input checked="" class="mt-0.5 accent-primary rounded cursor-pointer" type="checkbox"/>
+<div class="flex flex-col">
+<span class="text-on-surface font-medium">OpenAPI 3.0 / Swagger UI</span>
+<span class="text-on-surface-variant font-code-sm text-code-sm">SpringDoc OpenAPI with JWT scheme definitions</span>
+</div>
+</label>
+<label class="flex items-start gap-space-sm p-1.5 rounded hover:bg-surface-container cursor-pointer transition-colors">
+<input checked="" class="mt-0.5 accent-primary rounded cursor-pointer" type="checkbox"/>
+<div class="flex flex-col">
+<span class="text-on-surface font-medium">Postman Collection v2.1</span>
+<span class="text-on-surface-variant font-code-sm text-code-sm">Pre-seeded with clinic seed payloads</span>
+</div>
+</label>
+</div>
+<!-- Metamodel Derivation Sparkline -->
+<div class="bg-surface-container rounded-lg p-space-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Derivation Fidelity</span>
+<span class="font-code-md text-code-md text-secondary font-bold">100.0% PIM-Sync</span>
+</div>
+<svg class="w-24 h-6 text-secondary" fill="none" viewbox="0 0 100 24">
+<path d="M0 18 L15 16 L30 19 L45 10 L60 12 L75 4 L90 7 L100 2" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<circle cx="100" cy="2" fill="currentColor" r="2.5"></circle>
+</svg>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Code Viewport & Execution Terminal (Col 5-12) -->
+<div class="col-span-12 lg:col-span-8 flex flex-col gap-space-sm">
+<!-- Code Editor Main Card -->
+<div class="bg-surface-container-low rounded-xl shadow-xl flex flex-col overflow-hidden">
+<!-- Multi-Tab Code Switcher Toolbar -->
+<div class="flex items-center justify-between bg-surface-container px-space-xs pt-space-xs">
+<div class="flex items-center gap-1 overflow-x-auto">
+<button class="code-tab active px-space-md py-1.5 rounded-t font-code-sm text-code-sm bg-surface-container-lowest text-secondary flex items-center gap-1.5 shadow-sm" data-code="paciente">
+<span class="material-symbols-outlined text-[14px]">data_object</span>
+<span>Paciente.java</span>
+<span class="material-symbols-outlined text-[12px] text-outline hover:text-on-surface">close</span>
+</button>
+<button class="code-tab px-space-md py-1.5 rounded-t font-code-sm text-code-sm bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors flex items-center gap-1.5" data-code="schema">
+<span class="material-symbols-outlined text-[14px]">schema</span>
+<span>V1__init_clinica_schema.sql</span>
+</button>
+<button class="code-tab px-space-md py-1.5 rounded-t font-code-sm text-code-sm bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors flex items-center gap-1.5" data-code="appyml">
+<span class="material-symbols-outlined text-[14px]">settings</span>
+<span>application.yml</span>
+</button>
+<button class="code-tab px-space-md py-1.5 rounded-t font-code-sm text-code-sm bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors flex items-center gap-1.5" data-code="docker">
+<span class="material-symbols-outlined text-[14px]">view_in_ar</span>
+<span>docker-compose.yml</span>
+</button>
+</div>
+<!-- Utility Micro-Actions -->
+<div class="flex items-center gap-space-xs pb-1 pr-1">
+<button class="px-space-xs py-1 rounded bg-surface-container-high text-on-surface-variant hover:text-secondary hover:bg-surface-bright transition-colors font-code-sm text-code-sm flex items-center gap-1" id="btn-copy-code" title="Copiar al portapapeles">
+<span class="material-symbols-outlined text-[15px]">content_copy</span>
+<span>Copiar</span>
+</button>
+<button class="px-space-xs py-1 rounded bg-surface-container-high text-on-surface-variant hover:text-primary hover:bg-surface-bright transition-colors font-code-sm text-code-sm flex items-center gap-1" title="Descargar este archivo">
+<span class="material-symbols-outlined text-[15px]">download</span>
+<span>Descargar</span>
+</button>
+</div>
+</div>
+<!-- Syntax Highlighted Code Viewer -->
+<div class="bg-surface-container-lowest p-space-md overflow-x-auto max-h-[460px] font-code-md text-code-md leading-relaxed selection:bg-secondary/30 selection:text-on-surface">
+<!-- View 1: Paciente.java -->
+<div class="code-block flex" id="code-paciente">
+<!-- Line Numbers -->
+<div class="select-none text-right pr-space-md text-outline-variant font-code-sm text-code-sm flex flex-col gap-0 opacity-60">
+<span>01</span><span>02</span><span>03</span><span>04</span><span>05</span>
+<span>06</span><span>07</span><span>08</span><span>09</span><span>10</span>
+<span>11</span><span>12</span><span>13</span><span>14</span><span>15</span>
+<span>16</span><span>17</span><span>18</span><span>19</span><span>20</span>
+<span>21</span><span>22</span><span>23</span><span>24</span><span>25</span>
+<span>26</span><span>27</span><span>28</span><span>29</span>
+</div>
+<!-- Highlighted Source -->
+<div class="flex flex-col text-on-surface flex-1">
+<div><span class="text-tertiary">package</span> com.clinica.dominio;</div>
+<div class="h-4"></div>
+<div><span class="text-tertiary">import</span> jakarta.persistence.*;</div>
+<div><span class="text-tertiary">import</span> jakarta.validation.constraints.*;</div>
+<div><span class="text-tertiary">import</span> lombok.*;</div>
+<div><span class="text-tertiary">import</span> java.util.UUID;</div>
+<div><span class="text-tertiary">import</span> java.time.LocalDate;</div>
+<div class="h-4"></div>
+<div><span class="text-secondary font-medium">@Entity</span></div>
+<div><span class="text-secondary font-medium">@Table</span>(name = <span class="text-primary-fixed-dim">"tb_paciente"</span>)</div>
+<div><span class="text-secondary font-medium">@Getter</span> <span class="text-secondary font-medium">@Setter</span> <span class="text-secondary font-medium">@NoArgsConstructor</span> <span class="text-secondary font-medium">@AllArgsConstructor</span> <span class="text-secondary font-medium">@Builder</span></div>
+<div><span class="text-tertiary">public class</span> <span class="text-on-surface font-semibold">Paciente</span> {</div>
+<div class="pl-4"><span class="text-secondary">@Id</span></div>
+<div class="pl-4"><span class="text-secondary">@GeneratedValue</span>(strategy = GenerationType.UUID)</div>
+<div class="pl-4"><span class="text-secondary">@Column</span>(name = <span class="text-primary-fixed-dim">"id_paciente"</span>, updatable = <span class="text-primary">false</span>, nullable = <span class="text-primary">false</span>)</div>
+<div class="pl-4"><span class="text-tertiary">private</span> UUID id;</div>
+<div class="h-3"></div>
+<div class="pl-4"><span class="text-secondary">@NotNull</span></div>
+<div class="pl-4"><span class="text-secondary">@Size</span>(min = <span class="text-primary">2</span>, max = <span class="text-primary">150</span>)</div>
+<div class="pl-4"><span class="text-secondary">@Column</span>(name = <span class="text-primary-fixed-dim">"nombre_completo"</span>, nullable = <span class="text-primary">false</span>)</div>
+<div class="pl-4"><span class="text-tertiary">private</span> String nombreCompleto;</div>
+<div class="h-3"></div>
+<div class="pl-4"><span class="text-secondary">@NotNull</span> <span class="text-secondary">@Email</span></div>
+<div class="pl-4"><span class="text-secondary">@Column</span>(name = <span class="text-primary-fixed-dim">"email"</span>, unique = <span class="text-primary">true</span>, nullable = <span class="text-primary">false</span>)</div>
+<div class="pl-4"><span class="text-tertiary">private</span> String email;</div>
+<div class="h-3"></div>
+<div class="pl-4"><span class="text-secondary">@OneToOne</span>(mappedBy = <span class="text-primary-fixed-dim">"paciente"</span>, cascade = CascadeType.ALL, orphanRemoval = <span class="text-primary">true</span>)</div>
+<div class="pl-4"><span class="text-tertiary">private</span> HistorialClinico historialClinico;</div>
+<div>}</div>
+</div>
+</div>
+<!-- View 2: Flyway Schema (hidden by default) -->
+<div class="code-block hidden flex" id="code-schema">
+<div class="select-none text-right pr-space-md text-outline-variant font-code-sm text-code-sm flex flex-col gap-0 opacity-60">
+<span>01</span><span>02</span><span>03</span><span>04</span><span>05</span>
+<span>06</span><span>07</span><span>08</span><span>09</span><span>10</span>
+<span>11</span><span>12</span>
+</div>
+<div class="flex flex-col text-on-surface flex-1">
+<div><span class="text-outline">-- Flyway Migration V1: PostgreSQL 16 Target</span></div>
+<div><span class="text-tertiary">CREATE EXTENSION IF NOT EXISTS</span> <span class="text-primary-fixed-dim">"uuid-ossp"</span>;</div>
+<div class="h-3"></div>
+<div><span class="text-tertiary">CREATE TABLE</span> <span class="text-secondary">tb_paciente</span> (</div>
+<div class="pl-4">id_paciente UUID <span class="text-tertiary">PRIMARY KEY DEFAULT</span> uuid_generate_v4(),</div>
+<div class="pl-4">nombre_completo <span class="text-tertiary">VARCHAR</span>(<span class="text-primary">150</span>) <span class="text-tertiary">NOT NULL</span>,</div>
+<div class="pl-4">email <span class="text-tertiary">VARCHAR</span>(<span class="text-primary">255</span>) <span class="text-tertiary">NOT NULL UNIQUE</span>,</div>
+<div class="pl-4">created_at <span class="text-tertiary">TIMESTAMP WITH TIME ZONE DEFAULT</span> <span class="text-primary">CURRENT_TIMESTAMP</span></div>
+<div>);</div>
+<div class="h-3"></div>
+<div><span class="text-tertiary">CREATE INDEX</span> idx_paciente_email <span class="text-tertiary">ON</span> tb_paciente(email);</div>
+</div>
+</div>
+<!-- View 3: Application YML -->
+<div class="code-block hidden flex" id="code-appyml">
+<div class="select-none text-right pr-space-md text-outline-variant font-code-sm text-code-sm flex flex-col gap-0 opacity-60">
+<span>01</span><span>02</span><span>03</span><span>04</span><span>05</span>
+<span>06</span><span>07</span><span>08</span><span>09</span><span>10</span>
+</div>
+<div class="flex flex-col text-on-surface flex-1">
+<div><span class="text-secondary">spring:</span></div>
+<div class="pl-4"><span class="text-secondary">datasource:</span></div>
+<div class="pl-8">url: <span class="text-primary-fixed-dim">jdbc:postgresql://localhost:5432/clinica_db</span></div>
+<div class="pl-8">username: <span class="text-on-surface">postgres</span></div>
+<div class="pl-8">password: <span class="text-primary-fixed-dim">${DB_PASSWORD:postgres}</span></div>
+<div class="pl-4"><span class="text-secondary">jpa:</span></div>
+<div class="pl-8">hibernate.ddl-auto: <span class="text-primary">validate</span></div>
+<div class="pl-8">open-in-view: <span class="text-primary">false</span></div>
+<div class="pl-4"><span class="text-secondary">flyway:</span></div>
+<div class="pl-8">enabled: <span class="text-primary">true</span></div>
+</div>
+</div>
+<!-- View 4: Docker Compose -->
+<div class="code-block hidden flex" id="code-docker">
+<div class="select-none text-right pr-space-md text-outline-variant font-code-sm text-code-sm flex flex-col gap-0 opacity-60">
+<span>01</span><span>02</span><span>03</span><span>04</span><span>05</span>
+<span>06</span><span>07</span><span>08</span><span>09</span><span>10</span>
+</div>
+<div class="flex flex-col text-on-surface flex-1">
+<div><span class="text-secondary">services:</span></div>
+<div class="pl-4"><span class="text-secondary">postgres:</span></div>
+<div class="pl-8">image: <span class="text-primary-fixed-dim">postgres:16-alpine</span></div>
+<div class="pl-8">ports: [<span class="text-primary-fixed-dim">"5432:5432"</span>]</div>
+<div class="pl-8">environment:</div>
+<div class="pl-12">POSTGRES_DB: clinica_db</div>
+<div class="pl-12">POSTGRES_PASSWORD: postgres</div>
+<div class="pl-4"><span class="text-secondary">pgadmin:</span></div>
+<div class="pl-8">image: <span class="text-primary-fixed-dim">dpage/pgadmin4:latest</span></div>
+<div class="pl-8">ports: [<span class="text-primary-fixed-dim">"5050:80"</span>]</div>
+</div>
+</div>
+</div>
+<!-- Terminal Status Bar -->
+<div class="bg-surface-container px-space-md py-1 flex items-center justify-between text-on-surface-variant font-code-sm text-code-sm">
+<div class="flex items-center gap-space-md">
+<span class="text-on-surface">UTF-8</span>
+<span>LF</span>
+<span class="text-secondary">Java 21 Virtual Threads Ready</span>
+</div>
+<span class="text-outline">Derived from OMG::UML::Class[Paciente]</span>
+</div>
+</div>
+<!-- Integrated Compiler Terminal Console -->
+<div class="bg-surface-container-low rounded-xl shadow-md p-space-sm flex flex-col">
+<div class="flex items-center justify-between px-space-xs py-1 bg-surface-container rounded-lg mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[16px]">code_blocks</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold tracking-wide">COMPILER AST DERIVATION CONSOLE</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-code-sm text-code-sm text-secondary">Pipeline Elapsed: 184ms</span>
+</div>
+</div>
+<!-- Log Terminal Output -->
+<div class="bg-surface-container-lowest p-space-sm rounded font-code-sm text-code-sm flex flex-col gap-1 max-h-[130px] overflow-y-auto">
+<div class="flex items-center gap-2 text-outline">
+<span class="text-secondary">[09:42:10.102]</span>
+<span>Parsing XMI Metamodel tree... OK (4 domain classes identified)</span>
+</div>
+<div class="flex items-center gap-2 text-outline">
+<span class="text-secondary">[09:42:10.145]</span>
+<span>Validating OCL 2.5 Invariant: <span class="text-primary">context Paciente inv: email.size() > 3</span> -> Validated</span>
+</div>
+<div class="flex items-center gap-2 text-outline">
+<span class="text-secondary">[09:42:10.180]</span>
+<span>Deriving Spring Boot 3.3 Metamodel: Generating JPA Entity bytecode mappings... Done</span>
+</div>
+<div class="flex items-center gap-2 text-outline">
+<span class="text-secondary">[09:42:10.220]</span>
+<span>Synthesizing PostgreSQL 16 DDL: 10 foreign constraints & 4 primary indices resolved.</span>
+</div>
+<div class="flex items-center gap-2 text-secondary font-medium">
+<span>[09:42:10.286]</span>
+<span>BUILD SUCCESS: 12 PSM artifacts derived in 184ms. Zero warnings.</span>
+</div>
+</div>
+<!-- Quick Action Trigger Bar -->
+<div class="flex flex-wrap items-center justify-between gap-space-xs pt-space-xs mt-space-xs">
+<div class="flex items-center gap-space-xs">
+<button class="px-space-md py-1.5 rounded bg-primary text-on-primary font-headline-sm text-label-md font-semibold hover:bg-primary-fixed transition-colors flex items-center gap-1 shadow-sm active:scale-95" id="btn-toast-zip">
+<span class="material-symbols-outlined text-[16px]">folder_zip</span>
+<span>Descargar Proyecto ZIP Completo</span>
+</button>
+<button class="px-space-md py-1.5 rounded bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-md text-label-md transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">cloud_upload</span>
+<span>Push to GitHub Repository</span>
+</button>
+</div>
+<div class="flex items-center gap-1 font-code-sm text-code-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px] text-secondary">commit</span>
+<span>SHA-256: 4f8e21a...</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Notification Toast for Simulated Actions -->
+<div class="fixed bottom-10 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none bg-surface-container-highest px-space-md py-space-sm rounded-lg shadow-xl flex items-center gap-space-sm text-on-surface" id="toast-banner">
+<span class="material-symbols-outlined text-secondary text-[20px]">check_circle</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-label-md font-bold text-on-surface" id="toast-title">Acción Ejecutada</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant" id="toast-msg">El archivo ha sido procesado exitosamente.</span>
+</div>
+</div>
+<script>
+    // Tab Switcher Logic
+    const tabs = document.querySelectorAll('.code-tab');
+    const blocks = document.querySelectorAll('.code-block');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const target = tab.getAttribute('data-code');
+
+        // Reset Tabs Style
+        tabs.forEach(t => {
+          t.classList.remove('active', 'bg-surface-container-lowest', 'text-secondary');
+          t.classList.add('bg-surface-container', 'text-on-surface-variant');
+        });
+
+        // Activate Tab
+        tab.classList.add('active', 'bg-surface-container-lowest', 'text-secondary');
+        tab.classList.remove('bg-surface-container', 'text-on-surface-variant');
+
+        // Toggle code views
+        blocks.forEach(b => b.classList.add('hidden'));
+        const activeBlock = document.getElementById('code-' + target);
+        if (activeBlock) {
+          activeBlock.classList.remove('hidden');
+        }
+      });
+    });
+
+    // File Tree Item Click Handler
+    const fileItems = document.querySelectorAll('.file-item');
+    fileItems.forEach(item => {
+      item.addEventListener('click', () => {
+        fileItems.forEach(f => f.classList.remove('bg-surface-container-high', 'text-on-surface'));
+        item.classList.add('bg-surface-container-high', 'text-on-surface');
+
+        const fileName = item.getAttribute('data-file');
+        if (fileName === 'Paciente.java') {
+          document.querySelector('[data-code="paciente"]')?.click();
+        } else if (fileName === 'V1__init_clinica_schema.sql') {
+          document.querySelector('[data-code="schema"]')?.click();
+        } else if (fileName === 'application.yml') {
+          document.querySelector('[data-code="appyml"]')?.click();
+        } else if (fileName === 'docker-compose.yml') {
+          document.querySelector('[data-code="docker"]')?.click();
+        } else {
+          showToast('Visualizador de Archivo', 'Abriendo ' + fileName + ' en modo lectura.');
+        }
+      });
+    });
+
+    // Toast Notification Utility
+    const toast = document.getElementById('toast-banner');
+    const toastTitle = document.getElementById('toast-title');
+    const toastMsg = document.getElementById('toast-msg');
+
+    function showToast(title, msg) {
+      if (!toast) return;
+      toastTitle.textContent = title;
+      toastMsg.textContent = msg;
+      toast.classList.remove('translate-y-24', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+      setTimeout(() => {
+        toast.classList.add('translate-y-24', 'opacity-0');
+        toast.classList.remove('translate-y-0', 'opacity-100');
+      }, 2500);
+    }
+
+    document.getElementById('btn-copy-code')?.addEventListener('click', () => {
+      showToast('Código Copiado', 'Fragmento copiado al portapapeles con formato Java 21.');
+    });
+
+    document.getElementById('btn-toast-zip')?.addEventListener('click', () => {
+      showToast('Descarga Iniciada', 'Preparando backend-spring-boot.zip con configuración Maven 3.9.');
+    });
+
+    document.getElementById('btn-recompile')?.addEventListener('click', () => {
+      showToast('Pipeline Re-ejecutado', 'AST derivado y validado en 142ms sin anomalías.');
+    });
+  </script>
+</div></main></div><footer class="fixed bottom-0 left-0 right-0 z-50 h-7 bg-surface-container-lowest px-gutter flex items-center justify-between text-on-surface-variant font-code-sm text-code-sm shadow-[0_-1px_4px_rgba(0,0,0,0.5)]"><div class="flex items-center gap-space-md"><span class="flex items-center gap-1 text-on-surface"><span class="material-symbols-outlined text-secondary text-[14px]">navigation</span> X: 420px  Y: 280px</span><div class="h-3 w-px bg-outline-variant/30"></div><span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">zoom_in</span> 100%</span><div class="h-3 w-px bg-outline-variant/30"></div><span class="text-secondary">Herramienta: Selección (V)</span></div><div class="flex items-center gap-space-md"><span class="flex items-center gap-1 text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span> WS: Conectado</span><div class="h-3 w-px bg-outline-variant/30"></div><span>4 Clases | 3 Relaciones | 1 OCL Invariant</span></div></footer></body></html>

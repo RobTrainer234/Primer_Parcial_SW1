@@ -15,6 +15,9 @@ import bo.edu.proyecto.caseapp.validacion.dominio.ResultadoValidacion;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.util.HexFormat;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.io.Resource;
@@ -91,6 +94,18 @@ public class ServicioGeneracion {
         obtenerTrabajo(trabajoId);
         return repositorioArtefacto.findByTrabajoGeneracionId(trabajoId)
                 .orElseThrow(() -> new RecursoNoEncontradoException("El trabajo no tiene artefacto generado"));
+    }
+
+    @Transactional(readOnly = true)
+    public String hashArtefacto(Long trabajoId) {
+        ArtefactoGenerado artefacto = obtenerArtefacto(trabajoId);
+        try {
+            byte[] contenido = Files.readAllBytes(Path.of(artefacto.getRutaArchivo()));
+            byte[] hash = MessageDigest.getInstance("SHA-256").digest(contenido);
+            return HexFormat.of().formatHex(hash);
+        } catch (IOException | NoSuchAlgorithmException error) {
+            throw new ReglaNegocioException("No se pudo calcular hash del artefacto: " + error.getMessage());
+        }
     }
 
     @Transactional(readOnly = true)

@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+import org.springframework.web.server.ResponseStatusException;
 
 @RestControllerAdvice
 public class ManejadorErrores {
@@ -31,6 +32,13 @@ public class ManejadorErrores {
                 .map(campo -> campo.getField() + ": " + campo.getDefaultMessage())
                 .orElse("Solicitud invalida");
         return respuesta(HttpStatus.BAD_REQUEST, mensaje);
+    }
+
+    @ExceptionHandler(ResponseStatusException.class)
+    ResponseEntity<Map<String, Object>> manejarEstado(ResponseStatusException error) {
+        HttpStatus estado = HttpStatus.valueOf(error.getStatusCode().value());
+        String mensaje = error.getReason() == null ? estado.getReasonPhrase() : error.getReason();
+        return respuesta(estado, mensaje);
     }
 
     private ResponseEntity<Map<String, Object>> respuesta(HttpStatus estado, String mensaje) {

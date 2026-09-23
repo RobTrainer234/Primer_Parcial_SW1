@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=JetBrains+Mono:wght@100..900&family=Space+Grotesk:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-secondary-fixed":"#001f26","background":"#0b1326","on-tertiary-fixed-variant":"#434176","inverse-on-surface":"#283044","primary":"#c0c1ff","on-primary":"#1000a9","inverse-surface":"#dbe2fd","inverse-primary":"#494bd6","on-primary-container":"#0d0096","surface-container-high":"#222a3e","on-primary-fixed-variant":"#2f2ebe","surface-container":"#171f33","surface-variant":"#2d3449","on-secondary-container":"#00424e","secondary-fixed-dim":"#4cd7f6","tertiary-fixed-dim":"#c3c0ff","on-surface-variant":"#c7c4d7","on-tertiary":"#2c2a5e","on-secondary":"#003640","outline-variant":"#464554","on-surface":"#dbe2fd","outline":"#908fa0","primary-fixed-dim":"#c0c1ff","secondary-fixed":"#acedff","on-tertiary-fixed":"#161349","on-error":"#690005","surface-container-highest":"#2d3449","surface-bright":"#31394e","secondary-container":"#03b5d4","on-secondary-fixed-variant":"#004e5c","surface-tint":"#c0c1ff","error":"#ffb4ab","on-tertiary-container":"#020026","surface-dim":"#0b1326","surface":"#0b1326","surface-container-low":"#131b2e","primary-container":"#8083ff","surface-container-lowest":"#060d20","error-container":"#93000a","on-background":"#dbe2fd","tertiary":"#c3c0ff","tertiary-container":"#7371aa","tertiary-fixed":"#e3dfff","secondary":"#4cd7f6","on-primary-fixed":"#07006c","primary-fixed":"#e1e0ff","on-error-container":"#ffdad6"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"gutter-mobile":"0.5rem","space-md":"0.75rem","margin-mobile":"0.5rem","space-lg":"1.25rem","space-sm":"0.375rem","space-xs":"0.25rem","space-xl":"1.75rem","gutter":"0.75rem","margin":"1rem"},"fontFamily":{"body-sm":["Geist"],"headline-sm":["Space Grotesk"],"headline-lg":["Space Grotesk"],"code-sm":["JetBrains Mono"],"headline-lg-mobile":["Space Grotesk"],"body-md":["Geist"],"code-md":["JetBrains Mono"],"label-sm":["JetBrains Mono"],"headline-md":["Space Grotesk"],"label-md":["JetBrains Mono"],"body-lg":["Geist"]},"fontSize":{"body-sm":["11px",{"lineHeight":"16px","fontWeight":"400"}],"headline-sm":["16px",{"lineHeight":"22px","fontWeight":"500"}],"headline-lg":["30px",{"lineHeight":"38px","fontWeight":"600"}],"code-sm":["11px",{"lineHeight":"14px","fontWeight":"400"}],"headline-lg-mobile":["22px",{"lineHeight":"28px","fontWeight":"600"}],"body-md":["13px",{"lineHeight":"18px","fontWeight":"400"}],"code-md":["12px",{"lineHeight":"16px","fontWeight":"500"}],"label-sm":["10px",{"lineHeight":"12px","fontWeight":"600"}],"headline-md":["20px",{"lineHeight":"26px","fontWeight":"600"}],"label-md":["11px",{"lineHeight":"14px","fontWeight":"500"}],"body-lg":["14px",{"lineHeight":"20px","fontWeight":"400"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased select-none"><header class="fixed top-0 left-0 right-0 z-50 h-14 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.4)] px-gutter flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-secondary text-headline-md">architecture</span><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-on-surface">CASE STUDIO</span></div><span class="px-space-xs py-0.5 rounded bg-surface-container-high text-tertiary font-label-sm text-label-sm border border-outline-variant/30">UML 2.5 • Spring 3.3</span><div class="h-4 w-px bg-outline-variant/40 mx-space-xs"></div><button class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-secondary text-[16px]">folder_open</span><span class="font-code-md text-code-md text-on-surface">Clínica Médica / Dominio v1.2</span><span class="material-symbols-outlined text-on-surface-variant text-[14px]">expand_more</span></button></div><nav class="flex items-center gap-space-xs bg-surface-container-lowest px-space-xs py-1 rounded-lg" data-active-classes="bg-surface-container-highest text-secondary shadow-[inset_0_0_0_1px_#4cd7f6]"><a aria-current="page" class="px-space-sm py-1 font-label-md rounded transition-colors flex items-center gap-1 bg-surface-container-highest text-secondary shadow-[inset_0_0_0_1px_#4cd7f6]" data-path="workbench-cad-canvas" href="#"><span class="material-symbols-outlined text-[15px]">near_me</span> Select (V)</a><a class="px-space-sm py-1 font-label-md text-label-md rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors flex items-center gap-1" data-path="domain-model-explorer" href="#"><span class="material-symbols-outlined text-[15px]">pan_tool</span> Pan (H)</a><a class="px-space-sm py-1 font-label-md text-label-md rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors flex items-center gap-1" data-path="spring-metamodel-inspector" href="#"><span class="material-symbols-outlined text-[15px]">conversion_path</span> Smart Connector (C)</a><a class="px-space-sm py-1 font-label-md text-label-md rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors flex items-center gap-1" data-path="ocl-validation-suite" href="#"><span class="material-symbols-outlined text-[15px]">account_tree</span> Auto-Layout</a></nav><div class="flex items-center gap-space-md"><div class="flex items-center -space-x-2"><div class="w-6 h-6 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-label-sm text-label-sm ring-2 ring-surface font-bold" title="Carlos M. (Active)">CM</div><div class="w-6 h-6 rounded-full bg-tertiary-container text-on-tertiary flex items-center justify-center font-label-sm text-label-sm ring-2 ring-surface font-bold" title="Ana R. (Active)">AR</div></div><div class="flex items-center gap-space-xs px-space-xs py-0.5 rounded bg-surface-container text-secondary font-label-sm text-label-sm"><span class="material-symbols-outlined text-[14px]">verified</span><span>OCL Validated</span></div><button class="flex items-center gap-1 px-space-sm py-1 rounded bg-surface-container-high hover:bg-surface-bright text-tertiary font-code-sm text-code-sm transition-colors"><span class="material-symbols-outlined text-[14px]">auto_awesome</span>Copilot</button><button class="px-space-md py-1.5 rounded bg-secondary text-on-secondary font-headline-sm text-label-md font-semibold hover:bg-secondary-fixed transition-colors flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">bolt</span> Generar Spring Boot 3.3</button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><aside class="fixed left-0 top-14 bottom-7 w-64 bg-surface-container-low z-40 flex flex-col justify-between"><div class="flex flex-col flex-1 overflow-hidden"><div class="h-9 px-space-md bg-surface-container flex items-center justify-between"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Model Hierarchy</span><span class="material-symbols-outlined text-on-surface-variant text-[16px]">filter_list</span></div><nav class="p-space-xs flex flex-col gap-0.5" data-active-classes="bg-surface-container-high text-on-surface font-semibold"><a aria-current="page" class="flex items-center gap-2 px-space-sm py-1.5 rounded transition-colors bg-surface-container-high text-on-surface font-semibold" data-path="workbench-cad-canvas" href="#"><span class="material-symbols-outlined text-[16px]">grid_view</span><span class="font-body-md text-body-md">CAD Canvas View</span></a><a class="flex items-center gap-2 px-space-sm py-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="domain-model-explorer" href="#"><span class="material-symbols-outlined text-[16px]">folder_special</span><span class="font-body-md text-body-md">Domain Explorer</span></a><a class="flex items-center gap-2 px-space-sm py-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="spring-metamodel-inspector" href="#"><span class="material-symbols-outlined text-[16px]">tune</span><span class="font-body-md text-body-md">JPA & Metamodel</span></a><a class="flex items-center gap-2 px-space-sm py-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="ocl-validation-suite" href="#"><span class="material-symbols-outlined text-[16px]">rule</span><span class="font-body-md text-body-md">OCL Rules Engine</span></a><a class="flex items-center gap-2 px-space-sm py-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="code-generator-preview" href="#"><span class="material-symbols-outlined text-[16px]">code</span><span class="font-body-md text-body-md">Spring Codegen</span></a></nav></div><div class="p-space-sm bg-surface-container-lowest"><div class="flex items-center justify-between text-on-surface-variant font-code-sm text-code-sm px-space-xs py-1"><span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-secondary"></span> Live Sync</span><span class="text-tertiary">12ms</span></div></div></aside><div class="pl-64"><main class="w-full pt-14 pb-7 bg-surface min-h-screen"><div class="flex flex-col w-full h-[calc(100vh-5.25rem)] overflow-hidden select-none">
+<div class="flex flex-1 w-full h-full min-h-0 bg-background">
+<!-- LEFT PALETTE & EXPLORER (280px DOCKED) -->
+<aside class="w-[280px] flex-shrink-0 flex flex-col bg-surface-container-low shadow-[inset_-1px_0_0_rgba(255,255,255,0.06)] h-full overflow-hidden">
+<!-- Stencil / Tree Switcher Tabs -->
+<div class="flex items-center bg-surface-container-lowest p-space-xs gap-space-xs">
+<button class="flex-1 flex items-center justify-center gap-1.5 py-1.5 px-space-xs rounded bg-surface-container text-secondary font-label-md text-label-md transition-colors shadow-sm" id="tab-stencils">
+<span class="material-symbols-outlined text-[15px]">shapes</span>
+<span>Stencils 2.5</span>
+</button>
+<button class="flex-1 flex items-center justify-center gap-1.5 py-1.5 px-space-xs rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors font-label-md text-label-md" id="tab-explorer">
+<span class="material-symbols-outlined text-[15px]">account_tree</span>
+<span>Modelo</span>
+</button>
+</div>
+<div class="flex-1 overflow-y-auto flex flex-col gap-space-md p-space-sm custom-scrollbar">
+<!-- Node Stencils Category -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between px-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Nodos Estructurales</span>
+<span class="text-tertiary font-code-sm text-[10px]">v2.5 spec</span>
+</div>
+<!-- Stencil 1: Class -->
+<div class="group flex flex-col p-space-xs rounded bg-surface-container hover:bg-surface-container-high transition-all cursor-grab active:cursor-grabbing shadow-sm hover:shadow-md" draggable="true">
+<div class="flex items-center justify-between">
+<span class="flex items-center gap-1.5 font-headline-sm text-body-md font-medium text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[16px]">data_object</span>
+                Clase de Dominio
+              </span>
+<span class="px-1 py-0.5 rounded bg-surface-container-highest text-tertiary font-code-sm text-[9px]">«entity»</span>
+</div>
+<div class="mt-1 flex flex-col rounded bg-surface-container-lowest p-1 gap-0.5 pointer-events-none">
+<div class="text-[9px] font-code-sm text-secondary truncate">+ id : UUID {PK}</div>
+<div class="text-[9px] font-code-sm text-on-surface-variant truncate">+ attribute : Type</div>
+<div class="h-px bg-surface-variant/60 my-0.5"></div>
+<div class="text-[9px] font-code-sm text-tertiary truncate">+ execute() : void</div>
+</div>
+</div>
+<!-- Stencil 2: Interface -->
+<div class="group flex items-center justify-between p-space-xs rounded bg-surface-container hover:bg-surface-container-high transition-all cursor-grab active:cursor-grabbing" draggable="true">
+<span class="flex items-center gap-1.5 font-headline-sm text-body-md font-medium text-on-surface">
+<span class="material-symbols-outlined text-tertiary text-[16px]">hub</span>
+              Interfaz / Servicio
+            </span>
+<span class="px-1 py-0.5 rounded bg-surface-container-highest text-tertiary-fixed-dim font-code-sm text-[9px]">«interface»</span>
+</div>
+<!-- Stencil 3: Note -->
+<div class="group flex items-center justify-between p-space-xs rounded bg-surface-container hover:bg-surface-container-high transition-all cursor-grab active:cursor-grabbing" draggable="true">
+<span class="flex items-center gap-1.5 font-headline-sm text-body-md font-medium text-on-surface">
+<span class="material-symbols-outlined text-secondary-fixed-dim text-[16px]">sticky_note_2</span>
+              Restricción OCL
+            </span>
+<span class="px-1 py-0.5 rounded bg-surface-container-highest text-secondary font-code-sm text-[9px]">inv : expr</span>
+</div>
+</div>
+<!-- Semantic Connectors Category -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<div class="flex items-center justify-between px-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Conectores Semánticos</span>
+<span class="text-outline font-code-sm text-[10px]">UML Connect</span>
+</div>
+<!-- Connector: Composition -->
+<button class="flex items-center justify-between px-space-sm py-1.5 rounded bg-surface-container hover:bg-surface-container-high text-left transition-colors">
+<div class="flex items-center gap-2">
+<svg class="text-secondary shrink-0" height="12" viewbox="0 0 20 12" width="20">
+<polygon fill="currentColor" points="6,6 1,3 6,0 11,3" stroke="none" transform="translate(0, 3)"></polygon>
+<line stroke="currentColor" stroke-width="1.5" x1="11" x2="20" y1="6" y2="6"></line>
+</svg>
+<span class="font-body-md text-body-md text-on-surface">Composición Fuerte</span>
+</div>
+<span class="font-code-sm text-[10px] text-secondary">1..1</span>
+</button>
+<!-- Connector: Association -->
+<button class="flex items-center justify-between px-space-sm py-1.5 rounded bg-surface-container hover:bg-surface-container-high text-left transition-colors">
+<div class="flex items-center gap-2">
+<svg class="text-on-surface-variant shrink-0" height="12" viewbox="0 0 20 12" width="20">
+<line stroke="currentColor" stroke-width="1.5" x1="0" x2="16" y1="6" y2="6"></line>
+<polyline fill="none" points="13,3 17,6 13,9" stroke="currentColor" stroke-width="1.5"></polyline>
+</svg>
+<span class="font-body-md text-body-md text-on-surface">Asociación Simple</span>
+</div>
+<span class="font-code-sm text-[10px] text-on-surface-variant">0..*</span>
+</button>
+<!-- Connector: Aggregation -->
+<button class="flex items-center justify-between px-space-sm py-1.5 rounded bg-surface-container hover:bg-surface-container-high text-left transition-colors">
+<div class="flex items-center gap-2">
+<svg class="text-tertiary shrink-0" height="12" viewbox="0 0 20 12" width="20">
+<polygon fill="none" points="6,6 1,3 6,0 11,3" stroke="currentColor" stroke-width="1.2" transform="translate(0, 3)"></polygon>
+<line stroke="currentColor" stroke-width="1.5" x1="11" x2="20" y1="6" y2="6"></line>
+</svg>
+<span class="font-body-md text-body-md text-on-surface">Agregación Débil</span>
+</div>
+<span class="font-code-sm text-[10px] text-tertiary">Shared</span>
+</button>
+<!-- Connector: Generalization -->
+<button class="flex items-center justify-between px-space-sm py-1.5 rounded bg-surface-container hover:bg-surface-container-high text-left transition-colors">
+<div class="flex items-center gap-2">
+<svg class="text-on-surface shrink-0" height="12" viewbox="0 0 20 12" width="20">
+<polygon fill="none" points="12,1 19,6 12,11" stroke="currentColor" stroke-width="1.2"></polygon>
+<line stroke="currentColor" stroke-width="1.5" x1="0" x2="12" y1="6" y2="6"></line>
+</svg>
+<span class="font-body-md text-body-md text-on-surface">Herencia (Extends)</span>
+</div>
+<span class="font-code-sm text-[10px] text-on-surface-variant">is-a</span>
+</button>
+<!-- Connector: Dependency -->
+<button class="flex items-center justify-between px-space-sm py-1.5 rounded bg-surface-container hover:bg-surface-container-high text-left transition-colors">
+<div class="flex items-center gap-2">
+<svg class="text-outline shrink-0" height="12" viewbox="0 0 20 12" width="20">
+<line stroke="currentColor" stroke-dasharray="3,2" stroke-width="1.5" x1="0" x2="16" y1="6" y2="6"></line>
+<polyline fill="none" points="13,3 17,6 13,9" stroke="currentColor" stroke-width="1.5"></polyline>
+</svg>
+<span class="font-body-md text-body-md text-on-surface">Dependencia</span>
+</div>
+<span class="font-code-sm text-[10px] text-outline">uses</span>
+</button>
+</div>
+<!-- Package Quick Hierarchy -->
+<div class="mt-auto flex flex-col gap-1 p-space-xs rounded bg-surface-container-lowest">
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm uppercase px-1">
+<span>Paquete Activo</span>
+<span class="text-secondary font-code-sm text-[10px]">3 Clases</span>
+</div>
+<div class="flex flex-col gap-0.5 text-on-surface font-code-sm text-[11px]">
+<div class="flex items-center gap-1.5 py-1 px-1.5 rounded hover:bg-surface-container text-tertiary">
+<span class="material-symbols-outlined text-[14px]">folder</span>
+<span>com.clinica.dominio</span>
+</div>
+<div class="pl-4 flex flex-col gap-0.5">
+<div class="flex items-center gap-1.5 py-0.5 px-1 rounded bg-surface-container text-secondary font-semibold">
+<span class="material-symbols-outlined text-[13px]">dataset</span>
+<span>Paciente.java</span>
+</div>
+<div class="flex items-center gap-1.5 py-0.5 px-1 rounded hover:bg-surface-container text-on-surface-variant">
+<span class="material-symbols-outlined text-[13px]">dataset</span>
+<span>HistorialClinico.java</span>
+</div>
+<div class="flex items-center gap-1.5 py-0.5 px-1 rounded hover:bg-surface-container text-on-surface-variant">
+<span class="material-symbols-outlined text-[13px]">dataset</span>
+<span>Medico.java</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</aside>
+<!-- CENTRAL CAD CANVAS (INFINITE VIEWPORT WITH CAD MATRIX) -->
+<main class="flex-1 relative h-full overflow-hidden bg-surface-container-lowest cursor-crosshair" id="cad-canvas">
+<!-- 20px x 20px Technical CAD Dot Matrix SVG Overlay -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none opacity-40" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="24" id="cad-grid" patternunits="userSpaceOnUse" width="24">
+<circle cx="12" cy="12" fill="#4cd7f6" fill-opacity="0.35" r="1"></circle>
+<path d="M 12 0 L 12 2 M 0 12 L 2 12 M 22 12 L 24 12 M 12 22 L 12 24" stroke="#c0c1ff" stroke-opacity="0.2" stroke-width="0.5"></path>
+</pattern>
+</defs>
+<rect fill="url(#cad-grid)" height="100%" width="100%"></rect>
+</svg>
+<!-- SVG Orthogonal CAD Connectors -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none z-10" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<!-- Filled Composition Diamond Marker -->
+<marker id="composition-diamond" markerheight="14" markerwidth="14" orient="auto-start-reverse" refx="16" refy="8" viewbox="0 0 16 16">
+<polygon fill="#4cd7f6" points="8,2 14,8 8,14 2,8" stroke="#001f26" stroke-width="1.5"></polygon>
+</marker>
+<marker id="association-arrow" markerheight="10" markerwidth="10" orient="auto" refx="10" refy="6" viewbox="0 0 12 12">
+<polyline fill="none" points="2,2 10,6 2,10" stroke="#c0c1ff" stroke-width="1.5"></polyline>
+</marker>
+</defs>
+<!-- Relation 1: Paciente to HistorialClinico (Composition) -->
+<g class="cad-connector-group">
+<!-- Orthogonal Route Path: Paciente East [330, 160] -> HistorialClinico West [480, 160] -->
+<path d="M 330 160 L 480 160" fill="none" marker-start="url(#composition-diamond)" stroke="#4cd7f6" stroke-width="2"></path>
+<!-- Multiplicity 1..1 at source -->
+<text fill="#4cd7f6" font-family="JetBrains Mono" font-size="11" font-weight="600" x="342" y="150">1..1</text>
+<!-- Association Label -->
+<rect fill="#171f33" height="16" rx="2" width="48" x="382" y="146"></rect>
+<text fill="#dbe2fd" font-family="Geist" font-size="10" text-anchor="middle" x="406" y="158">posee ▶</text>
+<!-- Multiplicity 1..1 at target -->
+<text fill="#dbe2fd" font-family="JetBrains Mono" font-size="11" x="450" y="150">1..1</text>
+</g>
+<!-- Relation 2: Medico to Paciente (Association) -->
+<!-- Medico North [590, 370] -> Paciente South-East [250, 270] via Orthogonal Elbow -->
+<g class="cad-connector-group">
+<path d="M 590 370 L 590 330 L 250 330 L 250 270" fill="none" marker-end="url(#association-arrow)" stroke="#c0c1ff" stroke-dasharray="0" stroke-width="1.5"></path>
+<!-- Multiplicity & Role Labels -->
+<text fill="#c0c1ff" font-family="JetBrains Mono" font-size="11" x="598" y="360">1..*</text>
+<rect fill="#171f33" height="16" rx="2" width="60" x="375" y="322"></rect>
+<text fill="#c3c0ff" font-family="Geist" font-size="10" text-anchor="middle" x="405" y="334">atiende ▶</text>
+<text fill="#c0c1ff" font-family="JetBrains Mono" font-size="11" x="215" y="300">0..*</text>
+</g>
+<!-- Relation 3: Paciente to OCL Note (Constraint Attachment) -->
+<g class="cad-connector-group">
+<line stroke="#908fa0" stroke-dasharray="4,4" stroke-width="1.2" x1="200" x2="200" y1="270" y2="350"></line>
+<circle cx="200" cy="350" fill="#4cd7f6" r="3"></circle>
+</g>
+</svg>
+<!-- CANVAS ENTITY 1: Paciente (ACTIVE / SELECTED) -->
+<div class="absolute left-[70px] top-[40px] w-[260px] rounded bg-surface-container-high shadow-xl shadow-surface-container-lowest/80 z-20 transition-shadow group ring-2 ring-secondary cursor-move" id="entity-paciente">
+<!-- Selection Magnetic Anchor Ports (UML CAD precision) -->
+<div class="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-secondary shadow-sm shadow-secondary flex items-center justify-center pointer-events-auto">
+<div class="w-1.5 h-1.5 rounded-full bg-surface-container-lowest"></div>
+</div>
+<div class="absolute top-1/2 -right-1.5 -translate-y-1/2 w-3 h-3 rounded-full bg-secondary shadow-sm shadow-secondary flex items-center justify-center pointer-events-auto">
+<div class="w-1.5 h-1.5 rounded-full bg-surface-container-lowest"></div>
+</div>
+<div class="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-secondary shadow-sm shadow-secondary flex items-center justify-center pointer-events-auto">
+<div class="w-1.5 h-1.5 rounded-full bg-surface-container-lowest"></div>
+</div>
+<div class="absolute top-1/2 -left-1.5 -translate-y-1/2 w-3 h-3 rounded-full bg-secondary shadow-sm shadow-secondary flex items-center justify-center pointer-events-auto">
+<div class="w-1.5 h-1.5 rounded-full bg-surface-container-lowest"></div>
+</div>
+<!-- Class Header Compartment -->
+<div class="p-space-xs bg-surface-container-highest rounded-t flex flex-col items-center justify-center relative">
+<span class="font-code-sm text-[10px] text-tertiary uppercase tracking-wider">«entity / AggregateRoot»</span>
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-headline-sm text-body-lg font-bold text-on-surface">Paciente</span>
+</div>
+<span class="absolute right-2 top-2 font-code-sm text-[9px] text-outline">@Table(tb_paciente)</span>
+</div>
+<!-- Attributes Compartment -->
+<div class="p-space-xs bg-surface-container flex flex-col gap-1 border-t border-b border-surface-variant/40 font-code-sm text-[11px]">
+<div class="flex items-center justify-between text-secondary">
+<span class="font-medium">+ id : UUID</span>
+<span class="text-[9px] text-secondary-fixed-dim bg-surface-container-lowest px-1 rounded">{PK, id}</span>
+</div>
+<div class="flex items-center justify-between text-on-surface">
+<span>+ nombreCompleto : String [1]</span>
+<span class="text-[9px] text-tertiary bg-surface-container-lowest px-1 rounded">{NN}</span>
+</div>
+<div class="flex items-center justify-between text-on-surface">
+<span>+ email : String [1]</span>
+<span class="text-[9px] text-tertiary bg-surface-container-lowest px-1 rounded">{Unique}</span>
+</div>
+<div class="flex items-center justify-between text-on-surface">
+<span>+ fechaNacimiento : LocalDate</span>
+<span class="text-[9px] text-outline">[1]</span>
+</div>
+<div class="flex items-center justify-between text-outline">
+<span>- activo : Boolean = true</span>
+<span class="text-[9px] text-outline">def</span>
+</div>
+</div>
+<!-- Operations / Methods Compartment -->
+<div class="p-space-xs bg-surface-container-low rounded-b flex flex-col gap-1 font-code-sm text-[11px] text-on-surface-variant">
+<div class="hover:text-secondary transition-colors cursor-pointer">+ validarHistorial() : Boolean</div>
+<div class="hover:text-secondary transition-colors cursor-pointer">+ registrarConsulta(m: Medico) : void</div>
+</div>
+</div>
+<!-- CANVAS ENTITY 2: HistorialClinico -->
+<div class="absolute left-[480px] top-[40px] w-[260px] rounded bg-surface-container shadow-lg shadow-surface-container-lowest/60 z-20 group hover:ring-1 hover:ring-tertiary cursor-move transition-shadow" id="entity-historial">
+<!-- Class Header -->
+<div class="p-space-xs bg-surface-container-high rounded-t flex flex-col items-center justify-center">
+<span class="font-code-sm text-[10px] text-tertiary-fixed-dim uppercase tracking-wider">«entity»</span>
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span class="font-headline-sm text-body-lg font-bold text-on-surface">HistorialClinico</span>
+</div>
+</div>
+<!-- Attributes Compartment -->
+<div class="p-space-xs bg-surface-container flex flex-col gap-1 border-t border-b border-surface-variant/40 font-code-sm text-[11px]">
+<div class="flex items-center justify-between text-secondary">
+<span>+ id : UUID</span>
+<span class="text-[9px] text-secondary-fixed-dim bg-surface-container-lowest px-1 rounded">{PK}</span>
+</div>
+<div class="flex items-center justify-between text-on-surface">
+<span>+ numeroFicha : String [1]</span>
+<span class="text-[9px] text-tertiary bg-surface-container-lowest px-1 rounded">{Unique}</span>
+</div>
+<div class="flex items-center justify-between text-on-surface">
+<span>+ fechaApertura : LocalDateTime</span>
+<span class="text-[9px] text-outline">[1]</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>+ observaciones : Text [0..1]</span>
+<span class="text-[9px] text-outline">null</span>
+</div>
+</div>
+<!-- Methods Compartment -->
+<div class="p-space-xs bg-surface-container-low rounded-b flex flex-col gap-1 font-code-sm text-[11px] text-on-surface-variant">
+<div class="hover:text-tertiary transition-colors cursor-pointer">+ agregarEntrada(nota: String) : void</div>
+</div>
+</div>
+<!-- CANVAS ENTITY 3: Medico -->
+<div class="absolute left-[470px] top-[370px] w-[240px] rounded bg-surface-container shadow-lg shadow-surface-container-lowest/60 z-20 group hover:ring-1 hover:ring-primary cursor-move transition-shadow" id="entity-medico">
+<!-- Class Header -->
+<div class="p-space-xs bg-surface-container-high rounded-t flex flex-col items-center justify-center">
+<span class="font-code-sm text-[10px] text-primary uppercase tracking-wider">«entity»</span>
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="font-headline-sm text-body-lg font-bold text-on-surface">Medico</span>
+</div>
+</div>
+<!-- Attributes Compartment -->
+<div class="p-space-xs bg-surface-container flex flex-col gap-1 border-t border-b border-surface-variant/40 font-code-sm text-[11px]">
+<div class="flex items-center justify-between text-secondary">
+<span>+ id : UUID</span>
+<span class="text-[9px] text-secondary bg-surface-container-lowest px-1 rounded">{PK}</span>
+</div>
+<div class="flex items-center justify-between text-on-surface">
+<span>+ numeroColegiado : String</span>
+<span class="text-[9px] text-tertiary bg-surface-container-lowest px-1 rounded">{NN, Unique}</span>
+</div>
+<div class="flex items-center justify-between text-on-surface">
+<span>+ especialidad : Enum</span>
+<span class="text-[9px] text-outline">Cardio</span>
+</div>
+</div>
+<!-- Methods Compartment -->
+<div class="p-space-xs bg-surface-container-low rounded-b flex flex-col gap-1 font-code-sm text-[11px] text-on-surface-variant">
+<div class="hover:text-primary transition-colors cursor-pointer">+ emitirDiagnostico() : void</div>
+</div>
+</div>
+<!-- CANVAS NOTE ELEMENT: OCL Invariant Sticky -->
+<div class="absolute left-[70px] top-[350px] w-[270px] bg-[#1a2238] rounded-bl rounded-br rounded-tl p-space-xs shadow-xl z-20 ring-1 ring-secondary/50">
+<div class="flex items-center justify-between pb-1 mb-1 border-b border-outline-variant/30">
+<span class="flex items-center gap-1 font-code-sm text-[10px] text-secondary font-bold">
+<span class="material-symbols-outlined text-[13px]">rule</span>
+            OCL 2.4 Invariant
+          </span>
+<span class="px-1 py-0.2 rounded bg-surface-container text-[9px] font-code-sm text-secondary">VALIDATED</span>
+</div>
+<p class="font-code-sm text-[10.5px] leading-relaxed text-tertiary">
+<span class="text-secondary font-semibold">context</span> Paciente<br/>
+<span class="text-secondary font-semibold">inv</span> ValidEmailAndAge:<br/>
+            self.edad >= 0 <span class="text-on-surface-variant">and</span><br/>
+            self.email.matches(<span class="text-secondary-fixed">".*@.*"</span>)
+        </p>
+</div>
+<!-- Real-time Collaborative Peer Cursor 1: María G. -->
+<div class="absolute left-[320px] top-[190px] z-30 pointer-events-none flex flex-col items-start gap-1">
+<svg class="text-secondary drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]" height="20" viewbox="0 0 24 24" width="20">
+<path d="M3.5 2.5L18.5 12L10.5 13.5L7 21L3.5 2.5Z" fill="currentColor"></path>
+</svg>
+<div class="px-1.5 py-0.5 rounded bg-surface-container-lowest/90 border border-secondary text-secondary font-label-sm text-[9.5px] backdrop-blur whitespace-nowrap shadow-md">
+          María G. (editando Paciente)
+        </div>
+</div>
+<!-- Real-time Collaborative Peer Cursor 2: Carlos M. -->
+<div class="absolute left-[540px] top-[310px] z-30 pointer-events-none flex flex-col items-start gap-1">
+<svg class="text-tertiary-container drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]" height="20" viewbox="0 0 24 24" width="20">
+<path d="M3.5 2.5L18.5 12L10.5 13.5L7 21L3.5 2.5Z" fill="currentColor"></path>
+</svg>
+<div class="px-1.5 py-0.5 rounded bg-surface-container-lowest/90 border border-tertiary text-tertiary font-label-sm text-[9.5px] backdrop-blur whitespace-nowrap shadow-md">
+          Carlos M. (inspeccionando JPA)
+        </div>
+</div>
+<!-- Floating Glassmorphic CAD HUD Controls (Bottom-Left) -->
+<div class="absolute bottom-4 left-4 z-30 flex items-center gap-1 p-1 bg-surface-container/85 backdrop-blur-md rounded-lg shadow-xl shadow-surface-container-lowest/80 ring-1 ring-outline-variant/30">
+<button class="p-1.5 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" id="zoom-in-btn" title="Zoom In (+)">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" id="zoom-out-btn" title="Zoom Out (-)">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</button>
+<button class="px-2 py-1 rounded bg-surface-container-lowest font-code-sm text-code-sm text-secondary hover:text-on-surface transition-colors" id="zoom-reset-btn" title="Reset Zoom">
+          100%
+        </button>
+<div class="h-4 w-px bg-outline-variant/30 mx-0.5"></div>
+<button class="p-1.5 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" title="Fit to Screen">
+<span class="material-symbols-outlined text-[18px]">aspect_ratio</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container-high text-secondary transition-colors" title="Radar Minimap Toggle">
+<span class="material-symbols-outlined text-[18px]">map</span>
+</button>
+</div>
+<!-- Mini-map Bird's Eye CAD Preview (Bottom-Right overlay) -->
+<div class="absolute bottom-4 right-4 z-30 w-36 h-24 bg-surface-container-lowest/90 backdrop-blur border border-outline-variant/30 rounded p-1.5 flex flex-col justify-between shadow-xl">
+<div class="flex items-center justify-between text-[9px] text-outline font-label-sm uppercase">
+<span>Overview</span>
+<span class="text-secondary">3 Nodes</span>
+</div>
+<div class="relative w-full flex-1 mt-1 bg-surface-container-low/50 rounded overflow-hidden">
+<!-- Mini Representation of Paciente -->
+<div class="absolute left-2 top-2 w-7 h-5 bg-secondary/70 rounded-xs ring-1 ring-secondary"></div>
+<!-- Mini Representation of Historial -->
+<div class="absolute left-16 top-2 w-7 h-5 bg-tertiary/70 rounded-xs"></div>
+<!-- Mini Representation of Medico -->
+<div class="absolute left-16 top-10 w-7 h-4 bg-primary/70 rounded-xs"></div>
+<!-- Active Camera Viewport Frustum Box -->
+<div class="absolute inset-0 border border-secondary/40 rounded-xs pointer-events-none"></div>
+</div>
+</div>
+</main>
+<!-- RIGHT PROPERTY & JPA METAMODEL INSPECTOR (320px DOCKED) -->
+<aside class="w-[320px] flex-shrink-0 flex flex-col bg-surface-container-low shadow-[inset_1px_0_0_rgba(255,255,255,0.06)] h-full overflow-hidden">
+<!-- Inspector Header -->
+<div class="p-space-sm bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-secondary text-[18px]">tune</span>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-body-md font-bold text-on-surface truncate">Inspector Metamodelo</span>
+<span class="font-code-sm text-[10px] text-outline truncate">UML 2.5 Element : Class</span>
+</div>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-secondary/15 text-secondary font-code-sm text-[10px] font-semibold border border-secondary/30">
+          Paciente
+        </span>
+</div>
+<!-- Inspector Body Scrollable -->
+<div class="flex-1 overflow-y-auto p-space-sm flex flex-col gap-space-md custom-scrollbar">
+<!-- JPA Entity Configuration -->
+<div class="flex flex-col gap-space-xs p-space-xs rounded bg-surface-container">
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm uppercase">
+<span>Configuración JPA 3.2</span>
+<span class="material-symbols-outlined text-[14px]">storage</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex flex-col gap-0.5">
+<label class="text-[10px] font-code-sm text-on-surface-variant">Class Name</label>
+<input class="h-6 px-2 rounded bg-surface-container-lowest text-on-surface font-code-sm text-code-sm focus:outline-none focus:ring-1 focus:ring-secondary border-0" type="text" value="Paciente"/>
+</div>
+<div class="flex items-center gap-2">
+<div class="flex-1 flex flex-col gap-0.5">
+<label class="text-[10px] font-code-sm text-on-surface-variant">Table Name (@Table)</label>
+<input class="h-6 px-2 rounded bg-surface-container-lowest text-secondary font-code-sm text-code-sm focus:outline-none focus:ring-1 focus:ring-secondary border-0" type="text" value="tb_paciente"/>
+</div>
+<div class="w-24 flex flex-col gap-0.5">
+<label class="text-[10px] font-code-sm text-on-surface-variant">Schema</label>
+<input class="h-6 px-2 rounded bg-surface-container-lowest text-on-surface font-code-sm text-code-sm focus:outline-none focus:ring-1 focus:ring-secondary border-0" type="text" value="clinica_core"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Attribute Management Table Grid -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="text-outline font-label-sm text-label-sm uppercase">Atributos & Columnas (5)</span>
+<button class="px-1.5 py-0.5 rounded bg-surface-container-high hover:bg-surface-bright text-secondary font-code-sm text-[10px] flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[12px]">add</span>
+              Atributo
+            </button>
+</div>
+<!-- Mini Data Grid -->
+<div class="flex flex-col rounded bg-surface-container-lowest overflow-hidden">
+<!-- Header Grid Row -->
+<div class="grid grid-cols-12 gap-1 py-1 px-1.5 bg-surface-container text-outline font-label-sm text-[9px] uppercase border-b border-surface-variant/40">
+<div class="col-span-1 text-center">Vis</div>
+<div class="col-span-5">Nombre</div>
+<div class="col-span-4">Tipo</div>
+<div class="col-span-2 text-right">Flags</div>
+</div>
+<!-- Row 1: id -->
+<div class="grid grid-cols-12 gap-1 py-1 px-1.5 items-center hover:bg-surface-container/60 transition-colors font-code-sm text-[10px] border-b border-surface-variant/20">
+<div class="col-span-1 text-center text-secondary font-bold">+</div>
+<div class="col-span-5 text-on-surface truncate font-semibold">id</div>
+<div class="col-span-4 text-tertiary truncate">UUID</div>
+<div class="col-span-2 text-right">
+<span class="px-1 rounded bg-secondary/20 text-secondary text-[8px] font-bold">PK</span>
+</div>
+</div>
+<!-- Row 2: nombreCompleto -->
+<div class="grid grid-cols-12 gap-1 py-1 px-1.5 items-center hover:bg-surface-container/60 transition-colors font-code-sm text-[10px] border-b border-surface-variant/20">
+<div class="col-span-1 text-center text-secondary font-bold">+</div>
+<div class="col-span-5 text-on-surface truncate">nombreCompleto</div>
+<div class="col-span-4 text-tertiary truncate">String</div>
+<div class="col-span-2 text-right">
+<span class="px-1 rounded bg-surface-container text-tertiary text-[8px]">NN</span>
+</div>
+</div>
+<!-- Row 3: email -->
+<div class="grid grid-cols-12 gap-1 py-1 px-1.5 items-center hover:bg-surface-container/60 transition-colors font-code-sm text-[10px] border-b border-surface-variant/20">
+<div class="col-span-1 text-center text-secondary font-bold">+</div>
+<div class="col-span-5 text-on-surface truncate">email</div>
+<div class="col-span-4 text-tertiary truncate">String</div>
+<div class="col-span-2 text-right">
+<span class="px-1 rounded bg-secondary/10 text-secondary text-[8px]">UQ</span>
+</div>
+</div>
+<!-- Row 4: fechaNacimiento -->
+<div class="grid grid-cols-12 gap-1 py-1 px-1.5 items-center hover:bg-surface-container/60 transition-colors font-code-sm text-[10px] border-b border-surface-variant/20">
+<div class="col-span-1 text-center text-secondary font-bold">+</div>
+<div class="col-span-5 text-on-surface truncate">fechaNacimiento</div>
+<div class="col-span-4 text-tertiary truncate">LocalDate</div>
+<div class="col-span-2 text-right text-outline text-[8px]">-</div>
+</div>
+<!-- Row 5: activo -->
+<div class="grid grid-cols-12 gap-1 py-1 px-1.5 items-center hover:bg-surface-container/60 transition-colors font-code-sm text-[10px]">
+<div class="col-span-1 text-center text-outline font-bold">-</div>
+<div class="col-span-5 text-outline truncate">activo</div>
+<div class="col-span-4 text-outline truncate">Boolean</div>
+<div class="col-span-2 text-right text-outline text-[8px]">DEF</div>
+</div>
+</div>
+</div>
+<!-- OCL Live Validation Engine Status -->
+<div class="flex flex-col gap-space-xs p-space-xs rounded bg-surface-container">
+<div class="flex items-center justify-between">
+<span class="text-outline font-label-sm text-label-sm uppercase">Validación OCL 2.4</span>
+<div class="flex items-center gap-1 text-secondary font-code-sm text-[10px]">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-ping"></span>
+              En Sintaxis
+            </div>
+</div>
+<div class="flex flex-col gap-1 bg-surface-container-lowest p-2 rounded">
+<div class="flex items-center justify-between text-[11px] font-code-sm">
+<span class="text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-[14px]">check_circle</span>
+                ValidEmailAndAge
+              </span>
+<span class="text-secondary text-[10px]">OK (0ms)</span>
+</div>
+<div class="flex items-center justify-between text-[11px] font-code-sm">
+<span class="text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-[14px]">check_circle</span>
+                NoSelfReference
+              </span>
+<span class="text-secondary text-[10px]">OK (0ms)</span>
+</div>
+</div>
+</div>
+<!-- Spring Data Repository Generation Quick Option -->
+<div class="flex flex-col gap-space-xs p-space-xs rounded bg-surface-container-lowest">
+<span class="text-outline font-label-sm text-label-sm uppercase">Spring Metamodel Export</span>
+<div class="flex flex-col gap-1.5">
+<label class="flex items-center justify-between text-on-surface font-body-sm text-[11px] cursor-pointer">
+<span>Generar Spring Data JPA Repo</span>
+<input checked="" class="w-3.5 h-3.5 rounded bg-surface-container text-secondary accent-secondary" type="checkbox"/>
+</label>
+<label class="flex items-center justify-between text-on-surface font-body-sm text-[11px] cursor-pointer">
+<span>Habilitar Auditoría (@CreatedDate)</span>
+<input checked="" class="w-3.5 h-3.5 rounded bg-surface-container text-secondary accent-secondary" type="checkbox"/>
+</label>
+<label class="flex items-center justify-between text-on-surface font-body-sm text-[11px] cursor-pointer">
+<span>Lombok @Getter / @Setter</span>
+<input checked="" class="w-3.5 h-3.5 rounded bg-surface-container text-secondary accent-secondary" type="checkbox"/>
+</label>
+</div>
+<button class="mt-1 w-full py-1.5 rounded bg-surface-container-high hover:bg-surface-bright text-tertiary font-code-sm text-[11px] transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[14px]">code_blocks</span>
+            Ver PacienteRepository.java
+          </button>
+</div>
+</div>
+</aside>
+</div>
+</div>
+<script>
+  (function initCadWorkbench() {
+    let zoomLevel = 100;
+    const zoomResetBtn = document.getElementById('zoom-reset-btn');
+    const zoomInBtn = document.getElementById('zoom-in-btn');
+    const zoomOutBtn = document.getElementById('zoom-out-btn');
+    const cadCanvas = document.getElementById('cad-canvas');
+
+    function updateZoomDisplay() {
+      if (zoomResetBtn) {
+        zoomResetBtn.textContent = zoomLevel + '%';
+      }
+    }
+
+    if (zoomInBtn) {
+      zoomInBtn.addEventListener('click', () => {
+        if (zoomLevel < 200) {
+          zoomLevel += 10;
+          updateZoomDisplay();
+        }
+      });
+    }
+
+    if (zoomOutBtn) {
+      zoomOutBtn.addEventListener('click', () => {
+        if (zoomLevel > 50) {
+          zoomLevel -= 10;
+          updateZoomDisplay();
+        }
+      });
+    }
+
+    if (zoomResetBtn) {
+      zoomResetBtn.addEventListener('click', () => {
+        zoomLevel = 100;
+        updateZoomDisplay();
+      });
+    }
+
+    // Toggle Left Stencil vs Explorer tabs
+    const tabStencils = document.getElementById('tab-stencils');
+    const tabExplorer = document.getElementById('tab-explorer');
+
+    if (tabStencils && tabExplorer) {
+      tabStencils.addEventListener('click', () => {
+        tabStencils.className = 'flex-1 flex items-center justify-center gap-1.5 py-1.5 px-space-xs rounded bg-surface-container text-secondary font-label-md text-label-md transition-colors shadow-sm';
+        tabExplorer.className = 'flex-1 flex items-center justify-center gap-1.5 py-1.5 px-space-xs rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors font-label-md text-label-md';
+      });
+
+      tabExplorer.addEventListener('click', () => {
+        tabExplorer.className = 'flex-1 flex items-center justify-center gap-1.5 py-1.5 px-space-xs rounded bg-surface-container text-secondary font-label-md text-label-md transition-colors shadow-sm';
+        tabStencils.className = 'flex-1 flex items-center justify-center gap-1.5 py-1.5 px-space-xs rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors font-label-md text-label-md';
+      });
+    }
+  })();
+</script></main></div><footer class="fixed bottom-0 left-0 right-0 z-50 h-7 bg-surface-container-lowest px-gutter flex items-center justify-between text-on-surface-variant font-code-sm text-code-sm shadow-[0_-1px_4px_rgba(0,0,0,0.5)]"><div class="flex items-center gap-space-md"><span class="flex items-center gap-1 text-on-surface"><span class="material-symbols-outlined text-secondary text-[14px]">navigation</span> X: 420px  Y: 280px</span><div class="h-3 w-px bg-outline-variant/30"></div><span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">zoom_in</span> 100%</span><div class="h-3 w-px bg-outline-variant/30"></div><span class="text-secondary">Herramienta: Selección (V)</span></div><div class="flex items-center gap-space-md"><span class="flex items-center gap-1 text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span> WS: Conectado</span><div class="h-3 w-px bg-outline-variant/30"></div><span>4 Clases | 3 Relaciones | 1 OCL Invariant</span></div></footer></body></html>

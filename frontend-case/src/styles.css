@@ -1,21 +1,143 @@
+/* Global styles for CASE Studio Technical Workbench */
 :root {
-  color-scheme: light;
-  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: #f4f6fb;
-  color: #172033;
+  color-scheme: dark;
+  --font-body: 'Geist', system-ui, -apple-system, sans-serif;
+  --font-headline: 'Space Grotesk', 'Geist', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --cad-surface: #0b1326;
+  --cad-surface-lowest: #060d20;
+  --cad-surface-low: #131b2e;
+  --cad-surface-container: #171f33;
+  --cad-surface-high: #222a3e;
+  --cad-surface-highest: #2d3449;
+  --cad-grid-major: rgba(76, 215, 246, 0.22);
+  --cad-grid-minor: rgba(192, 193, 255, 0.11);
+  --cad-border: rgba(70, 69, 84, 0.72);
+  --cad-text: #dbe2fd;
+  --cad-muted: #94a3b8;
+  --cad-primary: #c0c1ff;
+  --cad-secondary: #4cd7f6;
+  --cad-tertiary: #c3c0ff;
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
-body {
+html, body {
   margin: 0;
-  background: #f4f6fb;
+  padding: 0;
+  background-color: var(--cad-surface);
+  color: var(--cad-text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-button, input, select, textarea {
-  font: inherit;
+/* Custom technical scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: var(--cad-surface-lowest);
+}
+::-webkit-scrollbar-thumb {
+  background: #223158;
+  border: 1px solid var(--cad-surface-lowest);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--cad-secondary);
 }
 
-button {
-  cursor: pointer;
+/* Canvas Theme Environments */
+.canvas-dark {
+  background-color: var(--cad-surface-lowest) !important;
+  background-image:
+    linear-gradient(rgba(192, 193, 255, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(192, 193, 255, 0.055) 1px, transparent 1px),
+    radial-gradient(var(--cad-grid-major) 1px, transparent 1.15px) !important;
+  background-position: 0 0, 0 0, 0 0 !important;
+  background-size: 48px 48px, 48px 48px, 12px 12px !important;
+}
+
+.canvas-daylight {
+  background-color: #f8fafc !important;
+  background-image:
+    linear-gradient(rgba(15, 23, 42, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.08) 1px, transparent 1px),
+    radial-gradient(rgba(15, 23, 42, 0.28) 1px, transparent 1.15px) !important;
+  background-size: 48px 48px, 48px 48px, 12px 12px !important;
+  color: #0f172a !important;
+}
+
+.canvas-blueprint {
+  background-color: #081b35 !important;
+  background-image:
+    linear-gradient(rgba(76, 215, 246, 0.10) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(76, 215, 246, 0.10) 1px, transparent 1px),
+    radial-gradient(rgba(76, 215, 246, 0.42) 1px, transparent 1.15px) !important;
+  background-size: 48px 48px, 48px 48px, 12px 12px !important;
+}
+
+/* Dog-Ear folded corner for OCL formal notes */
+.dog-ear-notch {
+  position: relative;
+  overflow: hidden;
+}
+.dog-ear-notch::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 18px 18px 0;
+  border-color: transparent var(--cad-surface-lowest) transparent transparent;
+  pointer-events: none;
+  z-index: 10;
+}
+.dog-ear-notch::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 18px 18px;
+  border-color: transparent transparent rgba(76, 215, 246, 0.55) transparent;
+  pointer-events: none;
+  z-index: 11;
+}
+
+/* Monospace font utilities */
+.font-mono-code {
+  font-family: var(--font-mono);
+}
+
+/* Code signature styling */
+.sig-public { color: #10b981; }
+.sig-private { color: #ef4444; }
+.sig-protected { color: #f59e0b; }
+.sig-package { color: #38bdf8; }
+
+/* Subtle pulse animation */
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+
+.font-headline-sm, .font-headline-md, .font-headline-lg, .font-headline-xl {
+  font-family: var(--font-headline);
+}
+
+.font-body-sm, .font-body-md, .font-body-lg {
+  font-family: var(--font-body);
 }

@@ -35,6 +35,13 @@ public class RelacionModelo {
     @Column(nullable = false, length = 120)
     private String nombre;
 
+    @Column(length = 120)
+    private String verbo;
+
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false, length = 40)
+    private TipoRelacion tipo = TipoRelacion.ASOCIACION;
+
     @Enumerated(EnumType.STRING)
     @Column(name = "cardinalidad_origen", nullable = false, length = 20)
     private Cardinalidad cardinalidadOrigen;
@@ -47,18 +54,38 @@ public class RelacionModelo {
     }
 
     public RelacionModelo(ModeloConceptual modelo, EntidadModelo entidadOrigen, EntidadModelo entidadDestino, String nombre, Cardinalidad cardinalidadOrigen, Cardinalidad cardinalidadDestino) {
+        this(modelo, entidadOrigen, entidadDestino, nombre, null, cardinalidadOrigen, cardinalidadDestino);
+    }
+
+    public RelacionModelo(ModeloConceptual modelo, EntidadModelo entidadOrigen, EntidadModelo entidadDestino, String nombre, String verbo, Cardinalidad cardinalidadOrigen, Cardinalidad cardinalidadDestino) {
+        this(modelo, entidadOrigen, entidadDestino, nombre, verbo, TipoRelacion.ASOCIACION, cardinalidadOrigen, cardinalidadDestino);
+    }
+
+    public RelacionModelo(ModeloConceptual modelo, EntidadModelo entidadOrigen, EntidadModelo entidadDestino, String nombre, String verbo, TipoRelacion tipo, Cardinalidad cardinalidadOrigen, Cardinalidad cardinalidadDestino) {
         this.modelo = modelo;
         this.entidadOrigen = entidadOrigen;
         this.entidadDestino = entidadDestino;
         this.nombre = nombre;
+        this.verbo = verbo;
+        this.tipo = tipo != null ? tipo : TipoRelacion.ASOCIACION;
         this.cardinalidadOrigen = cardinalidadOrigen;
         this.cardinalidadDestino = cardinalidadDestino;
     }
 
     public void actualizar(EntidadModelo entidadOrigen, EntidadModelo entidadDestino, String nombre, Cardinalidad cardinalidadOrigen, Cardinalidad cardinalidadDestino) {
+        actualizar(entidadOrigen, entidadDestino, nombre, null, cardinalidadOrigen, cardinalidadDestino);
+    }
+
+    public void actualizar(EntidadModelo entidadOrigen, EntidadModelo entidadDestino, String nombre, String verbo, Cardinalidad cardinalidadOrigen, Cardinalidad cardinalidadDestino) {
+        actualizar(entidadOrigen, entidadDestino, nombre, verbo, TipoRelacion.ASOCIACION, cardinalidadOrigen, cardinalidadDestino);
+    }
+
+    public void actualizar(EntidadModelo entidadOrigen, EntidadModelo entidadDestino, String nombre, String verbo, TipoRelacion tipo, Cardinalidad cardinalidadOrigen, Cardinalidad cardinalidadDestino) {
         this.entidadOrigen = entidadOrigen;
         this.entidadDestino = entidadDestino;
         this.nombre = nombre;
+        this.verbo = verbo;
+        this.tipo = tipo != null ? tipo : TipoRelacion.ASOCIACION;
         this.cardinalidadOrigen = cardinalidadOrigen;
         this.cardinalidadDestino = cardinalidadDestino;
     }
@@ -68,6 +95,8 @@ public class RelacionModelo {
     public EntidadModelo getEntidadOrigen() { return entidadOrigen; }
     public EntidadModelo getEntidadDestino() { return entidadDestino; }
     public String getNombre() { return nombre; }
+    public String getVerbo() { return verbo; }
+    public TipoRelacion getTipo() { return tipo; }
     public Cardinalidad getCardinalidadOrigen() { return cardinalidadOrigen; }
     public Cardinalidad getCardinalidadDestino() { return cardinalidadDestino; }
 }

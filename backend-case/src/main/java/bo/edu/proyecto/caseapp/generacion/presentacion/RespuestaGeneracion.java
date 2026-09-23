@@ -10,16 +10,26 @@ public record RespuestaGeneracion(
         EstadoGeneracion estado,
         LocalDateTime iniciadoEn,
         LocalDateTime finalizadoEn,
-        String mensajeError
+        String mensajeError,
+        String target,
+        String perfil,
+        String artifactHash
 ) {
     public static RespuestaGeneracion desde(TrabajoGeneracion trabajo) {
+        return desde(trabajo, null);
+    }
+
+    public static RespuestaGeneracion desde(TrabajoGeneracion trabajo, String artifactHash) {
         return new RespuestaGeneracion(
                 trabajo.getId(),
                 trabajo.getModelo().getId(),
                 trabajo.getEstado(),
                 trabajo.getIniciadoEn(),
                 trabajo.getFinalizadoEn(),
-                trabajo.getMensajeError()
+                trabajo.getMensajeError(),
+                "spring-boot",
+                "default",
+                artifactHash
         );
     }
 }

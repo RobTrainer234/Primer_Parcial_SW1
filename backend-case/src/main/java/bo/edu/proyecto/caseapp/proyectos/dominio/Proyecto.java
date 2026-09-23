@@ -26,6 +26,9 @@ public class Proyecto {
     @Column(length = 1000)
     private String descripcion;
 
+    @Column(name = "owner_user_id", nullable = false, length = 80)
+    private String ownerUserId;
+
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, length = 30)
     private EstadoProyecto estado = EstadoProyecto.ACTIVO;
@@ -39,9 +42,13 @@ public class Proyecto {
     protected Proyecto() {
     }
 
-    public Proyecto(String nombre, String descripcion) {
+    public Proyecto(String nombre, String descripcion, String ownerUserId) {
+        if (ownerUserId == null || ownerUserId.isBlank()) {
+            throw new IllegalArgumentException("El propietario del proyecto es obligatorio");
+        }
         this.nombre = nombre;
         this.descripcion = descripcion;
+        this.ownerUserId = ownerUserId.trim();
         this.estado = EstadoProyecto.ACTIVO;
     }
 
@@ -66,6 +73,7 @@ public class Proyecto {
     public Long getId() { return id; }
     public String getNombre() { return nombre; }
     public String getDescripcion() { return descripcion; }
+    public String getOwnerUserId() { return ownerUserId; }
     public EstadoProyecto getEstado() { return estado; }
     public LocalDateTime getCreadoEn() { return creadoEn; }
     public LocalDateTime getActualizadoEn() { return actualizadoEn; }
